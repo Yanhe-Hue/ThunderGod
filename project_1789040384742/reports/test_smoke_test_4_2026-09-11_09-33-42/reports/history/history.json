@@ -1,0 +1,1 @@
+{"d85e5c7bd63ee58230dc473d964b3978":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"d4212c4049931999","status":"failed","statusDetails":"Failed: case_issue: 前置「步骤0：车机正常启动，处于主页面」未由 Explore 证明且无可执行来源，无法安全继续","time":{"start":1789090424870,"stop":1789090424870,"duration":0}}]}}

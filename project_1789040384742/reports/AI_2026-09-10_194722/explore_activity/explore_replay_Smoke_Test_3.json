@@ -1,0 +1,241 @@
+{
+  "schema": 6,
+  "case_id": "Smoke_Test_3",
+  "xlsx": {
+    "precondition": [
+      "步骤0：车机正常启动，处于主页面"
+    ],
+    "steps": [
+      "步骤1：检查首页"
+    ],
+    "expected": [
+      "步骤1：显示Google地图、音频、Google助手三个区域"
+    ],
+    "postcondition": []
+  },
+  "replay": {
+    "setup": [],
+    "setup_steps": [],
+    "steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "步骤1：检查首页",
+        "actions": [
+          {
+            "trace_id": "d5cb4dac4660",
+            "action_id": "d5cb4dac4660:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "home"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260910-194942-577881",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_3-25640-1832ca84c117/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_3-25640-1832ca84c117",
+                "page_signature": "sha1:bd22f5d4f4076ddcbeb2c0609d9bf18e9c018b21",
+                "summary": {
+                  "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+                  "title": "搜索",
+                  "page_anchor": {
+                    "ref": "e32",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.google.android.apps.maps:id/action_bar_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/snackbar_coordinator_container_view"
+                    },
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_container"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/one_bar_ellipsizing_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_mute_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_compass_container"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/one_bar_bottom_group"
+                    },
+                    {
+                      "ref": "e57",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/main_maps_cards_container"
+                    },
+                    {
+                      "ref": "e79",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_branding_watermark_container"
+                    },
+                    {
+                      "ref": "e81",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/account_particle_account_picker_container"
+                    }
+                  ]
+                },
+                "element_count": 124,
+                "page": {
+                  "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+                  "title": "搜索",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": [
+                    "搜索"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-10_194722\\screenshots\\hierarchy_after_press_20260910_194941_629675.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-10_194722\\screenshots\\after_press_20260910_194942_639045.png"
+              }
+            },
+            "execution_index": 3
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "dcea683c3ce5",
+            "action_id": "dcea683c3ce5:0",
+            "domain": "ui",
+            "sdk": "car.assert_exists",
+            "args": {
+              "locator": "com.google.android.apps.maps:id/map_buttons_view_zoom_in",
+              "by": "id",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "d43f0312dbf7",
+            "action_id": "d43f0312dbf7:0",
+            "domain": "ui",
+            "sdk": "car.assert_exists",
+            "args": {
+              "locator": "音频",
+              "by": "text",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "3b88e17b0095",
+            "action_id": "3b88e17b0095:0",
+            "domain": "ui",
+            "sdk": "car.assert_exists",
+            "args": {
+              "locator": "Google 助理",
+              "by": "text",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "asserts": [
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：显示Google地图、音频、Google助手三个区域",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "com.google.android.apps.maps:id/map_buttons_view_zoom_in",
+          "by": "id",
+          "expected": true
+        },
+        "from": "dcea683c3ce5",
+        "execution_order": {
+          "before_action_id": "d5cb4dac4660:0",
+          "before_step_index": 0
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：显示Google地图、音频、Google助手三个区域",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "音频",
+          "by": "text",
+          "expected": true
+        },
+        "from": "d43f0312dbf7",
+        "execution_order": {
+          "before_action_id": "d5cb4dac4660:0",
+          "before_step_index": 0
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：显示Google地图、音频、Google助手三个区域",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Google 助理",
+          "by": "text",
+          "expected": true
+        },
+        "from": "3b88e17b0095",
+        "execution_order": {
+          "before_action_id": "d5cb4dac4660:0",
+          "before_step_index": 0
+        },
+        "evidence": {}
+      }
+    ],
+    "teardown": [],
+    "teardown_steps": []
+  },
+  "policies": [],
+  "gaps": []
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "devices": [
+    {
+      "device_id": "3696ade",
+      "aliases": [
+        "3696ade"
+      ],
+      "mode": "u2",
+      "name": "Android-3696ade",
+      "resolved_device_id": "3696ade",
+      "source": "probe",
+      "updated_at": "2026-09-10T11:49:04Z"
+    }
+  ]
+}

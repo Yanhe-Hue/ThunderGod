@@ -1,0 +1,822 @@
+开始执行测试（19 个脚本，19 次运行）…
+
+
+--- tests_scripts/桌面启动器/test_smoke_test_3.py::TestSmokeTest3::test_smoke_test_3 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_3.py::TestSmokeTest3::test_smoke_test_3 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_3.py::TestSmokeTest3::test_smoke_test_3 PASSED
+
+============================== 1 passed in 8.93s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4 PASSED
+
+============================= 1 passed in 20.09s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest6.test_smoke_test_6 _______________________
+
+self = <test_smoke_test_6.TestSmokeTest6 object at 0x000001C4A0EB9580>
+
+    @allure.story("系统UI - 触发谷歌助手")
+    @allure.title("系统UI - 触发谷歌助手")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_6(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤1：返回主界面并点击主界面谷歌助手区域'] | 预期: 步骤1：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤1: 返回主界面并点击主界面谷歌助手区域"):
+            self.page.go_home()
+            self.page.click_google_assistant()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤1：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部
+        with allure.step("验证[0]: 步骤1：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"):
+>           self.car.assert_exists(Loc.VOICEPLATE, by="id", expected=True)
+
+tests_scripts\桌面启动器\test_smoke_test_6.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: id=com.google.android.carassistant:id/voiceplate
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Google 助理' -> (1103, 118), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6
+============================= 1 failed in 17.45s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5 FAILED
+
+================================== FAILURES ===================================
+__________________ TestSmokeTest7Row5.test_smoke_test_7_row5 __________________
+
+self = <test_smoke_test_7_row5.TestSmokeTest7Row5 object at 0x000001AD26EC97C0>
+
+    @allure.story("系统UI - 左侧导航")
+    @allure.title("系统UI - 左侧导航")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_7_row5(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：点击左侧导航栏应用图标；验证目标页面', '步骤1：点击左侧导航栏车辆图标；验证目标页面', '步骤2：点击左侧导航栏音乐图标；验证目标页面', '步骤3：点击左侧导航栏电话图标；验证目标页面'] | 预期: 步骤0：页面跳转到应用页面，显示所有应用：“Play商店”，“Android Auto”，“设备管理器”，“收音机”，“AM收音机”; 步骤1：页面跳转到车辆页面,显示：“Live Data”,“Coaching”,; “Challenges”,“Driver Mode”,“电力”，“座位”，“My Driving”，“驾驶辅助”，“车辆”，“Reno Assistant”,“设置”; 步骤2：页面跳转到音乐源页面，显示“AM收音机”、“蓝牙音频”、“Google新闻”、“收音机”、“USB”,“Android Auto”; 步骤3：页面跳转到电话连接页面，页面显示：要完成通话，请先通过蓝牙将您的手机连接到汽车。带有“连接到蓝牙”按钮"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 点击左侧导航栏应用图标"):
+            self.page.click_nav_app()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤0：页面跳转到应用页面，显示所有应用：“Play商店”，“Android Auto”，“设备管理器”，“收音机”，“AM收音机”
+        with allure.step("验证[0]: 步骤0：页面跳转到应用页面，显示所有应用：“Play商店”，“Android Auto”，“设备管理器”，“收音机”，“AM收音机”"):
+            # 应用网格在点击后延迟加载（explore 证据：grid_nav 点击后 apps_grid 为空，约 2 分钟后才出现应用文案），
+            # 首个断言用长超时等待应用列表就绪，后续断言在网格加载完成后快速通过。
+>           self.car.assert_exists(Loc.APP_PLAY_STORE, timeout=120)
+
+tests_scripts\桌面启动器\test_smoke_test_7_row5.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: text=Play 商店
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/grid_nav' -> (56, 450), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5
+======================== 1 failed in 131.51s (0:02:11) ========================
+
+--- tests_scripts/桌面启动器/test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6 FAILED
+
+================================== FAILURES ===================================
+__________________ TestSmokeTest7Row6.test_smoke_test_7_row6 __________________
+
+self = <test_smoke_test_7_row6.TestSmokeTest7Row6 object at 0x00000208C3D89400>
+
+    @allure.story("系统UI - 窗口小部件编辑")
+    @allure.title("系统UI - 窗口小部件编辑")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_7_row6(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面'] | 预期: 步骤0：右侧出现“编辑窗口部件”窗口，下方显示“Google助理”，“日期和时间”，“GG图”，“Eco Score”“电话”，“”音频，“车辆”选项"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 从屏幕右侧向左滑动，打开窗口小部件编辑界面"):
+            self.page.swipe_open_widget_editor()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤0：右侧出现“编辑窗口部件”窗口，下方显示“Google助理”，“日期和时间”，“GG图”，“Eco Score”“电话”，“”音频，“车辆”选项
+        with allure.step("验证[0] 小部件编辑窗口标题: 编辑窗口部件"):
+            self.car.assert_exists(
+                Loc.WIDGET_EDIT_TITLE,
+                by="text",
+                expected=True,
+                timeout=5.0,
+                msg="右侧出现“编辑窗口部件”窗口",
+            )
+        with allure.step("验证[0] 小部件选项: Google 助理"):
+            self.car.assert_text(Loc.WIDGET_EDIT_GOOGLE_ASSISTANT, "Google 助理", by="text", msg="小部件选项“Google助理”存在")
+        with allure.step("验证[0] 小部件选项: 日期和时间"):
+>           self.car.assert_text(Loc.WIDGET_EDIT_DATE_TIME, "日期和时间", by="text", msg="小部件选项“日期和时间”存在")
+
+tests_scripts\桌面启动器\test_smoke_test_7_row6.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 小部件选项“日期和时间”存在
+
+src/autocar/drivers/u2/enhanced.py:2320: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6
+============================= 1 failed in 12.70s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest9.test_smoke_test_9 _______________________
+
+self = <test_smoke_test_9.TestSmokeTest9 object at 0x0000023CA1572240>
+
+    @allure.story("系统UI - 谷歌助手小部件生命周期")
+    @allure.title("系统UI - 谷歌助手小部件生命周期")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_9(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面', '步骤1：点击“Goolge助理”小部件将它添加在屏幕中，退出编辑界面并检查', '步骤2：点击首页的“Goolge助理”小部件', '步骤3：从屏幕右侧向左滑动，打开窗口小部件编辑界面，将“Goolge助理”小部件更换成其他小部件，退出编辑界面并检查'] | 预期: 步骤1：“Goolge助理”小部件立即添加到主页面; 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部; 步骤3：“Goolge助理”小部件从主页移除"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 从屏幕右侧向左滑动，打开窗口小部件编辑界面"):
+            self.page.swipe_open_widget_editor()
+    
+        with allure.step("步骤1: 点击 Google 助理小部件添加至主页面，并退出编辑界面"):
+            self.page.add_google_assistant_widget()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤1：“Goolge助理”小部件立即添加到主页面
+        with allure.step("验证[0]: 步骤1：“Goolge助理”小部件立即添加到主页面"):
+            self.car.assert_exists(Loc.GOOGLE_ASSISTANT, by="text", expected=True, timeout=5.0)
+    
+        with allure.step("步骤2: 点击首页的 Google 助理小部件"):
+            self.page.click_google_assistant()
+            time.sleep(3)  # 等待语音交互焦点出现
+        # AUTOCAR-EXPECTED[1]: 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部
+        with allure.step("验证[1]: 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"):
+            # 语音交互焦点条出现（final_assertions: by=id，稳定结构断言）
+            self.car.assert_exists(Loc.VOICEPLATE, by="id", expected=True, timeout=5.0)
+            # 语音交互焦点为动态画面（聆听状态/波形实时变化），静态基准图比对不稳定，
+            # 改用截图留档供确认燃油图标与聆听状态。
+            self._shot_attach("voiceplate_listening")
+    
+        with allure.step("步骤3: 打开窗口小部件编辑界面，将 Google 助理小部件更换成其他小部件并退出"):
+            self.page.replace_google_assistant_with_datetime()
+    
+        # AUTOCAR-EXPECTED[2]: 步骤3：“Goolge助理”小部件从主页移除
+        with allure.step("验证[2]: 步骤3：“Goolge助理”小部件从主页移除"):
+>           self.car.assert_exists(Loc.GOOGLE_ASSISTANT, by="text", expected=False, timeout=5.0)
+
+tests_scripts\桌面启动器\test_smoke_test_9.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不应存在但存在: text=Google 助理
+
+src/autocar/drivers/u2/enhanced.py:2306: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Google 助理' -> (694, 118), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.launcher:id/close_button' -> (1230, 97), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Google 助理' -> (1103, 118), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='日期和时间' -> (1069, 170), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.launcher:id/close_button' -> (1230, 97), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9
+============================= 1 failed in 27.11s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_10.py::TestSmokeTest10::test_smoke_test_10 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_10.py::TestSmokeTest10::test_smoke_test_10 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_10.py::TestSmokeTest10::test_smoke_test_10 PASSED
+
+============================= 1 passed in 25.28s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11 PASSED
+
+============================= 1 passed in 19.66s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12 PASSED
+
+============================= 1 passed in 41.48s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13 PASSED
+
+============================= 1 passed in 16.45s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14 PASSED
+
+============================= 1 passed in 41.52s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15 PASSED
+
+============================= 1 passed in 17.55s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_36_row14.py::TestSmokeTest36Row14::test_smoke_test_36_row14 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_36_row14.py::TestSmokeTest36Row14::test_smoke_test_36_row14 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_36_row14.py::TestSmokeTest36Row14::test_smoke_test_36_row14 PASSED
+
+============================= 1 passed in 18.47s ==============================
+
+--- tests_scripts/车辆设置/test_smoke_test_36_row15.py::TestSmokeTest36Row15::test_smoke_test_36_row15 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\车辆设置\test_smoke_test_36_row15.py::TestSmokeTest36Row15::test_smoke_test_36_row15 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/车辆设置/test_smoke_test_36_row15.py::TestSmokeTest36Row15::test_smoke_test_36_row15 PASSED
+
+============================= 1 passed in 24.44s ==============================
+
+--- tests_scripts/车辆设置/test_smoke_test_37.py::TestSmokeTest37::test_smoke_test_37 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\车辆设置\test_smoke_test_37.py::TestSmokeTest37::test_smoke_test_37 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/车辆设置/test_smoke_test_37.py::TestSmokeTest37::test_smoke_test_37 FAILED
+
+================================== FAILURES ===================================
+_____________________ TestSmokeTest37.test_smoke_test_37 ______________________
+
+self = <test_smoke_test_37.TestSmokeTest37 object at 0x000001A75ECA2240>
+
+    @allure.story("设置 - 语言和关于")
+    @allure.title("设置 - 语言和关于")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_37(self):
+        """前置: 步骤0：车机正常启动，处于主页面; 步骤1：打开左侧导航栏车辆>设置 > 系统 | 步骤: ['步骤0：打开语言和输入法', '步骤1：点击语言'] | 预期: 步骤0：页面显示\"语言和输入法\"、\"单位\"、\"存储空间\"、\"关于\"、\"法律信息\"、\"重置选项\"\"Android Auto\"显示正确。; 步骤1:步骤 1：显示:建议\",\"简体中文（中国）\"及所有语言列表:; - Čeština; - Dansk; - Deutsch; - Eesti; - English; - Español; - Français; - Hrvatski; - Italiano; - Latviešu; - Lietuvių; - Magyar; - Melayu; - Nederlands; - Polski; - Português; - Română; - Shqip; - Slovenčina; - Slovenščina; - Suomi; - Svenska; - Tiếng Việt; - Türkçe; - Ελληνικά; - Български; - Русский; - Српски (ћирилица); - Українська; - עברית; - العربية; - فارسی; - हिन्दी; - ไทย; - 한국어; - 日本語; - 简体中文; - 繁體中文; System language change to Chinese; System language change to Français"""
+        # AUTOCAR-DEVIATION: [
+        #   "expected[20..36/38/40/41] 无 Explore 断言回执（handoff-incomplete），保留失败 scaffold",
+        # ]
+        # ==================== 步骤0：打开语言和输入法 ====================
+        with allure.step("步骤0：打开语言和输入法 — 系统设置页首屏"):
+            # AUTOCAR-EXPECTED[0]: 步骤0：页面显示"语言和输入法"、"单位"、"存储空间"、"关于"、"法律信息"、"重置选项""Android Auto"显示正确。
+            # 首屏（回放第一次 swipe 之前）：语言和输入法、单位、存储空间、关于、法律信息
+            self.car.assert_text(Loc.ENTRY_LANGUAGE_INPUT, "语言和输入法")
+            self.car.assert_text(Loc.TXT_UNIT, "单位")
+            self.car.assert_text(Loc.TXT_STORAGE, "存储空间")
+            self.car.assert_text(Loc.TXT_ABOUT, "关于")
+            self.car.assert_text(Loc.TXT_LEGAL_INFO, "法律信息")
+    
+        with allure.step("步骤0：向上滑动系统设置页，校验次屏项"):
+            self.page.swipe_up_system_page()
+            # AUTOCAR-EXPECTED[0]: 次屏（第一次 swipe 之后、第二次 swipe 之前）：重置选项、Android Auto
+            self.car.assert_text(Loc.TXT_RESET_OPTIONS, "重置选项")
+            self.car.assert_text(Loc.TXT_ANDROID_AUTO, "Android Auto")
+    
+        with allure.step("步骤0：向下滑动返回并点击语言和输入法"):
+            self.page.swipe_down_system_page()
+            self.page.open_language_and_input()
+    
+        # ==================== 步骤1：点击语言 ====================
+        with allure.step("步骤1：点击语言，校验语言选择页顶部"):
+            self.page.open_language()
+            # AUTOCAR-EXPECTED[1]: 步骤1:步骤 1：显示:建议","简体中文（中国）"及所有语言列表:
+            self.car.assert_text(Loc.TXT_SUGGESTED, "建议")
+            self.car.assert_text(Loc.TXT_SIMPLIFIED_CHINESE_CN, "简体中文（中国）")
+            self.car.assert_text(Loc.TXT_ALL_LANGUAGES, "所有语言")
+            self.car.assert_text(Loc.LANG_JA, "日本語")
+            self.car.assert_text(Loc.LANG_ZH_HANT, "繁體中文")
+    
+        with allure.step("步骤1：滑动语言列表第 1 屏"):
+            self.page.swipe_language_list()
+            # AUTOCAR-EXPECTED[2]: - Čeština（同视口可见：Dansk、Deutsch）
+            self.page.assert_language_item(Loc.LANG_CS, "Čeština")
+            self.page.assert_language_item(Loc.LANG_DA, "Dansk")
+            self.page.assert_language_item(Loc.LANG_DE, "Deutsch")
+    
+        with allure.step("步骤1：滑动语言列表第 2 屏"):
+            self.page.swipe_language_list()
+            # AUTOCAR-EXPECTED[5]: - Eesti（同视口可见：English）
+            self.page.assert_language_item(Loc.LANG_ET, "Eesti")
+            self.page.assert_language_item(Loc.LANG_EN, "English")
+    
+        with allure.step("步骤1：滑动语言列表第 3 屏"):
+            self.page.swipe_language_list()
+            # AUTOCAR-EXPECTED[7]: - Español（同视口可见：Français）
+            self.page.assert_language_item(Loc.LANG_ES, "Español")
+            self.page.assert_language_item(Loc.LANG_FR, "Français")
+    
+        with allure.step("步骤1：滑动语言列表第 4 屏"):
+            self.page.swipe_language_list()
+            # AUTOCAR-EXPECTED[9]: - Hrvatski（同视口可见：Italiano、Latviešu）
+            self.page.assert_language_item(Loc.LANG_HR, "Hrvatski")
+            self.page.assert_language_item(Loc.LANG_IT, "Italiano")
+            self.page.assert_language_item(Loc.LANG_LV, "Latviešu")
+    
+        with allure.step("步骤1：滑动语言列表第 5 屏"):
+            self.page.swipe_language_list()
+            # AUTOCAR-EXPECTED[12]: - Lietuvių（同视口可见：Magyar）
+            self.page.assert_language_item(Loc.LANG_LT, "Lietuvių")
+            self.page.assert_language_item(Loc.LANG_HU, "Magyar")
+    
+        with allure.step("步骤1：滑动语言列表第 6 屏"):
+            self.page.swipe_language_list()
+            # AUTOCAR-EXPECTED[14]: - Melayu（同视口可见：Nederlands、Polski、Português）
+>           self.page.assert_language_item(Loc.LANG_MS, "Melayu")
+
+tests_scripts\车辆设置\test_smoke_test_37.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\车辆设置\车辆设置_page.py:77: in assert_language_item
+    self.car.scroll_to_element(loc, by="text")
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/enhanced.py:2122: in autocar.drivers.u2.enhanced.DeviceEnhancedMixin.scroll_to_element
+    ???
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:457: in wrapper
+    return _fn(self, *args, **kwargs)  # 重入时返回原始值，避免双重包装
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:1345: in autocar.drivers.u2.driver.U2Manager.get_element_info
+    ???
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\uiautomator2\_selector.py:128: in info
+    return self.jsonrpc.objInfo(self.selector)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\uiautomator2\base.py:158: in __call__
+    return self.server.jsonrpc_call(self.method, params, http_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\uiautomator2\core.py:311: in jsonrpc_call
+    return _jsonrpc_call(self._dev, self._device_server_port, method, params, timeout, self._debug)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+dev = AdbDevice(serial=3696ade), device_port = 9008, method = 'objInfo'
+params = ({'mask': 1, 'childOrSibling': [], 'childOrSiblingSelector': [], 'text': 'Melayu'},)
+timeout = 300, print_request = False
+
+    def _jsonrpc_call(dev: adbutils.AdbDevice, device_port: int, method: str, params: Any, timeout: float, print_request: bool) -> Any:
+        """Send jsonrpc call to uiautomator2 server
+    
+        Raises:
+            UiAutomationError
+        """
+        payload = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": method,
+            "params": params
+        }
+        r = _http_request(dev, device_port, "POST", "/jsonrpc/0", payload, timeout=timeout, print_request=print_request)
+        data = r.json()
+        if not isinstance(data, dict):
+            raise RPCInvalidError("Unknown RPC error: not a dict")
+    
+        if isinstance(data, dict) and "error" in data:
+            logger.debug("jsonrpc error: %s", data)
+            code = data['error'].get('code')
+            message = data['error'].get('message', '')
+            stacktrace = data['error'].get('data')
+            if "UiAutomation not connected" in r.text:
+                raise UiAutomationNotConnectedError("UiAutomation not connected")
+            if "android.os.DeadObjectException" in message:
+                # https://developer.android.com/reference/android/os/DeadObjectException
+                raise UiAutomationNotConnectedError("android.os.DeadObjectException")
+            if "android.os.DeadSystemRuntimeException" in message:
+                raise UiAutomationNotConnectedError("android.os.DeadSystemRuntimeException")
+            if "uiautomator.UiObjectNotFoundException" in message:
+>               raise UiObjectNotFoundError(code, message, params)
+E               uiautomator2.exceptions.UiObjectNotFoundError: (-32001, 'androidx.test.uiautomator.UiObjectNotFoundException', ({'mask': 1, 'childOrSibling': [], 'childOrSiblingSelector': [], 'text': 'Melayu'},))
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\uiautomator2\core.py:191: UiObjectNotFoundError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/grid_nav' -> (56, 450), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='设置' -> (1125, 489), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='系统' -> (696, 595), display-id=0, XML coords are physical screen coords
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='语言和输入法' -> (696, 185), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='语言' -> (696, 185), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/车辆设置/test_smoke_test_37.py::TestSmokeTest37::test_smoke_test_37
+======================== 1 failed in 63.49s (0:01:03) =========================
+
+--- tests_scripts/车辆设置/test_smoke_test_44.py::TestSmokeTest44::test_smoke_test_44 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\车辆设置\test_smoke_test_44.py::TestSmokeTest44::test_smoke_test_44 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/车辆设置/test_smoke_test_44.py::TestSmokeTest44::test_smoke_test_44 PASSED
+
+============================= 1 passed in 31.92s ==============================
+
+--- tests_scripts/车辆设置/test_smoke_test_46.py::TestSmokeTest46::test_smoke_test_46 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\车辆设置\test_smoke_test_46.py::TestSmokeTest46::test_smoke_test_46 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/车辆设置/test_smoke_test_46.py::TestSmokeTest46::test_smoke_test_46 FAILED
+
+================================== FAILURES ===================================
+_____________________ TestSmokeTest46.test_smoke_test_46 ______________________
+
+self = <test_smoke_test_46.TestSmokeTest46 object at 0x000001EC36988320>
+
+    @allure.story("车辆 - 座椅")
+    @allure.title("车辆 - 座椅")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_46(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤1：点击左侧导航栏进入车辆页面', '步骤2：点击座椅'] | 预期: 步骤2：座椅页面显示：驾驶位置，文字说明：座椅和驾驶设备，带有保存和调用按钮"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤1: 点击左侧导航栏进入车辆页面"):
+            self.page.enter_vehicle_page()
+        with allure.step("步骤2: 点击座椅"):
+            self.page.enter_seat_page()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤2：座椅页面显示：驾驶位置，文字说明：座椅和驾驶设备，带有保存和调用按钮
+        with allure.step("验证[0] 座椅页面显示\"驾驶位置\""):
+>           self.car.assert_text(Loc.TXT_DRIVING_POSITION, "驾驶位置")
+
+tests_scripts\车辆设置\test_smoke_test_46.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: text=驾驶位置
+
+src/autocar/drivers/u2/enhanced.py:2320: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/car_world' -> (56, 566), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='座位' -> (1138, 144), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/车辆设置/test_smoke_test_46.py::TestSmokeTest46::test_smoke_test_46
+============================= 1 failed in 13.29s ==============================
+
+--- tests_scripts/收音机/test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\收音机\test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/收音机/test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47 PASSED
+
+============================= 1 passed in 13.45s ==============================
+
+--- tests_scripts/收音机/test_smoke_test_48.py::TestSmokeTest48::test_smoke_test_48 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\收音机\test_smoke_test_48.py::TestSmokeTest48::test_smoke_test_48 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/收音机/test_smoke_test_48.py::TestSmokeTest48::test_smoke_test_48 PASSED
+
+============================= 1 passed in 26.27s ==============================
+
+正在生成 Allure 报告…
+Report successfully generated to reports
+
+报告路径：d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-11_13-38-11\reports
+（使用“打开报告”启动 Allure 服务并在浏览器中打开）
+
+执行完成。
