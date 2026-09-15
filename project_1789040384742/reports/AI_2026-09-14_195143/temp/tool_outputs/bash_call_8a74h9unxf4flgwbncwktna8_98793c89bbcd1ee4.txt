@@ -1,0 +1,118 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=press
+page_changed: true
+key: back
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-065800-829167
+added: 13  changed: 1  removed: 14
+added refs:
+   e43  RelativeLayout "Bluetooth toggle switch"  action=click  →  desc=Bluetooth toggle switch
+   e44  ViewGroup      "com.android.car.settings:id/multi_action_preference_first_action_container"  action=view  →  id=com.android.car.settings:id/multi_action_pre...
+   e47  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e53  TextView       "Paired devices"  action=view  →  text=Paired devices
+   e54  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e57  RowAction      action=enter  label="62888b2b"  value=Connected  value_ref=e58 assert_on=xpath=//*[@resource-id='com.android.car.settings:id/multi_action_preference_first_action_container']//*[@resource-id='android:id/summary']  affordance=icon  alt=e50 xpath=//*[@resource-id='com.android.car.settings:id/multi_action_preference_first_action_container']//*[@resource-id='android:id/icon']  (row_or_trailing_arrow)  →  text=62888b2b
+   e62  RowAction      action=enter  label="Bluetooth"  value=Visible as MY_CAR to other devices  (row_or_trailing_arrow)  →  text=Bluetooth  [B:ambiguous]
+   e64  TextView       "Pair new device"  action=view  →  text=Pair new device
+   e92  ViewGroup      "com.android.car.settings:id/multi_action_preference_second_action_container"  action=view  →  id=com.android.car.settings:id/multi_action_pre...
+   e94  View           "com.android.car.settings:id/multi_action_preference_divider"  action=view  →  id=com.android.car.settings:id/multi_action_pre...
+changed refs:
+   e42  RecyclerView   "com.android.car.ui.utils.ROTARY_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+removed refs:
+   e41  ViewGroup      "com.android.car.settings:id/car_ui_scroll_bar"  action=view  →  id=com.android.car.settings:id/car_ui_scroll_bar
+   e42  View           "com.android.car.settings:id/car_ui_scrollbar_track"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e43  View           "com.android.car.settings:id/car_ui_scrollbar_thumb"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e46  LinearLayout   "com.android.car.settings:id/button1"  action=click  →  id=com.android.car.settings:id/button1
+   e53  TextView       "Profiles"  action=view  →  text=Profiles
+   e59  TextView       "Phone calls"  action=view  →  text=Phone calls
+   e63  ImageView      "com.android.car.settings:id/button1Icon"  action=view  →  id=com.android.car.settings:id/button1Icon
+   e64  TextView       "Disconnect"  action=view  →  text=Disconnect
+   e72  RowAction      action=enter  label="62888b2b"  value=Connected, battery 100%  value_ref=e69 assert_on=id=com.android.car.settings:id/entity_header_summary  affordance=entity_header_icon  alt=e73 id=com.android.car.settings:id/entity_header_icon  (row_or_trailing_arrow)  →  text=62888b2b
+   e74  LinearLayout   "com.android.car.settings:id/button2"  action=click  →  id=com.android.car.settings:id/button2
+   e79  ImageView      "com.android.car.settings:id/button2Icon"  action=view  →  id=com.android.car.settings:id/button2Icon
+   e80  TextView       "Forget"  action=view  →  text=Forget
+before_signature: sha1:d49199e994d67ddb94c433717ae80b966ea790ae
+after_signature: sha1:501ec6f584875e69f10da84455477fea0f063b90
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-065800-829167
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_18-13164-94278aa9cbd9/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_press_20260915_065800_117435.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_press_20260915_065800_878268.png
+after_capture.summary.title: Bluetooth
+after_capture.summary.app: com.android.car.settings/.common.SubSettingsActivity
+after_capture.summary.page_anchor: {'ref': 'e41', 'text': '', 'desc': 'Back', 'by': 'id', 'value': 'com.android.car.settings:id/car_ui_toolbar_nav_icon_container'}
+after_snapshot.snapshot_id: viewport-20260915-065800-829167
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+✅ UI 操作成功  method=ensure_click
+live_list: list
+live_list_next: snapshot --scope scan --max-scrolls 10
+live_list_hint: 已识别搜索列表：当前回执已有目标就点；没有则立刻 scan 聚合。scan 仍无或仍在搜索/未发现，则刷新（下拉或点刷新）后再 dump/scan
+page_changed: true
+locator: Pair new device
+by: text
+matched_text: Pair new device
+matched_by: text
+matched_value: Pair new device
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-065808-578105
+added: 8  changed: 2  removed: 12
+added refs:
+   e36  ProgressBar    "com.android.car.settings:id/car_ui_toolbar_progress_bar"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_p...
+   e42  ViewGroup      "com.android.car.settings:id/car_ui_scroll_bar"  action=view  →  id=com.android.car.settings:id/car_ui_scroll_bar
+   e43  View           "com.android.car.settings:id/car_ui_scrollbar_track"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e44  View           "com.android.car.settings:id/car_ui_scrollbar_thumb"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e54  TextView       "Available devices"  action=view  →  text=Available devices
+   e57  TextView       "REDMI Watch 6 C216"  action=view  →  text=REDMI Watch 6 C216
+   e61  RowAction      action=enter  label="Vehicle name"  value=MY_CAR  value_ref=e62 assert_on=id=android:id/summary  affordance=icon  alt=e53 xpath=//*[@resource-id='com.android.car.settings.renault.rro:id/begin_frame']//*[@resource-id='android:id/icon']  (row_or_trailing_arrow)  →  text=Vehicle name
+changed refs:
+   e60  TextView       "Pair new device"  action=view  →  text=Pair new device
+removed refs:
+   e43  RelativeLayout "Bluetooth toggle switch"  action=click  →  desc=Bluetooth toggle switch
+   e46  FrameLayout    "android:id/widget_frame"  action=view  →  id=android:id/widget_frame
+   e47  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e51  Switch         "android:id/switch_widget"  action=toggle  checked=true  →  id=android:id/switch_widget
+   e53  TextView       "Paired devices"  action=view  →  text=Paired devices
+   e54  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e57  RowAction      action=enter  label="62888b2b"  value=Connected  value_ref=e58 assert_on=xpath=//*[@resource-id='com.android.car.settings:id/multi_action_preference_first_action_container']//*[@resource-id='android:id/summary']  affordance=icon  alt=e50 xpath=//*[@resource-id='com.android.car.settings:id/multi_action_preference_first_action_container']//*[@resource-id='android:id/icon']  (row_or_trailing_arrow)  →  text=62888b2b
+   e62  RowAction      action=enter  label="Bluetooth"  value=Visible as MY_CAR to other devices  (row_or_trailing_arrow)  →  text=Bluetooth  [B:ambiguous]
+   e64  TextView       "Pair new device"  action=view  →  text=Pair new device
+   e92  ViewGroup      "com.android.car.settings:id/multi_action_preference_second_action_container"  action=view  →  id=com.android.car.settings:id/multi_action_pre...
+   e94  View           "com.android.car.settings:id/multi_action_preference_divider"  action=view  →  id=com.android.car.settings:id/multi_action_pre...
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:d6bec572b97e68bcdcee2202edd9e880601d3d52
+after_signature: sha1:bd905d53d6858c3cf312259d3e1fa48d51815963
+scan_snapshot.snapshot_id: scan-20260915-065804-412472
+scan_snapshot.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+scan_snapshot.scope: scan
+scan_snapshot.query: Pair new device
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-065808-578105
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_18-13164-94278aa9cbd9/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_065807_683501.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_065808_636123.png
+after_capture.live_list: list
+after_capture.live_list_next: snapshot --scope scan --max-scrolls 10
+after_capture.live_list_hint: 已识别搜索列表：当前回执已有目标就点；没有则立刻 scan 聚合。scan 仍无或仍在搜索/未发现，则刷新（下拉或点刷新）后再 dump/scan
+after_capture.summary.title: Vehicle name
+after_capture.summary.app: com.android.car.settings/.common.SubSettingsActivity
+after_capture.summary.page_anchor: {'ref': 'e45', 'text': '', 'desc': 'Back', 'by': 'id', 'value': 'com.android.car.settings:id/car_ui_toolbar_nav_icon_container'}
+after_snapshot.snapshot_id: viewport-20260915-065808-578105
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+
+===== stderr =====

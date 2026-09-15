@@ -1,0 +1,75 @@
+开始执行测试（1 个脚本，1 次运行）…
+
+
+--- tests_scripts/收音机/test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\收音机\test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\test_smoke_test_47_2026-09-11_17-28-34\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/收音机/test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47 ERROR
+
+=================================== ERRORS ====================================
+____________ ERROR at setup of TestSmokeTest47.test_smoke_test_47 _____________
+
+self = <test_smoke_test_47.TestSmokeTest47 object at 0x0000026CA302C6E0>
+at = <AT devices=1 disconnected>
+car = <autocar.drivers.u2.driver.U2Manager object at 0x0000026CA48F36B0>
+config = {'ARXML_PATH': '', 'BT_DEVICE_NAME': '', 'CAMERA_CROP_REGION': None, 'CAMERA_FPS': '', ...}
+
+    @pytest.fixture(autouse=True)
+    def setup(self, at, car, config):
+        self.at = at
+        self.car = car
+        self.page = 收音机Page(car=car, at=at)
+        self._shot_dir = Path(self.at.report_path("screenshots", "smoke_test_47", create=True))
+        # AUTOCAR-PRECONDITIONS:
+        # 步骤0：车机正常启动，处于主页面 —— 车机正常启动为外部硬件前置（设备在线，car 已连接，
+        # 本运行 Preflight 已确认「设备连接成功」）；处于主页面由 reset_environment 统一收尾回到桌面建立。
+        # 步骤1：点击左侧导航栏进入“音乐”页面，点击“AM收音机”（Explored ok:true）
+>       self.page.open_music_am_radio()
+
+tests_scripts\收音机\test_smoke_test_47.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\收音机\收音机_page.py:21: in open_music_am_radio
+    self.car.ensure_click(Loc.AM_RADIO)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: ensure_click 失败: 元素 'AM收音机' (by=text, nth=0) 层次树无匹配，在 1 个候选滚动容器中按主方向查找 + 适用的横向兜底后仍未命中 (direction=up, max_scrolls=10, container_xs=[696], containers=['com.renault.car.launcher:id/media_source_grid_recycler'])
+
+src/autocar/drivers/u2/enhanced.py:2084: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/music_nav' -> (56, 218), display-id=0, XML coords are physical screen coords
+=========================== short test summary info ===========================
+ERROR tests_scripts/收音机/test_smoke_test_47.py::TestSmokeTest47::test_smoke_test_47
+============================== 1 error in 34.58s ==============================
+
+正在生成 Allure 报告…
+Report successfully generated to reports
+
+报告路径：d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\test_smoke_test_47_2026-09-11_17-28-34\reports
+（使用“打开报告”启动 Allure 服务并在浏览器中打开）
+
+执行完成。

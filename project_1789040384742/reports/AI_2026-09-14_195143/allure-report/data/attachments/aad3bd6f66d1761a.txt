@@ -1,0 +1,19 @@
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.factory:conftest.py:122 设备 62888b2b 检测为 Android (adb/u2)
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=probe
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/music_nav' -> (56, 218), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/music_nav' -> (56, 218), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Radio' -> (267, 512), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.media:id/title' -> (696, 261), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.media:id/play_pause_stop' -> (1202, 544), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.image.driver:method_registry.py:463 [compare] element=(76, 76, 3) baseline=(76, 76, 3) similarity=0.820312 threshold=0.9
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 [assert_image] locator=(region,text) similarity=0.820312 threshold=0.9 match=False element=(76, 76) baseline=(76, 76)
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开

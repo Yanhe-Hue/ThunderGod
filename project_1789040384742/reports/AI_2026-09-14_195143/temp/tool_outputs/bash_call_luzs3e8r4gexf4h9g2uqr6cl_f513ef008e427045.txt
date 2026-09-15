@@ -1,0 +1,146 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Cancel
+by: text
+matched_text: Cancel
+matched_by: text
+matched_value: Cancel
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-070038-524353
+added: 104  changed: 0  removed: 9
+added refs:
+    e1  FrameLayout    "com.android.systemui:id/navigation_bar_frame"  action=view  →  id=com.android.systemui:id/navigation_bar_frame  [B:ambiguous]
+    e2  LinearLayout   "com.android.systemui:id/car_top_bar"  action=click  →  id=com.android.systemui:id/car_top_bar
+    e3  FrameLayout    "com.android.systemui:id/navigation_bar_frame"  action=view  →  id=com.android.systemui:id/navigation_bar_frame  [B:ambiguous]
+    e4  ViewGroup      "com.android.systemui:id/status_bar_background"  action=view  →  id=com.android.systemui:id/status_bar_background
+    e5  LinearLayout   "com.android.systemui:id/nav_buttons"  action=view  →  id=com.android.systemui:id/nav_buttons
+    e6  LinearLayout   "com.android.systemui:id/home"  action=click  →  id=com.android.systemui:id/home
+    e7  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+    e8  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+    e9  LinearLayout   "com.android.systemui:id/music_nav"  action=click  →  id=com.android.systemui:id/music_nav
+   e10  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e11  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e12  LinearLayout   "com.android.systemui:id/phone_nav"  action=click  →  id=com.android.systemui:id/phone_nav
+   e13  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e14  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e15  LinearLayout   "com.android.systemui:id/grid_nav"  action=click  →  id=com.android.systemui:id/grid_nav
+   e16  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e17  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e18  LinearLayout   "com.android.systemui:id/car_world"  action=click  selected=true  →  id=com.android.systemui:id/car_world
+   e19  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  selected=true  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e20  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  selected=true  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e21  FrameLayout    "com.android.systemui:id/navigation_bar_frame"  action=view  →  id=com.android.systemui:id/navigation_bar_frame  [B:ambiguous]
+   e22  LinearLayout   "com.android.systemui:id/hvac_bar"  action=click  →  id=com.android.systemui:id/hvac_bar
+   e24  FrameLayout    "com.android.systemui:id/first_left_container"  action=view  →  id=com.android.systemui:id/first_left_container
+   e25  ViewGroup      "com.android.systemui:id/container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e26  LinearLayout   "com.android.systemui:id/system_icons"  action=view  →  id=com.android.systemui:id/system_icons
+   e27  LinearLayout   "com.android.systemui:id/status_icons"  action=view  →  id=com.android.systemui:id/status_icons
+   e28  ViewGroup      "com.android.systemui:id/notification_headsup"  action=view  →  id=com.android.systemui:id/notification_headsup
+   e29  View           "com.android.systemui:id/scrim"  action=view  →  id=com.android.systemui:id/scrim
+   e30  FrameLayout    "com.android.car.ui.utils.FOCUS_DELEGATING_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.FOCUS_DELEGATING_...
+   e31  FrameLayout    "com.android.systemui:id/card_view"  action=click  →  id=com.android.systemui:id/card_view
+   e32  RelativeLayout "com.android.systemui:id/inner_template_view"  action=view  →  id=com.android.systemui:id/inner_template_view
+   e33  RelativeLayout "com.android.systemui:id/notification_body"  action=view  →  id=com.android.systemui:id/notification_body
+   e34  ViewGroup      "com.android.systemui:id/temperature_container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e35  RowAction      action=enter  label="21"  value=°C  value_ref=e36 assert_on=xpath=//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']  (row_or_trailing_arrow)  →  text=21
+   e37  LinearLayout   "com.android.systemui:id/notification_header"  action=view  →  id=com.android.systemui:id/notification_header
+   e40  TextView       "Google apps and services can’t run on this device"  action=view  →  text=Google apps and services can’t run on this...
+   e41  FrameLayout    "com.android.car.settings:id/car_ui_base_layout_content_container"  action=view  →  id=com.android.car.settings:id/car_ui_base_layo...
+   e43  RelativeLayout "com.android.car.settings:id/car_settings_activity_wrapper"  action=view  →  id=com.android.car.settings:id/car_settings_act...
+   e44  FrameLayout    "com.android.car.settings:id/fragment_container_wrapper"  action=view  →  id=com.android.car.settings:id/fragment_contain...
+   e45  ViewGroup      "com.android.car.settings:id/car_ui_toolbar_background"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_b...
+   e46  ProgressBar    "com.android.car.settings:id/car_ui_toolbar_progress_bar"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_p...
+   e47  FrameLayout    "com.android.car.settings:id/fragment_container"  action=view  →  id=com.android.car.settings:id/fragment_container
+   e48  FrameLayout    "android:id/list_container"  action=view  →  id=android:id/list_container
+   e49  FocusArea      "com.android.car.settings:id/settings_car_ui_focus_area"  action=view  →  id=com.android.car.settings:id/settings_car_ui_...
+   e50  FrameLayout    "com.android.car.settings:id/settings_recycler_view"  action=view  →  id=com.android.car.settings:id/settings_recycle...
+   e51  FrameLayout    "com.android.car.settings:id/car_ui_recycler_view"  action=view  →  id=com.android.car.settings:id/car_ui_recycler_...
+   e52  ViewGroup      "com.android.car.settings:id/car_ui_scroll_bar"  action=view  →  id=com.android.car.settings:id/car_ui_scroll_bar
+   e53  View           "com.android.car.settings:id/car_ui_scrollbar_track"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e54  View           "com.android.car.settings:id/car_ui_scrollbar_thumb"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e55  FrameLayout    "Back"  action=click  →  desc=Back
+   e56  RecyclerView   "com.android.car.ui.utils.ROTARY_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+   e57  ViewGroup      "com.android.car.settings:id/multi_action_preference_first_action_container"  action=view  →  id=com.android.car.settings:id/multi_action_pre...  [B:ambiguous]
+   e58  ViewGroup      "com.android.car.settings:id/multi_action_preference_first_action_container"  action=view  →  id=com.android.car.settings:id/multi_action_pre...  [B:ambiguous]
+   e59  ViewGroup      "com.android.car.settings:id/multi_action_preference_first_action_container"  action=view  →  id=com.android.car.settings:id/multi_action_pre...  [B:ambiguous]
+   e60  FrameLayout    "com.android.systemui:id/second_left_container"  action=view  →  id=com.android.systemui:id/second_left_container
+   e61  ViewGroup      "com.android.systemui:id/ventilation_container"  action=view  →  id=com.android.systemui:id/ventilation_container
+   e62  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e63  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e64  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e65  RowAction      action=enter  label="Google Play services"  value=This device isn’t Play Protect certified  value_ref=e39 assert_on=id=com.android.systemui:id/notification_body_title  affordance=app_icon  alt=e38 id=com.android.systemui:id/app_icon  (row_or_trailing_arrow)  →  text=Google Play services
+   e66  ImageView      "com.android.car.settings:id/car_ui_toolbar_nav_icon"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_n...
+   e69  TextView       "客厅的小米电视S55 Mini LED 2026"  action=view  →  text=客厅的小米电视S55 Mini LED 2026
+   e70  TextView       "F-53G"  action=view  →  text=F-53G
+   e71  TextView       "REDMI Watch 6 BC67"  action=view  →  text=REDMI Watch 6 BC67
+   e72  TextView       "msmnile_gvmq for arm64"  action=view  →  text=msmnile_gvmq for arm64
+   e73  TextView       "REDMI Watch 6 B450"  action=view  →  text=REDMI Watch 6 B450
+   e74  FrameLayout    "com.android.car.settings:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_s...
+   e75  LinearLayout   "com.android.car.settings:id/car_ui_toolbar_title_container"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_t...
+   e76  TextView       "Pair new device"  action=view  →  text=Pair new device
+   e77  LinearLayout   "com.android.systemui:id/center_container"  action=view  →  id=com.android.systemui:id/center_container
+   e78  ImageView      "com.android.systemui:id/steering_wheel_button"  action=view  enabled=false  →  id=com.android.systemui:id/steering_wheel_button
+   e79  ImageView      "com.android.systemui:id/steering_wheel_line_view"  action=view  enabled=false  →  id=com.android.systemui:id/steering_wheel_line_...
+   e80  ImageView      "com.android.systemui:id/seat_image_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_image_view  [B:ambiguous]
+   e81  ImageView      "com.android.systemui:id/seat_status_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_status_view  [B:ambiguous]
+   e82  LinearLayout   "com.android.systemui:id/notifications"  action=click  →  id=com.android.systemui:id/notifications
+   e83  ImageView      "com.android.systemui:id/notifications_bar_animation"  action=view  →  id=com.android.systemui:id/notifications_bar_an...
+   e84  ImageView      "com.android.systemui:id/air_conditioner_button"  action=view  enabled=false  →  id=com.android.systemui:id/air_conditioner_button
+   e85  ImageView      "com.android.systemui:id/air_conditioner_line_view"  action=view  enabled=false  →  id=com.android.systemui:id/air_conditioner_line...
+   e86  ImageView      "com.android.systemui:id/seat_image_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_image_view  [B:ambiguous]
+   e87  ImageView      "com.android.systemui:id/seat_status_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_status_view  [B:ambiguous]
+   e88  ImageView      "com.android.systemui:id/window_heating_button"  action=view  enabled=false  →  id=com.android.systemui:id/window_heating_button
+   e89  ImageView      "com.android.systemui:id/window_heating_line_view"  action=view  enabled=false  →  id=com.android.systemui:id/window_heating_line_...
+   e91  FrameLayout    "com.android.systemui:id/first_right_container"  action=view  →  id=com.android.systemui:id/first_right_container
+   e93  LinearLayout   "com.android.systemui:id/external_temperature_view"  action=view  →  id=com.android.systemui:id/external_temperature...
+   e96  FrameLayout    "com.android.systemui:id/second_right_container"  action=view  →  id=com.android.systemui:id/second_right_container
+   e97  ViewGroup      "com.android.systemui:id/container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e99  ViewGroup      "com.android.systemui:id/temperature_container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+  e100  RowAction      action=enter  label="21"  value=°C  value_ref=e104 assert_on=xpath=//*[@resource-id='com.android.systemui:id/second_right_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']  affordance=left_hvac_background  alt=e23 id=com.android.systemui:id/left_hvac_background  (row_or_trailing_arrow)  →  text=21
+  e101  ViewGroup      "com.android.systemui:id/clock"  action=view  →  id=com.android.systemui:id/clock
+  e102  FrameLayout    "com.android.systemui:id/custom_clock_container"  action=view  →  id=com.android.systemui:id/custom_clock_container
+  e103  RowAction      action=enter  label="07:00"  value=--  value_ref=e94 assert_on=id=com.android.systemui:id/external_temperature_value  affordance=dot_divider  alt=e98 id=com.android.systemui:id/dot_divider  (row_or_trailing_arrow)  →  text=07:00
+  e105  FrameLayout    "com.android.systemui:id/dismiss_button_container"  action=view  →  id=com.android.systemui:id/dismiss_button_conta...
+removed refs:
+    e2  LinearLayout   "android:id/parentPanel"  action=view  →  id=android:id/parentPanel
+    e3  LinearLayout   "android:id/topPanel"  action=view  →  id=android:id/topPanel
+    e4  RelativeLayout "android:id/title_template"  action=view  →  id=android:id/title_template
+    e5  FrameLayout    "android:id/customPanel"  action=view  →  id=android:id/customPanel
+    e6  FrameLayout    "android:id/custom"  action=view  →  id=android:id/custom
+    e7  ScrollView     "android:id/buttonPanel"  action=view  →  id=android:id/buttonPanel
+    e8  Button         "Cancel"  action=click  →  text=Cancel
+    e9  TextView       "Pair with REDMI Watch 6 C571?"  action=view  →  text=Pair with REDMI Watch 6 C571?
+   e10  Button         "Pair"  action=click  →  text=Pair
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:f00da994219463341ed090c145c410f60295c13c
+after_signature: sha1:c5de418320594998ad42d48f6592f4bce80a5dc6
+scan_snapshot.snapshot_id: scan-20260915-070034-827420
+scan_snapshot.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+scan_snapshot.scope: scan
+scan_snapshot.query: Cancel
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-070038-524353
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_18-13164-94278aa9cbd9/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_070037_619301.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_070038_577429.png
+after_capture.summary.title: 客厅的小米电视S55 Mini LED 2026
+after_capture.summary.app: com.android.car.settings/.common.SubSettingsActivity
+after_capture.summary.page_anchor: {'ref': 'e55', 'text': '', 'desc': 'Back', 'by': 'id', 'value': 'com.android.car.settings:id/car_ui_toolbar_nav_icon_container'}
+after_snapshot.snapshot_id: viewport-20260915-070038-524353
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_18-13164-94278aa9cbd9
+
+===== stderr =====

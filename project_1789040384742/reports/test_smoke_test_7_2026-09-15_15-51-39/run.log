@@ -1,0 +1,48 @@
+开始执行测试（1 个脚本，1 次运行）…
+
+
+--- tests_scripts/桌面启动器/test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\test_smoke_test_7_2026-09-15_15-51-39\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest7.test_smoke_test_7 _______________________
+AUTOCAR_CASE_ISSUE: expected[0] 指定应用（PlayStore/Android Auto/Devices Manager/Audio/AM Radio）在本车机 Application 页均不存在；实际列表为 Google Assistant/Google Maps/News/Permissions Test/Renault UI Foundations/SMS/Settings/ThunderSoft Engineering Mode
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+WARNING  conftest:conftest.py:125 configured phone connection failed: 设备 '62888b2b' 未连接。请检查: 1) USB 是否连接 2) adb devices 是否可见 3) ATX agent 是否运行
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/grid_nav' -> (56, 450), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7
+============================= 1 failed in 21.14s ==============================
+
+正在生成 Allure 报告…
+Report successfully generated to reports
+
+报告路径：d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\test_smoke_test_7_2026-09-15_15-51-39\reports
+（使用“打开报告”启动 Allure 服务并在浏览器中打开）
+
+执行完成。

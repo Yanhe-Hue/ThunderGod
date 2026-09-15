@@ -1,0 +1,112 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: AM Radio
+by: text
+matched_text: AM Radio
+matched_by: text
+matched_value: AM Radio
+=== AFTER DIFF ===
+snapshot_id: viewport-20260914-205915-294254
+added: 40  changed: 0  removed: 26
+added refs:
+   e33  FrameLayout    "com.renault.car.media:id/media_activity_root"  action=view  →  id=com.renault.car.media:id/media_activity_root
+   e34  FrameLayout    "com.renault.car.media:id/fragment_container"  action=view  →  id=com.renault.car.media:id/fragment_container
+   e35  FrameLayout    "com.renault.car.media:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.media:id/car_ui_base_layout_...
+   e36  FrameLayout    "com.renault.car.media:id/browse_content_area"  action=view  →  id=com.renault.car.media:id/browse_content_area
+   e37  FocusArea      "com.renault.car.media:id/focus_area"  action=view  →  id=com.renault.car.media:id/focus_area
+   e38  FrameLayout    "com.renault.car.media:id/browse_list"  action=click  →  id=com.renault.car.media:id/browse_list
+   e39  FrameLayout    "com.renault.car.media:id/car_ui_recycler_view"  action=view  →  id=com.renault.car.media:id/car_ui_recycler_view
+   e40  LinearLayout   "com.renault.car.media:id/car_ui_toolbar_background"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_back...
+   e41  LinearLayout   "com.renault.car.media:id/car_ui_toolbar_tabs"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_tabs
+   e42  GridView       "com.android.car.ui.utils.ROTARY_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+   e43  FrameLayout    "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_nav_...
+   e44  ViewGroup      "com.renault.car.media:id/item_container"  action=click  selected=true  →  id=com.renault.car.media:id/item_container
+   e45  ImageView      "com.renault.car.media:id/thumbnail"  action=view  selected=true  →  id=com.renault.car.media:id/thumbnail
+   e48  ImageView      "com.renault.car.media:id/car_ui_toolbar_logo"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_logo
+   e51  FrameLayout    "com.renault.car.media:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_sear...
+   e52  LinearLayout   "com.renault.car.media:id/car_ui_toolbar_title_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_titl...
+   e53  TextView       "AM Radio"  action=view  →  text=AM Radio
+   e54  TextView       "1602 kHz"  action=view  selected=true  →  text=1602 kHz
+   e58  TextView       "List"  action=view  →  text=List
+   e67  ViewGroup      "com.renault.car.media:id/minimized_playback_controls"  action=click  →  id=com.renault.car.media:id/minimized_playback_...
+   e68  ProgressBar    "0.0"  action=view  →  text=0.0
+   e69  ViewGroup      "com.renault.car.media:id/minimized_control_bar"  action=view  →  id=com.renault.car.media:id/minimized_control_bar
+   e70  ViewGroup      "com.renault.car.media:id/minimized_control_bar_layout"  action=view  →  id=com.renault.car.media:id/minimized_control_b...
+   e71  View           "com.renault.car.media:id/metadata_background"  action=view  →  id=com.renault.car.media:id/metadata_background
+   e72  ImageView      "com.renault.car.media:id/minimized_control_bar_app_icon"  action=view  →  id=com.renault.car.media:id/minimized_control_b...
+   e73  TextView       "1602 kHz"  action=view  →  text=1602 kHz
+   e76  TextView       "Favourites"  action=view  →  text=Favourites
+   e77  LinearLayout   "com.renault.car.media:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_menu...
+   e78  FrameLayout    "Sound settings"  action=click  →  desc=Sound settings
+   e79  FrameLayout    "com.renault.car.media:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_menu...
+   e80  ImageView      "com.renault.car.media:id/car_ui_toolbar_menu_item_icon"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_menu...
+   e84  FrameLayout    "SOURCES"  action=click  →  desc=SOURCES
+   e85  Button         "SOURCES"  action=view  →  text=SOURCES
+   e91  LinearLayout   "com.renault.car.media:id/minimized_control_buttons_wrapper"  action=view  →  id=com.renault.car.media:id/minimized_control_b...
+   e93  FrameLayout    "com.renault.car.media:id/minimized_control_bar_main_slot"  action=view  →  id=com.renault.car.media:id/minimized_control_b...
+   e94  FrameLayout    "com.renault.car.media:id/play_pause_container"  action=click  →  id=com.renault.car.media:id/play_pause_container
+   e95  ImageView      "com.renault.car.media:id/play_pause_stop"  action=click  →  id=com.renault.car.media:id/play_pause_stop
+  e101  LinearLayout   "com.renault.car.media:id/browse_item_actions_container"  action=view  selected=true  →  id=com.renault.car.media:id/browse_item_actions...
+  e102  ImageView      "com.renault.car.media:id/browse_item_custom_action_divider"  action=view  →  id=com.renault.car.media:id/browse_item_custom_...
+  e103  ImageView      "com.renault.car.media:id/browse_item_custom_action"  action=view  →  id=com.renault.car.media:id/browse_item_custom_...
+removed refs:
+   e32  FrameLayout    "com.renault.car.launcher:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_base_layo...
+   e33  ViewGroup      "com.renault.car.launcher:id/car_ui_toolbar_background"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_b...
+   e34  LinearLayout   "com.renault.car.launcher:id/action_bar_root"  action=view  →  id=com.renault.car.launcher:id/action_bar_root
+   e36  Scroll         "com.renault.car.launcher:id/media_source_grid_recycler"  action=scroll  →  id=com.renault.car.launcher:id/media_source_gri...
+   e39  FrameLayout    "com.renault.car.launcher:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_s...
+   e40  LinearLayout   "com.renault.car.launcher:id/car_ui_toolbar_title_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_t...
+   e41  TextView       "Sources"  action=view  →  text=Sources
+   e43  TextView       "AM Radio"  action=view  selected=true  →  text=AM Radio
+   e44  TextView       "Radio"  action=view  →  text=Radio
+   e46  ImageView      "com.renault.car.launcher:id/icon"  action=view  selected=true  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e47  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e51  TextView       "Android Auto"  action=view  →  text=Android Auto
+   e52  TextView       "USB"  action=view  →  text=USB
+   e55  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e56  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e61  TextView       "Bluetooth audio"  action=view  →  text=Bluetooth audio
+   e64  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e69  TextView       "News"  action=view  →  text=News
+   e71  LinearLayout   "com.renault.car.launcher:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_m...
+   e74  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e75  FrameLayout    "com.renault.car.launcher:id/audio_settings"  action=click  →  id=com.renault.car.launcher:id/audio_settings
+   e76  FrameLayout    "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+   e78  ImageView      "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+   e82  FrameLayout    "com.renault.car.launcher:id/audio_close"  action=click  →  id=com.renault.car.launcher:id/audio_close
+   e83  FrameLayout    "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+   e89  ImageView      "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:aa73f4a83c6e82c1cc288c0d206cd3b47467e0e5
+after_signature: sha1:5cd8b7f203e7f463f9eeeff65c710d3abb0f4db2
+scan_snapshot.snapshot_id: scan-20260914-205912-404227
+scan_snapshot.session: explore-Smoke_Test_51-13164-a8ca9ed16dfd
+scan_snapshot.scope: scan
+scan_snapshot.query: AM Radio
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260914-205915-294254
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_51-13164-a8ca9ed16dfd/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_51-13164-a8ca9ed16dfd
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260914_205914_512636.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260914_205915_342476.png
+after_capture.summary.title: 1602 kHz
+after_capture.summary.app: com.renault.car.media/com.android.car.media.MediaActivity
+after_capture.summary.page_anchor: {'ref': 'e33', 'text': '', 'desc': '', 'by': 'id', 'value': 'com.renault.car.media:id/media_activity_root'}
+after_capture.selected: 1602 kHz
+after_snapshot.snapshot_id: viewport-20260914-205915-294254
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_51-13164-a8ca9ed16dfd
+
+===== stderr =====

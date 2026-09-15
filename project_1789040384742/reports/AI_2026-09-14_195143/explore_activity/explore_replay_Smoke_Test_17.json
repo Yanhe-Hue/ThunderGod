@@ -1,0 +1,3514 @@
+{
+  "schema": 6,
+  "case_id": "Smoke_Test_17",
+  "xlsx": {
+    "precondition": [
+      "步骤0：adb正常连接",
+      "步骤1：点击左侧导航栏“Vehicle ”>\"Settings\" > “Bluetooth”启用“Bluetooth”"
+    ],
+    "steps": [
+      "步骤0：关闭“Bluetooth”配对模式并检查可发现性。",
+      "步骤1：开启“Bluetooth”配对模式并检查可发现性。"
+    ],
+    "expected": [
+      "步骤0：连接的手机找不到车载系统（车载系统不可被发现）",
+      "步骤1：配对模式成功激活",
+      "手机可以找到车载系统（可被发现）"
+    ],
+    "postcondition": [
+      "杀死所有进程，车机恢复初始状态"
+    ]
+  },
+  "replay": {
+    "setup": [
+      {
+        "trace_id": "277dc8aef148",
+        "action_id": "277dc8aef148:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.renault.car.launcher:id/close_button",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060028-572607",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:3f13b019a44c98b496ed9de94e827748e187db19",
+            "summary": {
+              "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+              "title": "Search",
+              "page_anchor": {
+                "ref": "e31",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.google.android.apps.maps:id/action_bar_root"
+              },
+              "top_refs": [
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/action_bar_root"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/snackbar_coordinator_container_view"
+                },
+                {
+                  "ref": "e39",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_container"
+                },
+                {
+                  "ref": "e40",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/one_bar_ellipsizing_container"
+                },
+                {
+                  "ref": "e43",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_mute_container"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_compass_container"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/one_bar_bottom_group"
+                },
+                {
+                  "ref": "e56",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/main_maps_cards_container"
+                },
+                {
+                  "ref": "e61",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/recenter_button_container"
+                },
+                {
+                  "ref": "e81",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_branding_watermark_container"
+                }
+              ]
+            },
+            "element_count": 126,
+            "page": {
+              "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+              "title": "Search",
+              "title_source": "first_text",
+              "title_confidence": "low",
+              "selected": "",
+              "anchors": [
+                "Search",
+                "Re-centre"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060027_807064.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060028_629462.png"
+          }
+        },
+        "execution_index": 0
+      },
+      {
+        "trace_id": "39516257fd10",
+        "action_id": "39516257fd10:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.android.systemui:id/car_world",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060138-740993",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:7884e5b8ae8f33bf820e2cfee4a693a44a7c034a",
+            "summary": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "page_anchor": {
+                "ref": "e41",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e41",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e42",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/action_bar_root"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/mex_view_container"
+                },
+                {
+                  "ref": "e47",
+                  "text": "Live Data",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/data_button"
+                },
+                {
+                  "ref": "e48",
+                  "text": "Coaching",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/coaching_button"
+                },
+                {
+                  "ref": "e49",
+                  "text": "Challenges",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/paddock_button"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                },
+                {
+                  "ref": "e46",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                },
+                {
+                  "ref": "e60",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/apps_grid"
+                },
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                }
+              ]
+            },
+            "element_count": 108,
+            "page": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Drive Mode",
+                "Electric",
+                "Seats"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060137_990486.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060138_791999.png"
+          }
+        },
+        "execution_index": 1
+      },
+      {
+        "trace_id": "2ebc5ee87888",
+        "action_id": "2ebc5ee87888:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Settings",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060148-651183",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:4354612c338be67ea5d3d42fe18db5e21b2cafc2",
+            "summary": {
+              "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+              "title": "Notifications",
+              "page_anchor": {
+                "ref": "e44",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/fragment_container_wrapper"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/fragment_container"
+                },
+                {
+                  "ref": "e61",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e62",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                },
+                {
+                  "ref": "e90",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_menu_items_container"
+                },
+                {
+                  "ref": "e93",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_menu_item_icon_container"
+                },
+                {
+                  "ref": "e63",
+                  "text": "Settings",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                }
+              ]
+            },
+            "element_count": 100,
+            "page": {
+              "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+              "title": "Notifications",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Notifications",
+                "Date and time",
+                "Profiles & accounts"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060147_879608.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060148_699033.png"
+          }
+        },
+        "execution_index": 2
+      },
+      {
+        "trace_id": "38f1db0354db",
+        "action_id": "38f1db0354db:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Back",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060227-212809",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:ab18f504d6655415f9e4bbd0b9acc8a6a262bb89",
+            "summary": {
+              "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+              "title": "This device isn’t Play Protect certified",
+              "page_anchor": {
+                "ref": "e38",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.google.android.gms:id/car_ui_base_layout_content_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e38",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e39",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/action_bar_root"
+                },
+                {
+                  "ref": "e41",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/setup_wizard_layout"
+                },
+                {
+                  "ref": "e54",
+                  "text": "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration.",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/auth_uncertified_notification_description"
+                },
+                {
+                  "ref": "e42",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/application_bar"
+                },
+                {
+                  "ref": "e23",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                },
+                {
+                  "ref": "e43",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_left_container"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/ventilation_container"
+                },
+                {
+                  "ref": "e49",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/center_container"
+                },
+                {
+                  "ref": "e64",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_right_container"
+                }
+              ]
+            },
+            "element_count": 74,
+            "page": {
+              "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+              "title": "This device isn’t Play Protect certified",
+              "title_source": "top_non_clickable",
+              "title_confidence": "medium",
+              "selected": "",
+              "anchors": [
+                "This device isn’t Play Protect certified",
+                "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration."
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060226_495783.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060227_249927.png"
+          }
+        },
+        "execution_index": 3
+      },
+      {
+        "trace_id": "c66e7981623e",
+        "action_id": "c66e7981623e:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Back",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060309-455493",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:1a422f01843ea783c110958879caf3a4f64c992f",
+            "summary": {
+              "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+              "title": "Location",
+              "page_anchor": {
+                "ref": "e44",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/fragment_container_wrapper"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/fragment_container"
+                },
+                {
+                  "ref": "e61",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e62",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                },
+                {
+                  "ref": "e90",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_menu_items_container"
+                },
+                {
+                  "ref": "e93",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_menu_item_icon_container"
+                },
+                {
+                  "ref": "e63",
+                  "text": "Settings",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                }
+              ]
+            },
+            "element_count": 100,
+            "page": {
+              "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+              "title": "Location",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Location",
+                "Privacy",
+                "Apps"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060308_701475.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060309_517718.png"
+          }
+        },
+        "execution_index": 4
+      },
+      {
+        "trace_id": "2219de74a7f3",
+        "action_id": "2219de74a7f3:0",
+        "domain": "ui",
+        "sdk": "car.swipe",
+        "args": {
+          "locator": null,
+          "by": "text",
+          "direction": "up",
+          "duration": 0.5,
+          "fingers": null,
+          "auto_wait": false,
+          "scale": 0.8
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 5
+      },
+      {
+        "trace_id": "bd9bf3549315",
+        "action_id": "bd9bf3549315:0",
+        "domain": "ui",
+        "sdk": "car.swipe",
+        "args": {
+          "locator": null,
+          "by": "text",
+          "direction": "down",
+          "duration": 0.5,
+          "fingers": null,
+          "auto_wait": false,
+          "scale": 0.8
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 6
+      },
+      {
+        "trace_id": "a4e3e0a364a9",
+        "action_id": "a4e3e0a364a9:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Search",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060421-012190",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:a43d1087633311f1da074ee1a3f42f870efb081b",
+            "summary": {
+              "app": "com.android.settings.intelligence/.search.SearchActivity",
+              "title": "Search…",
+              "page_anchor": {
+                "ref": "e40",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e40",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e46",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e39",
+                  "text": "",
+                  "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_internal_recycler_view"
+                },
+                {
+                  "ref": "e47",
+                  "text": "Search…",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_bar"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/main_content"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_focus_area"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/recycler_view"
+                },
+                {
+                  "ref": "e37",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_recycler_view"
+                },
+                {
+                  "ref": "e38",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_background"
+                }
+              ]
+            },
+            "element_count": 76,
+            "page": {
+              "app": "com.android.settings.intelligence/.search.SearchActivity",
+              "title": "Search…",
+              "title_source": "first_text",
+              "title_confidence": "low",
+              "selected": "",
+              "anchors": []
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060420_109712.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060421_050276.png"
+          }
+        },
+        "execution_index": 7
+      },
+      {
+        "trace_id": "16f2c98a517b",
+        "action_id": "16f2c98a517b:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Search…",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 8
+      },
+      {
+        "trace_id": "a5d3ed656323",
+        "action_id": "a5d3ed656323:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Bluetooth",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060450-960182",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:9e52875259f3da4523b7348166af1eef8fd4cad4",
+            "summary": {
+              "app": "com.android.settings.intelligence/.search.SearchActivity",
+              "title": "Bluetooth address",
+              "page_anchor": {
+                "ref": "e58",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e58",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e75",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e57",
+                  "text": "",
+                  "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_internal_recycler_view"
+                },
+                {
+                  "ref": "e76",
+                  "text": "Bluetooth ",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_bar"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/main_content"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_focus_area"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/recycler_view"
+                },
+                {
+                  "ref": "e37",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_recycler_view"
+                },
+                {
+                  "ref": "e38",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_scroll_bar"
+                }
+              ]
+            },
+            "element_count": 190,
+            "page": {
+              "app": "com.android.settings.intelligence/.search.SearchActivity",
+              "title": "Bluetooth address",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Bluetooth address",
+                "Reset Wi-Fi and Bluetooth",
+                "About"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060450_235834.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060451_056580.png"
+          }
+        },
+        "execution_index": 9
+      },
+      {
+        "trace_id": "9d7fd6873fb0",
+        "action_id": "9d7fd6873fb0:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Search",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 10
+      },
+      {
+        "trace_id": "378357ac6a6f",
+        "action_id": "378357ac6a6f:0",
+        "domain": "ui",
+        "sdk": "car.click_position",
+        "args": {
+          "x": 736,
+          "y": 376
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060543-043648",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:3956fbe134a31ad73c24b2b7e455740d20e633a5",
+            "summary": {
+              "app": "com.android.car.settings/.common.CarSettingActivities$ApplicationsDetailsActivity",
+              "title": "Bluetooth address",
+              "page_anchor": {
+                "ref": "e40",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e40",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "android:id/list_container"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_left_container"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/ventilation_container"
+                },
+                {
+                  "ref": "e52",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e61",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/center_container"
+                },
+                {
+                  "ref": "e75",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_right_container"
+                },
+                {
+                  "ref": "e80",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_right_container"
+                }
+              ]
+            },
+            "element_count": 89,
+            "page": {
+              "app": "com.android.car.settings/.common.CarSettingActivities$ApplicationsDetailsActivity",
+              "title": "Bluetooth address",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Bluetooth address",
+                "Reset Wi-Fi and Bluetooth",
+                "Bluetooth"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_click_position_20260915_060542_131025.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_click_position_20260915_060543_088675.png"
+          }
+        },
+        "execution_index": 11
+      },
+      {
+        "trace_id": "605dc8a6025e",
+        "action_id": "605dc8a6025e:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Back",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060609-713168",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:b2d7f0b7ea6dfb812a9ab5f139075e0073502ac8",
+            "summary": {
+              "app": "com.android.settings.intelligence/.search.SearchActivity",
+              "title": "Bluetooth address",
+              "page_anchor": {
+                "ref": "e40",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e40",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e52",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e39",
+                  "text": "",
+                  "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_internal_recycler_view"
+                },
+                {
+                  "ref": "e53",
+                  "text": "Bluetooth ",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_bar"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/main_content"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_focus_area"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/recycler_view"
+                },
+                {
+                  "ref": "e37",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_recycler_view"
+                },
+                {
+                  "ref": "e38",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.settings.intelligence:id/car_ui_toolbar_background"
+                }
+              ]
+            },
+            "element_count": 89,
+            "page": {
+              "app": "com.android.settings.intelligence/.search.SearchActivity",
+              "title": "Bluetooth address",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Bluetooth address",
+                "Reset Wi-Fi and Bluetooth",
+                "Bluetooth"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060609_016543.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060609_756888.png"
+          }
+        },
+        "execution_index": 12
+      },
+      {
+        "trace_id": "529016d1db4c",
+        "action_id": "529016d1db4c:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Back",
+          "by": "desc",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 13
+      },
+      {
+        "trace_id": "c3073d64ddb7",
+        "action_id": "c3073d64ddb7:0",
+        "domain": "ui",
+        "sdk": "car.swipe",
+        "args": {
+          "locator": null,
+          "by": "text",
+          "direction": "down",
+          "duration": 0.5,
+          "fingers": null,
+          "auto_wait": false,
+          "scale": 0.8
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 14
+      },
+      {
+        "trace_id": "5604487159a7",
+        "action_id": "5604487159a7:0",
+        "domain": "ui",
+        "sdk": "car.swipe",
+        "args": {
+          "locator": null,
+          "by": "text",
+          "direction": "down",
+          "duration": 0.5,
+          "fingers": null,
+          "auto_wait": false,
+          "scale": 0.8
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 15
+      },
+      {
+        "trace_id": "ab1e9a770682",
+        "action_id": "ab1e9a770682:0",
+        "domain": "ui",
+        "sdk": "car.swipe",
+        "args": {
+          "locator": null,
+          "by": "text",
+          "direction": "down",
+          "duration": 0.5,
+          "fingers": null,
+          "auto_wait": false,
+          "scale": 0.8
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 16
+      },
+      {
+        "trace_id": "0140c825e317",
+        "action_id": "0140c825e317:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Bluetooth",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-060718-504974",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+            "page_signature": "sha1:462fabe7470b72c94b3f76fed2c50c0c1e5a1054",
+            "summary": {
+              "app": "com.android.car.settings/.common.SubSettingsActivity",
+              "title": "Bluetooth",
+              "page_anchor": {
+                "ref": "e41",
+                "text": "",
+                "desc": "Back",
+                "by": "id",
+                "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e41",
+                  "text": "",
+                  "desc": "Back",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e31",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/fragment_container_wrapper"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/fragment_container"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/multi_action_preference_first_action_container"
+                },
+                {
+                  "ref": "e59",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e60",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                },
+                {
+                  "ref": "e92",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/multi_action_preference_second_action_container"
+                },
+                {
+                  "ref": "e61",
+                  "text": "Bluetooth",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                },
+                {
+                  "ref": "e42",
+                  "text": "",
+                  "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                  "by": "id",
+                  "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                }
+              ]
+            },
+            "element_count": 94,
+            "page": {
+              "app": "com.android.car.settings/.common.SubSettingsActivity",
+              "title": "Bluetooth",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Bluetooth",
+                "Paired devices",
+                "62888b2b"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060717_816988.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060718_555862.png"
+          }
+        },
+        "execution_index": 17
+      }
+    ],
+    "setup_steps": [
+      {
+        "xlsx_index": 1,
+        "xlsx_text": "步骤1：点击左侧导航栏“Vehicle ”>\"Settings\" > “Bluetooth”启用“Bluetooth”",
+        "actions": [
+          {
+            "trace_id": "277dc8aef148",
+            "action_id": "277dc8aef148:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.renault.car.launcher:id/close_button",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060028-572607",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:3f13b019a44c98b496ed9de94e827748e187db19",
+                "summary": {
+                  "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+                  "title": "Search",
+                  "page_anchor": {
+                    "ref": "e31",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.google.android.apps.maps:id/action_bar_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/snackbar_coordinator_container_view"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_container"
+                    },
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/one_bar_ellipsizing_container"
+                    },
+                    {
+                      "ref": "e43",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_mute_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_compass_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/one_bar_bottom_group"
+                    },
+                    {
+                      "ref": "e56",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/main_maps_cards_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/recenter_button_container"
+                    },
+                    {
+                      "ref": "e81",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_branding_watermark_container"
+                    }
+                  ]
+                },
+                "element_count": 126,
+                "page": {
+                  "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+                  "title": "Search",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": [
+                    "Search",
+                    "Re-centre"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060027_807064.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060028_629462.png"
+              }
+            },
+            "execution_index": 0
+          },
+          {
+            "trace_id": "39516257fd10",
+            "action_id": "39516257fd10:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/car_world",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060138-740993",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:7884e5b8ae8f33bf820e2cfee4a693a44a7c034a",
+                "summary": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/mex_view_container"
+                    },
+                    {
+                      "ref": "e47",
+                      "text": "Live Data",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/data_button"
+                    },
+                    {
+                      "ref": "e48",
+                      "text": "Coaching",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/coaching_button"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "Challenges",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/paddock_button"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                    },
+                    {
+                      "ref": "e60",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/apps_grid"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    }
+                  ]
+                },
+                "element_count": 108,
+                "page": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Drive Mode",
+                    "Electric",
+                    "Seats"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060137_990486.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060138_791999.png"
+              }
+            },
+            "execution_index": 1
+          },
+          {
+            "trace_id": "2ebc5ee87888",
+            "action_id": "2ebc5ee87888:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Settings",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060148-651183",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:4354612c338be67ea5d3d42fe18db5e21b2cafc2",
+                "summary": {
+                  "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+                  "title": "Notifications",
+                  "page_anchor": {
+                    "ref": "e44",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container_wrapper"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e62",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e90",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e93",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e63",
+                      "text": "Settings",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                    }
+                  ]
+                },
+                "element_count": 100,
+                "page": {
+                  "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+                  "title": "Notifications",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Notifications",
+                    "Date and time",
+                    "Profiles & accounts"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060147_879608.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060148_699033.png"
+              }
+            },
+            "execution_index": 2
+          },
+          {
+            "trace_id": "38f1db0354db",
+            "action_id": "38f1db0354db:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Back",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060227-212809",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:ab18f504d6655415f9e4bbd0b9acc8a6a262bb89",
+                "summary": {
+                  "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+                  "title": "This device isn’t Play Protect certified",
+                  "page_anchor": {
+                    "ref": "e38",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.google.android.gms:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/setup_wizard_layout"
+                    },
+                    {
+                      "ref": "e54",
+                      "text": "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration.",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/auth_uncertified_notification_description"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/application_bar"
+                    },
+                    {
+                      "ref": "e23",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    },
+                    {
+                      "ref": "e43",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_left_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/ventilation_container"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/center_container"
+                    },
+                    {
+                      "ref": "e64",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_right_container"
+                    }
+                  ]
+                },
+                "element_count": 74,
+                "page": {
+                  "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+                  "title": "This device isn’t Play Protect certified",
+                  "title_source": "top_non_clickable",
+                  "title_confidence": "medium",
+                  "selected": "",
+                  "anchors": [
+                    "This device isn’t Play Protect certified",
+                    "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration."
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060226_495783.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060227_249927.png"
+              }
+            },
+            "execution_index": 3
+          },
+          {
+            "trace_id": "c66e7981623e",
+            "action_id": "c66e7981623e:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Back",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060309-455493",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:1a422f01843ea783c110958879caf3a4f64c992f",
+                "summary": {
+                  "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+                  "title": "Location",
+                  "page_anchor": {
+                    "ref": "e44",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container_wrapper"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e62",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e90",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e93",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e63",
+                      "text": "Settings",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                    }
+                  ]
+                },
+                "element_count": 100,
+                "page": {
+                  "app": "com.android.car.settings/.Settings_Launcher_Homepage",
+                  "title": "Location",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Location",
+                    "Privacy",
+                    "Apps"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060308_701475.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060309_517718.png"
+              }
+            },
+            "execution_index": 4
+          },
+          {
+            "trace_id": "2219de74a7f3",
+            "action_id": "2219de74a7f3:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "up",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 5
+          },
+          {
+            "trace_id": "bd9bf3549315",
+            "action_id": "bd9bf3549315:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 6
+          },
+          {
+            "trace_id": "a4e3e0a364a9",
+            "action_id": "a4e3e0a364a9:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Search",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060421-012190",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:a43d1087633311f1da074ee1a3f42f870efb081b",
+                "summary": {
+                  "app": "com.android.settings.intelligence/.search.SearchActivity",
+                  "title": "Search…",
+                  "page_anchor": {
+                    "ref": "e40",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_internal_recycler_view"
+                    },
+                    {
+                      "ref": "e47",
+                      "text": "Search…",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_bar"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/main_content"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_focus_area"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/recycler_view"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_recycler_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 76,
+                "page": {
+                  "app": "com.android.settings.intelligence/.search.SearchActivity",
+                  "title": "Search…",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": []
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060420_109712.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060421_050276.png"
+              }
+            },
+            "execution_index": 7
+          },
+          {
+            "trace_id": "16f2c98a517b",
+            "action_id": "16f2c98a517b:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Search…",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 8
+          },
+          {
+            "trace_id": "a5d3ed656323",
+            "action_id": "a5d3ed656323:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Bluetooth",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060450-960182",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:9e52875259f3da4523b7348166af1eef8fd4cad4",
+                "summary": {
+                  "app": "com.android.settings.intelligence/.search.SearchActivity",
+                  "title": "Bluetooth address",
+                  "page_anchor": {
+                    "ref": "e58",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e58",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e57",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_internal_recycler_view"
+                    },
+                    {
+                      "ref": "e76",
+                      "text": "Bluetooth ",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_bar"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/main_content"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_focus_area"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/recycler_view"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_recycler_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_scroll_bar"
+                    }
+                  ]
+                },
+                "element_count": 190,
+                "page": {
+                  "app": "com.android.settings.intelligence/.search.SearchActivity",
+                  "title": "Bluetooth address",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth address",
+                    "Reset Wi-Fi and Bluetooth",
+                    "About"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060450_235834.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060451_056580.png"
+              }
+            },
+            "execution_index": 9
+          },
+          {
+            "trace_id": "9d7fd6873fb0",
+            "action_id": "9d7fd6873fb0:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Search",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 10
+          },
+          {
+            "trace_id": "378357ac6a6f",
+            "action_id": "378357ac6a6f:0",
+            "domain": "ui",
+            "sdk": "car.click_position",
+            "args": {
+              "x": 736,
+              "y": 376
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060543-043648",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:3956fbe134a31ad73c24b2b7e455740d20e633a5",
+                "summary": {
+                  "app": "com.android.car.settings/.common.CarSettingActivities$ApplicationsDetailsActivity",
+                  "title": "Bluetooth address",
+                  "page_anchor": {
+                    "ref": "e40",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/list_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_left_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/ventilation_container"
+                    },
+                    {
+                      "ref": "e52",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/center_container"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_right_container"
+                    },
+                    {
+                      "ref": "e80",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_right_container"
+                    }
+                  ]
+                },
+                "element_count": 89,
+                "page": {
+                  "app": "com.android.car.settings/.common.CarSettingActivities$ApplicationsDetailsActivity",
+                  "title": "Bluetooth address",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth address",
+                    "Reset Wi-Fi and Bluetooth",
+                    "Bluetooth"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_click_position_20260915_060542_131025.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_click_position_20260915_060543_088675.png"
+              }
+            },
+            "execution_index": 11
+          },
+          {
+            "trace_id": "605dc8a6025e",
+            "action_id": "605dc8a6025e:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Back",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060609-713168",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:b2d7f0b7ea6dfb812a9ab5f139075e0073502ac8",
+                "summary": {
+                  "app": "com.android.settings.intelligence/.search.SearchActivity",
+                  "title": "Bluetooth address",
+                  "page_anchor": {
+                    "ref": "e40",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e52",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_internal_recycler_view"
+                    },
+                    {
+                      "ref": "e53",
+                      "text": "Bluetooth ",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_search_bar"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/main_content"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_focus_area"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/recycler_view"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_recycler_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.settings.intelligence:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 89,
+                "page": {
+                  "app": "com.android.settings.intelligence/.search.SearchActivity",
+                  "title": "Bluetooth address",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth address",
+                    "Reset Wi-Fi and Bluetooth",
+                    "Bluetooth"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060609_016543.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060609_756888.png"
+              }
+            },
+            "execution_index": 12
+          },
+          {
+            "trace_id": "529016d1db4c",
+            "action_id": "529016d1db4c:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Back",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 13
+          },
+          {
+            "trace_id": "c3073d64ddb7",
+            "action_id": "c3073d64ddb7:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 14
+          },
+          {
+            "trace_id": "5604487159a7",
+            "action_id": "5604487159a7:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 15
+          },
+          {
+            "trace_id": "ab1e9a770682",
+            "action_id": "ab1e9a770682:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 16
+          },
+          {
+            "trace_id": "0140c825e317",
+            "action_id": "0140c825e317:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Bluetooth",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060718-504974",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:462fabe7470b72c94b3f76fed2c50c0c1e5a1054",
+                "summary": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container_wrapper"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/multi_action_preference_first_action_container"
+                    },
+                    {
+                      "ref": "e59",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e60",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e92",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/multi_action_preference_second_action_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "Bluetooth",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                    }
+                  ]
+                },
+                "element_count": 94,
+                "page": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth",
+                    "Paired devices",
+                    "62888b2b"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060717_816988.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060718_555862.png"
+              }
+            },
+            "execution_index": 17
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "步骤0：关闭“Bluetooth”配对模式并检查可发现性。",
+        "actions": [
+          {
+            "trace_id": "197c9e581f3f",
+            "action_id": "197c9e581f3f:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Bluetooth toggle switch",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060801-938121",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:f947448e138a97d18bebeb1ff58b780be08871ac",
+                "summary": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container_wrapper"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container"
+                    },
+                    {
+                      "ref": "e54",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e55",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e56",
+                      "text": "Bluetooth",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_settings_activity_wrapper"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 87,
+                "page": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth",
+                    "Pair new device",
+                    "Bluetooth will turn on to pair"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060801_194388.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060801_981813.png"
+              }
+            },
+            "execution_index": 18
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "4c833d0b675c",
+            "action_id": "4c833d0b675c:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "android:id/switch_widget",
+              "by": "id",
+              "attr": "checked",
+              "expected": false
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "xlsx_index": 1,
+        "xlsx_text": "步骤1：开启“Bluetooth”配对模式并检查可发现性。",
+        "actions": [
+          {
+            "trace_id": "f8bf9065f6b8",
+            "action_id": "f8bf9065f6b8:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Bluetooth toggle switch",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060831-425368",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:8fb4b20758d120360867c5b416d6482124df06a9",
+                "summary": {
+                  "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+                  "title": "This device isn’t Play Protect certified",
+                  "page_anchor": {
+                    "ref": "e31",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.google.android.gms:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/setup_wizard_layout"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration.",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/auth_uncertified_notification_description"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/application_bar"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_left_container"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/ventilation_container"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/center_container"
+                    },
+                    {
+                      "ref": "e57",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_right_container"
+                    }
+                  ]
+                },
+                "element_count": 70,
+                "page": {
+                  "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+                  "title": "This device isn’t Play Protect certified",
+                  "title_source": "top_non_clickable",
+                  "title_confidence": "medium",
+                  "selected": "",
+                  "anchors": [
+                    "This device isn’t Play Protect certified",
+                    "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration."
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060830_677145.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060831_461884.png"
+              }
+            },
+            "execution_index": 20
+          },
+          {
+            "trace_id": "d99998ff2d9d",
+            "action_id": "d99998ff2d9d:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Bluetooth toggle switch",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-060901-206582",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:276ef107b35732160954b76cf25a133cac5108c1",
+                "summary": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container_wrapper"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container"
+                    },
+                    {
+                      "ref": "e54",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e55",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e56",
+                      "text": "Bluetooth",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_settings_activity_wrapper"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 87,
+                "page": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth",
+                    "Pair new device",
+                    "Bluetooth will turn on to pair"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_060900_455647.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_060901_251264.png"
+              }
+            },
+            "execution_index": 21
+          },
+          {
+            "trace_id": "0a1f25e2a3a5",
+            "action_id": "0a1f25e2a3a5:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/car_world",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 23
+          },
+          {
+            "trace_id": "e0b9d9804a65",
+            "action_id": "e0b9d9804a65:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Settings",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 24
+          },
+          {
+            "trace_id": "8e9ae784ef76",
+            "action_id": "8e9ae784ef76:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 25
+          },
+          {
+            "trace_id": "076fa4937643",
+            "action_id": "076fa4937643:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 26
+          },
+          {
+            "trace_id": "4af735fd123c",
+            "action_id": "4af735fd123c:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.8
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 27
+          },
+          {
+            "trace_id": "0b2b89510046",
+            "action_id": "0b2b89510046:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Bluetooth",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-061058-259067",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_17-13164-5453a1d86777/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_17-13164-5453a1d86777",
+                "page_signature": "sha1:3dfe86600c10e1ecb83354b7ab449e7c4d87732d",
+                "summary": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container_wrapper"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/fragment_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/multi_action_preference_first_action_container"
+                    },
+                    {
+                      "ref": "e59",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e60",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e92",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/multi_action_preference_second_action_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "Bluetooth",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.android.car.settings:id/car_ui_internal_recycler_view"
+                    }
+                  ]
+                },
+                "element_count": 94,
+                "page": {
+                  "app": "com.android.car.settings/.common.SubSettingsActivity",
+                  "title": "Bluetooth",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Bluetooth",
+                    "Paired devices",
+                    "62888b2b"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_061057_508452.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_061058_305956.png"
+              }
+            },
+            "execution_index": 28
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "4062281022f5",
+            "action_id": "4062281022f5:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "android:id/switch_widget",
+              "by": "id",
+              "attr": "checked",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      }
+    ],
+    "asserts": [
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤0：连接的手机找不到车载系统（车载系统不可被发现）",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "android:id/switch_widget",
+          "by": "id",
+          "attr": "checked",
+          "expected": false
+        },
+        "from": "4c833d0b675c",
+        "execution_order": {
+          "after_action_id": "197c9e581f3f:0",
+          "after_step_index": 0,
+          "before_action_id": "f8bf9065f6b8:0",
+          "before_step_index": 1
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "4c833d0b675c",
+          "action_id": "4c833d0b675c:0",
+          "locator": "android:id/switch_widget",
+          "by": "id",
+          "attr": "checked",
+          "expected": false
+        }
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤1：配对模式成功激活",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "android:id/switch_widget",
+          "by": "id",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "4062281022f5",
+        "execution_order": {
+          "after_action_id": "d99998ff2d9d:0",
+          "after_step_index": 1,
+          "before_action_id": "0a1f25e2a3a5:0",
+          "before_step_index": 1
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "4062281022f5",
+          "action_id": "4062281022f5:0",
+          "locator": "android:id/switch_widget",
+          "by": "id",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "手机可以找到车载系统（可被发现）",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "android:id/switch_widget",
+          "by": "id",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "fa5483a71655",
+        "execution_order": {
+          "after_action_id": "0b2b89510046:0",
+          "after_step_index": 1
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "fa5483a71655",
+          "action_id": "fa5483a71655:0",
+          "locator": "android:id/switch_widget",
+          "by": "id",
+          "attr": "checked",
+          "expected": true
+        }
+      }
+    ],
+    "teardown": [],
+    "teardown_steps": []
+  },
+  "policies": [],
+  "gaps": [
+    {
+      "reason": "action-failed",
+      "trace_id": "37b2c094d49b",
+      "domain": "ui",
+      "method": "assert_attr",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "car.assert_attr",
+          "args": {
+            "locator": "android:id/switch_widget",
+            "by": "id",
+            "attr": "checked",
+            "expected": true
+          },
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

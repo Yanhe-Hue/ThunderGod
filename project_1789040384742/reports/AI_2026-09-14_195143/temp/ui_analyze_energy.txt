@@ -1,0 +1,51 @@
+✅ 页面分析成功
+目标: 车机 UI（ui）
+来源: 现场采集
+分析质量: 部分完成
+分析后端: 视觉 dump
+模型: OCR+DEKI+AI
+摘要: 视觉识别 31 项：文字 13，图标 18
+图像: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\page_analysis\captures\u2_page_6i9dj0dr.png
+分辨率: 1280x720
+检测统计: 匹配=18  候选=39  过滤=21
+候选语义覆盖: 总数=31  确认=28  推测=3  未解决=0
+识别结果: 图标=18  文字=13  视图=0  线条=0
+snapshot_id: analyze-20260915-000714-075919
+status  顶栏
+    e7 bounds=[58,7][91,37]  desc=Wi-Fi  semantic=confirmed confidence=high source=ui_tree
+   e26 bounds=[1104,4][1133,37]  text=°C
+   e29 bounds=[1177,8][1269,37]  text=00:06
+nav  左侧
+    e4 bounds=[27,75][83,132]  desc=主页  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e9 bounds=[133,133][167,158]  text=40
+    e5 bounds=[28,181][83,253]  desc=音乐  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e2 bounds=[24,301][84,362]  desc=电话  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e10 bounds=[134,337][168,363]  text=10
+   e12 bounds=[148,370][169,396]  text=5
+   e13 bounds=[148,405][168,430]  text=0
+    e3 bounds=[25,422][85,479]  desc=应用列表  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e11 bounds=[142,438][169,464]  text=-5
+    e1 bounds=[2,507][110,627]  desc=carnav  semantic=confirmed confidence=high source=ui_tree
+content  主区
+   e30 bounds=[1193,68][1235,109]  desc=caruitoolbarmenuitem  semantic=confirmed confidence=high source=ui_tree
+   e18 bounds=[518,542][561,571]  text=-20
+   e22 bounds=[854,542][898,571]  text=-10
+   e28 bounds=[1174,543][1201,571]  text=-1
+dock  底栏
+    e6 bounds=[28,649][85,700]  text=21°
+    e8 bounds=[85,651][108,671]  desc=温度单位  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e14 bounds=[150,650][231,694]  desc=风扇关闭  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e15 bounds=[324,645][371,698]  desc=steeringwheel  semantic=confirmed confidence=high source=ui_tree
+   e16 bounds=[466,646][522,696]  desc=座椅  semantic=confirmed confidence=high source=ui_tree
+   e17 bounds=[503,699][519,713]  desc=向上箭头  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e19 bounds=[602,651][676,717]  desc=空调制冷  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e20 bounds=[759,647][814,696]  desc=座椅  semantic=confirmed confidence=high source=ui_tree
+   e21 bounds=[794,699][811,713]  desc=向上箭头  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e23 bounds=[905,653][959,690]  desc=后窗除霜  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e24 bounds=[922,698][941,712]  desc=向上箭头  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e25 bounds=[1065,647][1116,695]  desc=座椅加热  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e27 bounds=[1173,651][1225,698]  text=21
+   e31 bounds=[1228,651][1251,673]  text=°C
+说明: 用 snapshot ref --ref eN --snapshot analyze-20260915-000714-075919 查看定位信息和操作建议；eN 仅适用于对应快照，实际点击路径由 ref 解析结果确定；按屏幕区域分组，方便核对是否漏检
+统计: 缓存=未命中  总计=14390ms  检测=6338ms  补名=8052ms
+提示: 已将 20 个候选重新归类为文字、线条或非页面对象

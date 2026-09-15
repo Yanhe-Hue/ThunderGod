@@ -1,0 +1,1 @@
+{"9a9078fcd4b95ec4150b1ad74a2a09d5":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"87caef0806bc43fb","status":"failed","statusDetails":"AssertionError: Application 页显示 Google Assistant","time":{"start":1789459146346,"stop":1789459150422,"duration":4076}}]}}

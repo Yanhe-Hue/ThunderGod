@@ -1,0 +1,89 @@
+开始执行测试（1 个脚本，1 次运行）…
+
+
+--- tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\test_smoke_test_9_2026-09-15_16-14-22\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest9.test_smoke_test_9 _______________________
+
+self = <test_smoke_test_9.TestSmokeTest9 object at 0x000002A61114A930>
+
+    @allure.story("系统UI - 谷歌助手小部件生命周期")
+    @allure.title("系统UI - 谷歌助手小部件生命周期")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_9(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面', '步骤1：点击“Goolge助理”小部件将它添加在屏幕中，退出编辑界面并检查', '步骤2：点击首页的“Goolge助理”小部件', '步骤3：从屏幕右侧向左滑动，打开窗口小部件编辑界面，将“Goolge助理”小部件更换成其他小部件，退出编辑界面并检查'] | 预期: 步骤1：“Goolge助理”小部件立即添加到主页面; 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部; 步骤3：“Goolge助理”小部件从主页移除"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 从屏幕右侧向左滑动，打开窗口小部件编辑界面"):
+            self.page.swipe_open_widget_editor()
+    
+        with allure.step("步骤1: 点击 Google 助理小部件添加至主页面，并退出编辑界面"):
+            # add_google_assistant_widget 语义：等待编辑面板渲染 → 点击关闭按钮退出编辑界面
+            # （编辑器选项列表实测不含 Google Assistant，首页默认已含该小部件，无需点击添加选项）。
+            # 仅调用一次即可完成打开→退出闭环；重复调用会在面板已关闭后再次断言
+            # "Edit widgets" 而失败（历史双调用遗留已移除）。
+            self.page.add_google_assistant_widget()
+            time.sleep(2)  # 等待小部件添加动画完成
+        # AUTOCAR-EXPECTED[0]: 步骤1：“Goolge助理”小部件立即添加到主页面
+        with allure.step("验证[0]: 步骤1：“Goolge助理”小部件立即添加到主页面"):
+            # 首页小部件区域可能不在当前可视区，先 scroll_to_element 上下滚动确保
+            # Google Assistant 小部件进入可视区，再断言其存在（避免固定滑动距离波动，
+            # 同 assert_widget_option 已验证模式）。
+>           self.page.scroll_to_google_assistant()
+
+tests_scripts\桌面启动器\test_smoke_test_9.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\桌面启动器\桌面启动器_page.py:45: in scroll_to_google_assistant
+    self.car.scroll_to_element(Loc.GOOGLE_ASSISTANT, by="text")
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: scroll_to_element 失败: 元素 'Google Assistant' (by=text) 在 1 个候选容器中 按主方向查找 + 适用的横向兜底后仍未找到 (direction=up, max_scrolls=10, container_xs=[1400])
+
+src/autocar/drivers/u2/enhanced.py:2203: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+WARNING  conftest:conftest.py:125 configured phone connection failed: 设备 '62888b2b' 未连接。请检查: 1) USB 是否连接 2) adb devices 是否可见 3) ATX agent 是否运行
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9
+============================= 1 failed in 29.24s ==============================
+
+正在生成 Allure 报告…
+Report successfully generated to reports
+
+报告路径：d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\test_smoke_test_9_2026-09-15_16-14-22\reports
+（使用“打开报告”启动 Allure 服务并在浏览器中打开）
+
+执行完成。

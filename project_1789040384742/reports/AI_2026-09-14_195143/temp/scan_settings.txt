@@ -1,0 +1,26 @@
+📸 snapshot: C:\Users\TS\AppData\Roaming\AutoCar\projects\project_1789040384742\snapshots\explore-Smoke_Test_17-13164-5453a1d86777\latest.yml  (139 elements, session=explore-Smoke_Test_17-13164-5453a1d86777, scope=scan, snapshot_id=scan-20260915-060105-625801)
+scan ref 仅在具有稳定/目标视口唯一 locator 时可由 click 滚动查找；coordinate-only ref 不会自动回到旧视口，仅在当前页面签名匹配时允许坐标点击；瞬时弹窗或面板的子节点表示可定位，是否已展开结合截图或动作后证据判断。
+screen: 1280x720
+packages: com.google.android.apps.maps (fg) | com.android.systemui | com.renault.car.launcher
+page: title="Search"  app=com.google.android.apps.maps
+app
+  nav
+    tab  Search  click  loc=desc=Search  ref=e74
+    tab  North up view  click  loc=desc=North up view  ref=e61
+    tab  Re-centre  click  loc=text=Re-centre  ref=e75
+  content
+    unlabeled  main_suggested_destinations_collapse  click  loc=id=com.google.android.apps.maps:id/main_suggested_destinations_collapse  ref=e82
+    row  Account  enter  loc=desc=Account  ref=e95
+    row  Account avatar  enter  loc=text=Account avatar  ref=e96
+    unlabeled  map_buttons_view_settings_button  click  loc=id=com.google.android.apps.maps:id/map_buttons_view_settings_button  ref=e60
+    unlabeled  map_buttons_view_zoom_in  click  loc=id=com.google.android.apps.maps:id/map_buttons_view_zoom_in  ref=e58
+    unlabeled  map_buttons_view_zoom_out  click  loc=id=com.google.android.apps.maps:id/map_buttons_view_zoom_out  ref=e59
+    unlabeled  recenter_button  click  loc=id=com.google.android.apps.maps:id/recenter_button  ref=e73
+overlay
+    unlabeled  com.android.systemui  click  selected  loc=id=com.android.systemui:id/home  ref=e6
+    unlabeled  com.renault.car.launcher  click  loc=id=com.renault.car.launcher:id/shortcut_start_button  ref=e113
+chrome
+  status  clock=06:00  ref=e134
+  dock
+    unlabeled  hvac_bar  click  loc=id=com.android.systemui:id/hvac_bar  ref=e22
+folded: 122 wrappers  shown=17/139

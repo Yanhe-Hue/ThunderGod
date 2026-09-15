@@ -1,0 +1,1 @@
+{"uuid": "26d2d27a-de72-4159-a3f7-5e4c6f684994", "children": ["c9cdb846-b192-4e20-be73-69fecfe8cea7"], "befores": [{"name": "configured_phone2", "status": "passed", "start": 1789430594910, "stop": 1789430594911}], "afters": [{"name": "configured_phone2::0", "status": "passed", "start": 1789430600569, "stop": 1789430600569}], "start": 1789430594910, "stop": 1789430600569}

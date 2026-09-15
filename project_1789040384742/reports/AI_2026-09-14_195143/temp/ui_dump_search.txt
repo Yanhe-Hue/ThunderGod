@@ -1,0 +1,54 @@
+snapshot_id: dump-20260915-060439-117623
+snapshot: C:\Users\TS\AppData\Roaming\AutoCar\projects\project_1789040384742\snapshots\explore-Smoke_Test_17-13164-5453a1d86777\latest.yml  (196 elements, session=explore-Smoke_Test_17-13164-5453a1d86777, scope=viewport, snapshot_id=dump-20260915-060439-117623)
+page_source: D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/screenshots/dump_page_source_20260915_060439_219117.xml  (xml)
+screen: 1280x720
+packages: com.google.android.apps.automotive.inputmethod (fg) | com.android.systemui | com.android.settings.intelligence
+page: title="1"  app=com.google.android.apps.automotive.inputmethod
+app
+  nav
+    tab  Use voice typing  click  loc=desc=Use voice typing  ref=e57
+    tab  Speech to text  click  loc=desc=Speech to text  ref=e81
+    tab  q  click  loc=desc=q  ref=e60
+    tab  w  click  loc=desc=w  ref=e92
+    tab  a  click  loc=desc=a  ref=e61
+    tab  s  click  loc=desc=s  ref=e97
+    tab  Shift  click  loc=desc=Shift  ref=e62
+    tab  z  click  loc=desc=z  ref=e98
+    tab  Hide keyboard  click  loc=desc=Hide keyboard  ref=e64
+    tab  Symbol keyboard  click  loc=desc=Symbol keyboard  ref=e95
+  content
+    row  Bluetooth  value=Bluetooth  enter  loc=desc=Bluetooth  ref=e110
+    row  e  value=3  enter  loc=desc=e  ref=e105
+    row  r  value=4  enter  loc=desc=r  ref=e118
+    row  t  value=5  enter  loc=desc=t  ref=e130
+    row  y  value=6  enter  loc=desc=y  ref=e140
+    row  u  value=7  enter  loc=desc=u  ref=e149
+    row  i  value=8  enter  loc=desc=i  ref=e158
+    row  o  value=9  enter  loc=desc=o  ref=e170
+    row  p  value=0  enter  loc=desc=p  ref=e185
+    row  d  value=d  enter  loc=desc=d  ref=e112
+    row  f  value=f  enter  loc=desc=f  ref=e123
+    row  g  value=g  enter  loc=desc=g  ref=e134
+    row  h  value=h  enter  loc=desc=h  ref=e142
+    row  j  value=j  enter  loc=desc=j  ref=e151
+    row  k  value=k  enter  loc=desc=k  ref=e162
+    row  l  value=l  enter  loc=desc=l  ref=e176
+    row  x  value=x  enter  loc=desc=x  ref=e113
+    row  c  value=c  enter  loc=desc=c  ref=e124
+    row  v  value=v  enter  loc=desc=v  ref=e135
+    row  b  value=b  enter  loc=desc=b  ref=e143
+    row  n  value=n  enter  loc=desc=n  ref=e152
+    row  m  value=m  enter  loc=desc=m  ref=e163
+    row  Delete  enter  loc=desc=Delete  ref=e178
+    row  Next language  enter  loc=desc=Next language  ref=e107
+    row  Space  value=English  enter  loc=desc=Space  ref=e122
+    row  Switch to corresponding handwriting keyboard  enter  loc=desc=Switch to corresponding handwriting keyboard  ref=e160
+    row  Search  enter  loc=desc=Search  ref=e172
+overlay
+    unlabeled  com.android.systemui  click  loc=id=com.android.systemui:id/home  ref=e6
+    link  Back  click  loc=desc=Back  ref=e68  com.android.settings.intelligence
+chrome
+  status  clock=06:04  ref=e192
+  dock
+    unlabeled  hvac_bar  click  loc=id=com.android.systemui:id/hvac_bar  ref=e22
+folded: 153 wrappers  shown=43/196

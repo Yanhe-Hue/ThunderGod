@@ -1,0 +1,117 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Favourites
+by: text
+matched_text: Favourites
+matched_by: text
+matched_value: Favourites
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-075631-710860
+added: 19  changed: 6  removed: 46
+added refs:
+   e28  ViewGroup      "com.android.systemui:id/notification_headsup"  action=view  →  id=com.android.systemui:id/notification_headsup
+   e29  View           "com.android.systemui:id/scrim"  action=view  →  id=com.android.systemui:id/scrim
+   e30  FrameLayout    "com.android.car.ui.utils.FOCUS_DELEGATING_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.FOCUS_DELEGATING_...
+   e31  FrameLayout    "com.android.systemui:id/card_view"  action=click  →  id=com.android.systemui:id/card_view
+   e32  RelativeLayout "com.android.systemui:id/inner_template_view"  action=view  →  id=com.android.systemui:id/inner_template_view
+   e33  RelativeLayout "com.android.systemui:id/notification_body"  action=view  →  id=com.android.systemui:id/notification_body
+   e37  LinearLayout   "com.android.systemui:id/notification_header"  action=view  →  id=com.android.systemui:id/notification_header
+   e40  TextView       "Google apps and services can’t run on this device"  action=view  →  text=Google apps and services can’t run on this...
+   e41  FrameLayout    "com.google.android.gms:id/car_ui_base_layout_content_container"  action=view  →  id=com.google.android.gms:id/car_ui_base_layout...
+   e42  LinearLayout   "com.google.android.gms:id/action_bar_root"  action=view  →  id=com.google.android.gms:id/action_bar_root
+   e44  LinearLayout   "com.google.android.gms:id/setup_wizard_layout"  action=view  →  id=com.google.android.gms:id/setup_wizard_layout
+   e45  FrameLayout    "com.google.android.gms:id/application_bar"  action=view  →  id=com.google.android.gms:id/application_bar
+   e48  RowAction      action=enter  label="Google Play services"  value=This device isn’t Play Protect certified  value_ref=e39 assert_on=id=com.android.systemui:id/notification_body_title  affordance=app_icon  alt=e38 id=com.android.systemui:id/app_icon  (row_or_trailing_arrow)  →  text=Google Play services
+   e58  RowAction      action=enter  label="This device isn’t Play Protect certified"  value=Users who purchased this device:
+The device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.
+
+Unlicensed manufacturers:
+You need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.
+
+Licensed manufacturers:
+To use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.
+
+Custom ROM users:
+To use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration.  value_ref=e57 assert_on=id=com.google.android.gms:id/auth_uncertified_notification_description  affordance=more  alt=e51 desc=Warning  (row_or_trailing_arrow)  →  text=This device isn’t Play Protect certified  [C:coord]
+   e82  FrameLayout    "com.android.systemui:id/dismiss_button_container"  action=view  →  id=com.android.systemui:id/dismiss_button_conta...
+changed refs:
+   e12  LinearLayout   "com.android.systemui:id/phone_nav"  action=click  →  id=com.android.systemui:id/phone_nav
+   e13  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e14  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e15  LinearLayout   "com.android.systemui:id/grid_nav"  action=click  selected=true  →  id=com.android.systemui:id/grid_nav
+   e16  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  selected=true  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e17  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  selected=true  →  xpath=//*[@resource-id='com.android.systemui:id...
+removed refs:
+   e31  FrameLayout    "com.renault.car.dialer:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_base_layout...
+   e33  FrameLayout    "com.renault.car.dialer:id/fragment_container"  action=view  →  id=com.renault.car.dialer:id/fragment_container
+   e34  FrameLayout    "com.renault.car.dialer:id/loading_frame_layout"  action=view  →  id=com.renault.car.dialer:id/loading_frame_layout
+   e35  FocusArea      "com.renault.car.dialer:id/loading_focus_area"  action=view  →  id=com.renault.car.dialer:id/loading_focus_area
+   e36  FrameLayout    "com.renault.car.dialer:id/list_view"  action=view  →  id=com.renault.car.dialer:id/list_view
+   e37  FrameLayout    "com.renault.car.dialer:id/car_ui_recycler_view"  action=view  →  id=com.renault.car.dialer:id/car_ui_recycler_view
+   e38  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_background"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_bac...
+   e39  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_tabs"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_tabs
+   e40  Scroll         "com.android.car.ui.utils.ROTARY_CONTAINER"  action=scroll  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+   e41  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_nav_icon_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_nav...
+   e42  TextView       "Older"  action=view  →  text=Older
+   e43  View           "com.renault.car.dialer:id/call_action_id"  action=click  →  id=com.renault.car.dialer:id/call_action_id  [B:ambiguous]
+   e44  View           "com.renault.car.dialer:id/call_action_id"  action=click  →  id=com.renault.car.dialer:id/call_action_id  [B:ambiguous]
+   e45  View           "com.renault.car.dialer:id/call_action_id"  action=click  →  id=com.renault.car.dialer:id/call_action_id  [B:ambiguous]
+   e51  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_logo"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_logo
+   e54  TextView       "Recent"  action=view  →  text=Recent
+   e55  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_sea...
+   e56  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_title_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_tit...
+   e57  TextView       "62888b2b"  action=view  →  text=62888b2b
+   e58  RowAction      action=enter  label="15649113591"  value=7 August  affordance=icon  (row_or_trailing_arrow)  →  text=15649113591
+   e59  View           "com.renault.car.dialer:id/call_type_icons"  action=view  →  id=com.renault.car.dialer:id/call_type_icons  [B:ambiguous]
+   e60  RowAction      action=enter  label="10086"  value=(5)  affordance=icon  (row_or_trailing_arrow)  →  text=10086
+   e61  View           "com.renault.car.dialer:id/call_type_icons"  action=view  →  id=com.renault.car.dialer:id/call_type_icons  [B:ambiguous]
+   e62  RowAction      action=enter  label="18611"  value=(44)  affordance=icon  (row_or_trailing_arrow)  →  text=18611
+   e63  View           "com.renault.car.dialer:id/call_type_icons"  action=view  →  id=com.renault.car.dialer:id/call_type_icons  [B:ambiguous]
+   e70  TextView       "7 August"  action=view  →  text=7 August  [B:ambiguous]
+   e71  TextView       "30 May 2025"  action=view  →  text=30 May 2025
+   e74  TextView       "Contacts"  action=view  →  text=Contacts
+   e81  TextView       "Favourites"  action=view  →  text=Favourites
+   e84  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_men...
+   e85  FrameLayout    "Search"  action=click  →  desc=Search
+   e86  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+   e89  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+   e93  TextView       "Dial Pad"  action=view  →  text=Dial Pad
+   e94  FrameLayout    "com.renault.car.dialer:id/menu_item_device_manager"  action=click  →  id=com.renault.car.dialer:id/menu_item_device_m...
+   e95  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+   e97  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+  e101  FrameLayout    "Settings"  action=click  →  desc=Settings
+  e102  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+  e108  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:150b388a052e4a0236aadcd6a5dcb5094d6162fd
+after_signature: sha1:c16797fb07b4b8bf708a6d645310d2038774a3c7
+scan_snapshot.snapshot_id: scan-20260915-075628-941208
+scan_snapshot.session: explore-Smoke_Test_21-13164-297bd831aaba
+scan_snapshot.scope: scan
+scan_snapshot.query: Favourites
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-075631-710860
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_21-13164-297bd831aaba/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_21-13164-297bd831aaba
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_075630_982075.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_075631_751151.png
+after_capture.summary.title: This device isn’t Play Protect certified
+after_capture.summary.app: com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity
+after_capture.summary.page_anchor: {'ref': 'e41', 'text': '', 'desc': '', 'by': 'id', 'value': 'com.google.android.gms:id/car_ui_base_layout_content_container'}
+after_snapshot.snapshot_id: viewport-20260915-075631-710860
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_21-13164-297bd831aaba
+
+===== stderr =====

@@ -1,0 +1,6 @@
+{
+  "probe_unit": null,
+  "probe_limit": null,
+  "mode": "test_script",
+  "note": "按测试脚本执行；业务完整性仍以证据和执行契约为准。"
+}

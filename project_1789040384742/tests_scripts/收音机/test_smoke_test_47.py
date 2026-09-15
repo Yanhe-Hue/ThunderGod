@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# AUTOCAR-REUSE-FINGERPRINT: {"case":"0fa8c579eb9fdab7f1498d9a7e89d81bd5913d9e2e10e0d3c96bb2a00fa4cc71","combined":"aecc209f8e0ca01d00055cea070f926dd2a47ea12fc4ee602d710773792cdf55","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"efdb2c9585f0229c954e9685a54cd493be59a49e07171cdd7285c39b6d4f9315","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","click_position","ensure_click","exists","screenshot","swipe"]},"version":2}
+# AUTOCAR-REUSE-FINGERPRINT: {"case":"6bc2c133dadf111a2bf71af4ce61716e944cf4fae4c6dbe6f9b93b5fb667997b","combined":"6a5e1dbc150af28010e054aaad3b9d024d97434848bfd317b290ea5d32db0a7f","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"efdb2c9585f0229c954e9685a54cd493be59a49e07171cdd7285c39b6d4f9315","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","click_position","ensure_click","exists","screenshot","swipe"]},"version":2}
 
 from pathlib import Path
 
@@ -47,10 +47,13 @@ class TestSmokeTest47:
         # 步骤1：检查UI / 步骤2：检查默认频率显示 —— 均为页面状态检查（Explored performed=false），
         # 导航已在 setup 完成，检查内容由下方 final_assertions 业务断言覆盖。
 
-        # AUTOCAR-EXPECTED[0]: 步骤1：页面正确显示"列表"和"收藏"标签页
-        with allure.step("验证[0]: 步骤1：页面正确显示\"列表\"和\"收藏\"标签页"):
-            self.car.assert_exists(Loc.TAB_LIST)
-            self.car.assert_exists(Loc.TAB_FAVORITE)
+        # AUTOCAR-EXPECTED[0]: 步骤1：页面正确显示"List"和"Favourites"标签页
+        # 设备界面为英文（来源瓦片实测显示 "AM Radio"，见 Smoke_Test_49 Explored），
+        # 标签页实测文案为 "List"/"Favourites"（Smoke_Test_51 回放 by=text，界面英文），
+        # 与原案 expected "List"/"Favourites" 一致。
+        with allure.step("验证[0]: 步骤1：页面正确显示\"List\"和\"Favourites\"标签页"):
+            self.car.assert_exists(Loc.TAB_LIST_EN)
+            self.car.assert_exists(Loc.TAB_FAVOURITES)
 
         # AUTOCAR-EXPECTED[1]: 步骤2：默认频率（如531 kHz）显示在右下角
         with allure.step("验证[1]: 步骤2：默认频率（如531 kHz）显示在右下角"):

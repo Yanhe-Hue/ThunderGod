@@ -47,17 +47,17 @@ class TestSmokeTest4:
             self.page.click_maps_search_box()
             time.sleep(3)  # 等待搜索下拉菜单出现
         # AUTOCAR-EXPECTED[0]: 步骤1：出现搜索下拉菜单：左侧显示“最近”“类别”“已保存”
-        with allure.step("验证[0]: 步骤1：出现搜索下拉菜单：左侧显示“最近”“类别”“已保存”"):
-            self.car.assert_text(Loc.MAPS_DROPDOWN_RECENT, "最近", by="text")
-            self.car.assert_text(Loc.MAPS_DROPDOWN_CATEGORY, "类别", by="text")
-            self.car.assert_text(Loc.MAPS_DROPDOWN_SAVED, "已保存", by="text")
+        with allure.step("验证[0]: 步骤1：出现搜索下拉菜单：左侧显示“Recent”“Categories”“Saved”"):
+            self.car.assert_text(Loc.MAPS_DROPDOWN_RECENT, "Recent", by="text")
+            self.car.assert_text(Loc.MAPS_DROPDOWN_CATEGORY, "Categories", by="text")
+            self.car.assert_text(Loc.MAPS_DROPDOWN_SAVED, "Saved", by="text")
 
         with allure.step("步骤2: 再次点击搜索栏"):
             self.page.click_keyboard_search_edit()
             time.sleep(3)
         # AUTOCAR-EXPECTED[1]: 步骤2：出现屏幕键盘
         with allure.step("验证[1]: 步骤2：出现屏幕键盘"):
-            self.car.assert_exists(Loc.MAPS_KEYBOARD_SPACE, by="desc", expected=True)
+            self.car.assert_exists(Loc.MAPS_KEYBOARD, by="id", expected=True, timeout=10)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,169 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Back
+by: desc
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-074611-571836
+added: 39  changed: 2  removed: 97
+added refs:
+   e38  ViewGroup      "com.renault.car.dialer:id/car_ui_scroll_bar"  action=view  →  id=com.renault.car.dialer:id/car_ui_scroll_bar
+   e40  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_tabs"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_tabs
+   e41  View           "com.renault.car.dialer:id/car_ui_scrollbar_track"  action=view  →  id=com.renault.car.dialer:id/car_ui_scrollbar_t...
+   e42  View           "com.renault.car.dialer:id/car_ui_scrollbar_thumb"  action=view  →  id=com.renault.car.dialer:id/car_ui_scrollbar_t...
+   e45  TextView       "Older"  action=view  →  text=Older
+   e46  View           "com.renault.car.dialer:id/call_action_id"  action=click  →  id=com.renault.car.dialer:id/call_action_id  [B:ambiguous]
+   e47  View           "com.renault.car.dialer:id/call_action_id"  action=click  →  id=com.renault.car.dialer:id/call_action_id  [B:ambiguous]
+   e48  View           "com.renault.car.dialer:id/call_action_id"  action=click  →  id=com.renault.car.dialer:id/call_action_id  [B:ambiguous]
+   e54  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_logo"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_logo
+   e57  TextView       "Recent"  action=view  →  text=Recent
+   e59  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_title_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_tit...
+   e60  TextView       "62888b2b"  action=view  →  text=62888b2b
+   e61  RowAction      action=enter  label="15649113591"  value=7 August  affordance=icon  (row_or_trailing_arrow)  →  text=15649113591
+   e62  View           "com.renault.car.dialer:id/call_type_icons"  action=view  →  id=com.renault.car.dialer:id/call_type_icons  [B:ambiguous]
+   e63  RowAction      action=enter  label="10086"  value=(5)  affordance=icon  (row_or_trailing_arrow)  →  text=10086
+   e64  View           "com.renault.car.dialer:id/call_type_icons"  action=view  →  id=com.renault.car.dialer:id/call_type_icons  [B:ambiguous]
+   e65  RowAction      action=enter  label="18611"  value=(44)  affordance=icon  (row_or_trailing_arrow)  →  text=18611
+   e66  View           "com.renault.car.dialer:id/call_type_icons"  action=view  →  id=com.renault.car.dialer:id/call_type_icons  [B:ambiguous]
+   e73  TextView       "7 August"  action=view  →  text=7 August  [B:ambiguous]
+   e74  TextView       "30 May 2025"  action=view  →  text=30 May 2025
+   e77  TextView       "Contacts"  action=view  →  text=Contacts
+   e84  TextView       "Favourites"  action=view  →  text=Favourites
+   e87  LinearLayout   "com.renault.car.dialer:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_men...
+   e88  FrameLayout    "Search"  action=click  →  desc=Search
+   e89  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+   e92  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+   e96  TextView       "Dial Pad"  action=view  →  text=Dial Pad
+   e97  FrameLayout    "com.renault.car.dialer:id/menu_item_device_manager"  action=click  →  id=com.renault.car.dialer:id/menu_item_device_m...
+   e98  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+  e100  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+  e104  FrameLayout    "Settings"  action=click  →  desc=Settings
+  e105  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+  e111  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+changed refs:
+   e43  Scroll         "com.android.car.ui.utils.ROTARY_CONTAINER"  action=scroll  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+   e44  FrameLayout    "com.renault.car.dialer:id/car_ui_toolbar_nav_icon_container"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_nav...
+removed refs:
+   e32  FrameLayout    "android:id/content"  action=view  →  xpath=//*[@resource-id='com.renault.car.dialer:...
+   e40  LinearLayout   "android:id/parentPanel"  action=view  →  id=android:id/parentPanel
+   e41  FrameLayout    "android:id/inputArea"  action=view  →  id=android:id/inputArea
+   e42  FrameLayout    "com.google.android.apps.automotive.inputmethod:id/input_view"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e43  FrameLayout    "com.google.android.apps.automotive.inputmethod:id/keyboard_area"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e44  LinearLayout   "com.google.android.apps.automotive.inputmethod:id/keyboard_holder"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e45  FrameLayout    "com.google.android.apps.automotive.inputmethod:id/keyboard_header_view_holder"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e46  FrameLayout    "Use voice typing"  action=click  →  desc=Use voice typing
+   e47  FrameLayout    "com.google.android.apps.automotive.inputmethod:id/keyboard_body_view_holder"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e48  LinearLayout   "com.google.android.apps.automotive.inputmethod:id/input_area"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e49  FrameLayout    "q"  action=click  →  desc=q
+   e50  FrameLayout    "a"  action=click  →  desc=a
+   e51  FrameLayout    "Shift"  action=click  →  desc=Shift
+   e52  LinearLayout   "com.google.android.apps.automotive.inputmethod:id/body_bottom_area"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e53  FrameLayout    "Hide keyboard"  action=click  →  desc=Hide keyboard
+   e54  TextView       "q"  action=view  →  desc=q
+   e55  LinearLayout   "com.google.android.apps.automotive.inputmethod:id/capsule_layout"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e58  ImageView      "com.google.android.apps.automotive.inputmethod:id/dictation_icon"  action=view  →  id=com.google.android.apps.automotive.inputmeth...
+   e61  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_nav_icon"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_nav...
+   e63  ImageView      "com.google.android.apps.automotive.inputmethod:id/icon"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+   e64  FrameLayout    "com.google.android.apps.automotive.inputmethod:id/host"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+   e65  TextView       "Speech to text"  action=view  →  desc=Speech to text
+   e66  TextView       "a"  action=view  →  desc=a
+   e67  ImageView      "com.google.android.apps.automotive.inputmethod:id/icon"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+   e69  TextView       "1"  action=view  →  text=1
+   e71  Input          "Search…"  action=input  →  id=com.renault.car.dialer:id/car_ui_toolbar_sea...
+   e72  FrameLayout    "w"  action=click  →  desc=w
+   e73  TextView       "w"  action=view  →  desc=w
+   e74  ImageView      "com.renault.car.dialer:id/car_ui_toolbar_search_icon"  action=view  →  id=com.renault.car.dialer:id/car_ui_toolbar_sea...
+   e75  FrameLayout    "Symbol keyboard"  action=click  →  desc=Symbol keyboard
+   e77  FrameLayout    "s"  action=click  →  desc=s
+   e78  FrameLayout    "z"  action=click  →  desc=z
+   e79  TextView       "?123"  action=view  →  desc=?123
+   e80  TextView       "s"  action=view  →  desc=s
+   e81  TextView       "z"  action=view  →  desc=z
+   e84  TextView       "2"  action=view  →  text=2
+   e85  FrameLayout    "e"  action=click  →  desc=e
+   e86  TextView       "e"  action=view  →  desc=e
+   e87  FrameLayout    "Next language"  action=click  →  desc=Next language
+   e88  FrameLayout    "d"  action=click  →  desc=d
+   e89  FrameLayout    "x"  action=click  →  desc=x
+   e90  TextView       "d"  action=view  →  desc=d
+   e91  TextView       "x"  action=view  →  desc=x
+   e92  ImageView      "com.google.android.apps.automotive.inputmethod:id/icon"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+   e93  TextView       "3"  action=view  →  text=3
+   e94  FrameLayout    "r"  action=click  →  desc=r
+   e95  TextView       "r"  action=view  →  desc=r
+   e98  FrameLayout    "Space"  action=click  →  desc=Space
+   e99  FrameLayout    "f"  action=click  →  desc=f
+  e100  FrameLayout    "c"  action=click  →  desc=c
+  e101  TextView       "f"  action=view  →  desc=f
+  e102  TextView       "c"  action=view  →  desc=c
+  e105  TextView       "4"  action=view  →  text=4
+  e106  FrameLayout    "t"  action=click  →  desc=t
+  e107  TextView       "t"  action=view  →  desc=t
+  e110  FrameLayout    "g"  action=click  →  desc=g
+  e111  FrameLayout    "v"  action=click  →  desc=v
+  e112  TextView       "g"  action=view  →  desc=g
+  e113  TextView       "v"  action=view  →  desc=v
+  e114  TextView       "5"  action=view  →  text=5
+  e115  TextView       "English"  action=view  →  desc=English
+  e116  FrameLayout    "y"  action=click  →  desc=y
+  e117  TextView       "y"  action=view  →  desc=y
+  e118  FrameLayout    "h"  action=click  →  desc=h
+  e119  FrameLayout    "b"  action=click  →  desc=b
+  e120  TextView       "h"  action=view  →  desc=h
+  e121  TextView       "b"  action=view  →  desc=b
+  e124  TextView       "6"  action=view  →  text=6
+  e125  FrameLayout    "u"  action=click  →  desc=u
+  e126  TextView       "u"  action=view  →  desc=u
+  e127  FrameLayout    "j"  action=click  →  desc=j
+  e128  FrameLayout    "n"  action=click  →  desc=n
+  e129  TextView       "j"  action=view  →  desc=j
+  e130  TextView       "n"  action=view  →  desc=n
+  e133  TextView       "7"  action=view  →  text=7
+  e134  FrameLayout    "i"  action=click  →  desc=i
+  e135  TextView       "i"  action=view  →  desc=i
+  e136  FrameLayout    "Switch to corresponding handwriting keyboard"  action=click  →  desc=Switch to corresponding handwriting keyboard
+  e137  ImageView      "com.google.android.apps.automotive.inputmethod:id/icon"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+  e138  FrameLayout    "k"  action=click  →  desc=k
+  e139  FrameLayout    "m"  action=click  →  desc=m
+  e140  TextView       "k"  action=view  →  desc=k
+  e141  TextView       "m"  action=view  →  desc=m
+  e144  TextView       "8"  action=view  →  text=8
+  e146  FrameLayout    "o"  action=click  →  desc=o
+  e147  TextView       "o"  action=view  →  desc=o
+  e148  FrameLayout    "Search"  action=click  →  desc=Search
+  e152  FrameLayout    "l"  action=click  →  desc=l
+  e153  FrameLayout    "com.google.android.apps.automotive.inputmethod:id/host"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+  e154  FrameLayout    "Delete"  action=click  →  desc=Delete
+  e155  TextView       "l"  action=view  →  desc=l
+  e156  TextView       "9"  action=view  →  text=9
+  e160  ImageView      "com.google.android.apps.automotive.inputmethod:id/icon"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+  e161  FrameLayout    "p"  action=click  →  desc=p
+  e162  TextView       "p"  action=view  →  desc=p
+  e163  ImageView      "com.google.android.apps.automotive.inputmethod:id/icon"  action=view  →  xpath=//*[@resource-id='com.google.android.apps...
+  e170  TextView       "0"  action=view  →  text=0
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:9fa69e394cd3cdd71ee4c8c733df0092c870997e
+after_signature: sha1:0596a19b635d5250bfc13626c69ca9498c8c6019
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-074611-571836
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_22-13164-85ea108a7656/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_22-13164-85ea108a7656
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_074610_787585.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_074611_625988.png
+after_capture.summary.title: Older
+after_capture.summary.app: com.renault.car.dialer/com.android.car.dialer.ui.TelecomActivity
+after_capture.summary.page_anchor: {'ref': 'e31', 'text': '', 'desc': '', 'by': 'id', 'value': 'com.renault.car.dialer:id/car_ui_base_layout_content_container'}
+after_snapshot.snapshot_id: viewport-20260915-074611-571836
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_22-13164-85ea108a7656
+
+===== stderr =====

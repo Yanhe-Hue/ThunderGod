@@ -1,0 +1,1 @@
+{"60453736c1f18fe66aa543877111dcfb":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"367eeb0dc089206","status":"failed","statusDetails":"AssertionError: 元素不存在: text=Connect to Bluetooth","time":{"start":1789437308916,"stop":1789437316397,"duration":7481}}]}}

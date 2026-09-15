@@ -1,0 +1,176 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: 联系人
+by: desc
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-075347-129520
+added: 66  changed: 1  removed: 85
+added refs:
+    e6  FrameLayout    "miui:id/action_bar_container"  action=view  →  id=miui:id/action_bar_container
+    e7  ViewGroup      "miui:id/action_bar"  action=view  →  id=miui:id/action_bar
+    e8  FrameLayout    "miui:id/action_bar_movable_container"  action=view  →  id=miui:id/action_bar_movable_container
+   e10  Scroll         "miui:id/view_pager"  action=scroll  →  id=miui:id/view_pager
+   e11  FrameLayout    "com.android.contacts:id/content"  action=view  →  id=com.android.contacts:id/content
+   e12  FrameLayout    "com.android.contacts:id/list_container"  action=view  →  id=com.android.contacts:id/list_container
+   e13  FrameLayout    "miui:id/header_view"  action=view  →  id=miui:id/header_view
+   e14  FrameLayout    "com.android.contacts:id/drawer_layout"  action=view  →  id=com.android.contacts:id/drawer_layout
+   e15  LinearLayout   "com.android.contacts:id/contacts_list_view"  action=view  →  id=com.android.contacts:id/contacts_list_view
+   e16  FrameLayout    "com.android.contacts:id/account_filter_header_container"  action=click  →  id=com.android.contacts:id/account_filter_heade...
+   e17  ViewGroup      "com.android.contacts:id/spring_back"  action=view  →  id=com.android.contacts:id/spring_back
+   e18  RecyclerView   "android:id/list"  action=view  →  id=android:id/list
+   e19  LinearLayout   "com.android.contacts:id/profile_container"  action=view  →  id=com.android.contacts:id/profile_container
+   e20  LinearLayout   "com.android.contacts:id/divider"  action=view  →  id=com.android.contacts:id/divider  [B:ambiguous]
+   e21  ViewGroup      "com.android.contacts:id/contact_list_item_view"  action=click  →  id=com.android.contacts:id/contact_list_item_view  [B:ambiguous]
+   e22  ViewGroup      "com.android.contacts:id/contact_list_item_view"  action=click  →  id=com.android.contacts:id/contact_list_item_view  [B:ambiguous]
+   e23  LinearLayout   "com.android.contacts:id/divider"  action=click  →  id=com.android.contacts:id/divider  [B:ambiguous]
+   e24  ViewGroup      "com.android.contacts:id/contact_list_item_view"  action=click  →  id=com.android.contacts:id/contact_list_item_view  [B:ambiguous]
+   e26  FrameLayout    "com.android.systemui:id/clock_container"  action=view  →  id=com.android.systemui:id/clock_container
+   e27  LinearLayout   "com.android.systemui:id/leftside"  action=view  →  id=com.android.systemui:id/leftside
+   e28  TextView       "7:53"  action=view  →  text=7:53
+   e29  LinearLayout   "com.android.contacts:id/filter_view"  action=view  →  id=com.android.contacts:id/filter_view
+   e30  LinearLayout   "android:id/inputArea"  action=view  →  id=android:id/inputArea
+   e31  TextView       "通话"  action=view  →  text=通话
+   e32  TextView       "我的名片"  action=view  →  text=我的名片
+   e33  TextView       "我的群组"  action=view  →  text=我的群组
+   e34  TextView       "黄页"  action=view  →  text=黄页
+   e35  TextView       "王"  action=view  →  text=王
+   e36  TextView       "所有联系人"  action=view  →  text=所有联系人
+   e42  TextView       "搜索1位联系人"  action=click  →  text=搜索1位联系人
+   e45  ImageView      "展开"  action=view  →  desc=展开
+   e46  TextView       "联系人"  action=view  selected=true  →  text=联系人
+   e52  FrameLayout    "新建联系人"  action=view  enabled=false  →  desc=新建联系人
+   e60  ImageView      "新建联系人"  action=click  →  desc=新建联系人
+   e63  ImageView      "更多选项"  action=click  →  desc=更多选项
+   e64  ImageView      "com.android.systemui:id/wifi_inout"  action=view  →  id=com.android.systemui:id/wifi_inout
+   e65  FrameLayout    "com.android.contacts:id/fast_indexer_bg"  action=view  →  id=com.android.contacts:id/fast_indexer_bg
+   e69  LinearLayout   "com.android.contacts:id/fast_indexer"  action=view  →  id=com.android.contacts:id/fast_indexer
+   e70  RowAction      action=enter  label="♥"  value=A  (row_or_trailing_arrow)  →  text=♥
+   e72  RowAction      action=enter  label="B"  value=C  (row_or_trailing_arrow)  →  text=B
+   e74  RowAction      action=enter  label="D"  value=E  (row_or_trailing_arrow)  →  text=D
+   e76  RowAction      action=enter  label="F"  value=G  (row_or_trailing_arrow)  →  text=F
+   e78  RowAction      action=enter  label="H"  value=I  (row_or_trailing_arrow)  →  text=H
+   e80  RowAction      action=enter  label="J"  value=K  (row_or_trailing_arrow)  →  text=J
+   e82  RowAction      action=enter  label="L"  value=M  (row_or_trailing_arrow)  →  text=L
+   e84  RowAction      action=enter  label="N"  value=O  (row_or_trailing_arrow)  →  text=N
+   e86  RowAction      action=enter  label="P"  value=Q  (row_or_trailing_arrow)  →  text=P
+   e88  RowAction      action=enter  label="R"  value=S  (row_or_trailing_arrow)  →  text=R
+   e90  RowAction      action=enter  label="T"  value=U  (row_or_trailing_arrow)  →  text=T
+   e92  RowAction      action=enter  label="V"  value=W  (row_or_trailing_arrow)  →  text=V
+   e94  RowAction      action=enter  label="X"  value=Y  (row_or_trailing_arrow)  →  text=X
+   e96  RowAction      action=enter  label="Z"  value=#  (row_or_trailing_arrow)  →  text=Z
+changed refs:
+   e49  TextView       "109K/s"  action=view  →  text=109K/s
+removed refs:
+    e7  FrameLayout    "com.miui.home:id/shortcut_menu_layer"  action=view  →  id=com.miui.home:id/shortcut_menu_layer
+    e8  View           "com.miui.home:id/drag_layer_background"  action=view  →  id=com.miui.home:id/drag_layer_background
+    e9  Scroll         "com.miui.home:id/minus_one_layer"  action=scroll  →  id=com.miui.home:id/minus_one_layer
+   e10  FrameLayout    "com.miui.home:id/drag_layer"  action=view  →  id=com.miui.home:id/drag_layer
+   e11  FrameLayout    "com.miui.home:id/screen"  action=view  →  id=com.miui.home:id/screen
+   e12  View           "com.miui.home:id/scrim_view"  action=view  →  id=com.miui.home:id/scrim_view
+   e13  FrameLayout    "com.miui.home:id/screen_content"  action=view  →  id=com.miui.home:id/screen_content
+   e14  Scroll         "com.miui.home:id/workspace"  action=scroll  →  id=com.miui.home:id/workspace
+   e15  FrameLayout    "com.miui.home:id/drop_target_bar"  action=view  →  id=com.miui.home:id/drop_target_bar
+   e16  FrameLayout    "com.miui.home:id/default_position"  action=view  →  id=com.miui.home:id/default_position
+   e17  Scroll         action=scroll  →  class=com.miui.home.launcher.ScreenView  [C:coord]
+   e18  Scroll         "com.miui.home:id/hotseat"  action=scroll  →  id=com.miui.home:id/hotseat
+   e19  FrameLayout    "com.miui.home:id/search_bar_container"  action=view  →  id=com.miui.home:id/search_bar_container
+   e25  RelativeLayout "联系人"  action=click  →  desc=联系人  [B:ambiguous]
+   e26  View           "7点53分"  action=view  →  desc=7点53分
+   e27  View           "多云, 22度"  action=view  →  desc=多云, 22度
+   e28  RelativeLayout "相册"  action=click  →  desc=相册  [B:ambiguous]
+   e29  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e30  TextView       "相册"  action=view  →  text=相册
+   e31  RelativeLayout "应用商店"  action=click  →  desc=应用商店  [B:ambiguous]
+   e32  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e33  TextView       "应用商店"  action=view  →  text=应用商店
+   e34  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e35  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e36  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e37  ImageView      "联系人"  action=view  →  desc=联系人  [B:ambiguous]
+   e38  ImageView      "相册"  action=view  →  desc=相册  [B:ambiguous]
+   e39  ImageView      "应用商店"  action=view  →  desc=应用商店  [B:ambiguous]
+   e41  FrameLayout    "搜索框"  action=view  →  desc=搜索框
+   e42  RelativeLayout "com.miui.home:id/search_bar_desktop_layout"  action=click  →  id=com.miui.home:id/search_bar_desktop_layout
+   e43  ViewAnimator   "com.miui.home:id/search_bar_extra_layout"  action=view  →  id=com.miui.home:id/search_bar_extra_layout
+   e44  FrameLayout    "com.miui.home:id/search_bar_content_icon_layout"  action=click  →  id=com.miui.home:id/search_bar_content_icon_layout
+   e46  ImageView      "com.miui.home:id/search_bar_content_icon"  action=view  →  id=com.miui.home:id/search_bar_content_icon
+   e48  RelativeLayout "浏览器"  action=click  →  desc=浏览器  [B:ambiguous]
+   e49  RelativeLayout "音乐"  action=click  →  desc=音乐  [B:ambiguous]
+   e50  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e51  TextView       "音乐"  action=view  →  text=音乐
+   e52  RelativeLayout "手机管家"  action=click  →  desc=手机管家  [B:ambiguous]
+   e53  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e54  TextView       "手机管家"  action=view  →  text=手机管家
+   e55  View           "9月15日 周二"  action=view  →  desc=9月15日 周二
+   e56  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e57  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e58  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e59  ImageView      "浏览器"  action=view  →  desc=浏览器  [B:ambiguous]
+   e60  ImageView      "音乐"  action=view  →  desc=音乐  [B:ambiguous]
+   e61  ImageView      "手机管家"  action=view  →  desc=手机管家  [B:ambiguous]
+   e62  ImageView      "智能助理"  action=click  →  desc=智能助理
+   e63  ImageView      "第1屏"  action=click  selected=true  →  desc=第1屏
+   e64  ImageView      "第2屏"  action=click  →  desc=第2屏
+   e65  RelativeLayout "电话"  action=click  →  desc=电话  [B:ambiguous]
+   e66  RelativeLayout "日历"  action=click  →  desc=日历  [B:ambiguous]
+   e67  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e68  TextView       "日历"  action=view  →  text=日历
+   e69  RelativeLayout "系统工具"  action=click  →  desc=系统工具  [B:ambiguous]
+   e70  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e71  TextView       "系统工具"  action=view  →  text=系统工具
+   e72  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e73  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e74  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+   e75  ImageView      "第3屏"  action=click  →  desc=第3屏
+   e76  ImageView      "电话"  action=view  →  desc=电话  [B:ambiguous]
+   e77  ImageView      "日历"  action=view  →  desc=日历  [B:ambiguous]
+   e78  ImageView      "com.miui.home:id/cover"  action=view  →  id=com.miui.home:id/cover
+   e79  ImageView      "系统工具"  action=view  →  desc=系统工具  [B:ambiguous]
+   e80  LinearLayout   "com.miui.home:id/preview_icons_container"  action=view  →  id=com.miui.home:id/preview_icons_container
+   e81  ImageView      "com.miui.home:id/item1"  action=view  →  id=com.miui.home:id/item1
+   e82  ImageView      "com.miui.home:id/item4"  action=view  →  id=com.miui.home:id/item4
+   e83  ImageView      "com.miui.home:id/item7"  action=view  →  id=com.miui.home:id/item7
+   e84  ImageView      "com.miui.home:id/item2"  action=view  →  id=com.miui.home:id/item2
+   e85  ImageView      "com.miui.home:id/item5"  action=view  →  id=com.miui.home:id/item5
+   e86  ImageView      "com.miui.home:id/item8"  action=view  →  id=com.miui.home:id/item8
+   e87  ImageView      "com.miui.home:id/item3"  action=view  →  id=com.miui.home:id/item3
+   e88  ImageView      "com.miui.home:id/item6"  action=view  →  id=com.miui.home:id/item6
+   e89  ImageView      "com.miui.home:id/item9"  action=view  →  id=com.miui.home:id/item9
+   e93  RelativeLayout "相机"  action=click  →  desc=相机  [B:ambiguous]
+   e96  RelativeLayout "短信"  action=click  →  desc=短信  [B:ambiguous]
+   e97  FrameLayout    "com.miui.home:id/icon_title_container"  action=view  →  id=com.miui.home:id/icon_title_container  [B:ambiguous]
+   e98  TextView       "短信"  action=view  →  text=短信
+   e99  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+  e100  FrameLayout    "com.miui.home:id/icon_container"  action=view  →  id=com.miui.home:id/icon_container  [B:ambiguous]
+  e107  ImageView      "相机"  action=view  →  desc=相机  [B:ambiguous]
+  e108  ImageView      "短信"  action=view  →  desc=短信  [B:ambiguous]
+  e109  FrameLayout    "小爱同学"  action=click  →  desc=小爱同学
+  e111  ImageView      "com.miui.home:id/xiaoai_button"  action=view  →  id=com.miui.home:id/xiaoai_button
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:7be90fa9350200a75cff29783e635f9ec12ee8d3
+after_signature: sha1:447302f200fa74986a37fb370825f00dfedac85f
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-075347-129520
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_21-13164-297bd831aaba/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_21-13164-297bd831aaba
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_075346_978851.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_075347_174782.png
+after_capture.summary.title: 所有联系人
+after_capture.summary.app: com.android.contacts/com.android.contacts.activities.PeopleActivity
+after_capture.summary.page_anchor: {'ref': 'e12', 'text': '', 'desc': '', 'by': 'id', 'value': 'com.android.contacts:id/list_container'}
+after_capture.selected: 联系人
+after_snapshot.snapshot_id: viewport-20260915-075347-129520
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_21-13164-297bd831aaba
+
+===== stderr =====

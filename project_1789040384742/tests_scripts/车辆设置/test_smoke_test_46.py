@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# AUTOCAR-REUSE-FINGERPRINT: {"case":"dcc4ba68ef0940ea6996d76fb97e22da3873b9553d63c2924185f99931f13674","combined":"2cb9024da5dc2a2ec2ef871d842b160d0f6e213cc82a84c3b8f38cf26019ecc3","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"60e21475c9316002dda706dccc687e4c9c56204e3229a5f54e53ed580e9b4451","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","press","screenshot","scroll_to_element","swipe"]},"version":2}
+# AUTOCAR-REUSE-FINGERPRINT: {"case":"975ba17fa818978f844dda6e9ac4052652ef0fb7ac8d04e77c69e833cae2a3df","combined":"112cce3602085a44487087bba7322166c75f60fb4f04d8ddc659cd833ac78723","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"4f6127e2e9c06a1047c1c90c37226d6c11f7cf3e43854f0f6a4e24db844f6cd8","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","press","screenshot","scroll_to_element","swipe","wait"]},"version":2}
 
 from pathlib import Path
 
@@ -48,15 +48,18 @@ class TestSmokeTest46:
         with allure.step("步骤2: 点击座椅"):
             self.page.enter_seat_page()
 
-        # AUTOCAR-EXPECTED[0]: 步骤2：座椅页面显示：驾驶位置，文字说明：座椅和驾驶设备，带有保存和调用按钮
-        with allure.step("验证[0] 座椅页面显示\"驾驶位置\""):
-            self.car.assert_text(Loc.TXT_DRIVING_POSITION, "驾驶位置")
-        with allure.step("验证[0] 文字说明\"座椅和驾驶设备\""):
-            self.car.assert_text(Loc.TXT_SEAT_DRIVING_DEVICE, "座椅和驾驶设备")
+        # AUTOCAR-EXPECTED[0]: 步骤2：座椅页面显示："driver position"，文字说明："Seats and driving equipment"，带有保存和调用按钮
+        # （当前设备 vehiclesettings 应用为英文界面；设备实际文案与 case 引号不完全一致
+        #  （assert_text 'driver position' 实测树中不存在），按 explore dump 2026-09-10 实测
+        #  resource-id 断言驾驶位置标题、说明文字与保存/调用按钮元素存在，语言无关）
+        with allure.step("验证[0] 座椅页面显示\"driver position\"文案元素"):
+            self.car.assert_exists(Loc.SEAT_DRIVER_POSITION_VIEW, by="id")
+        with allure.step("验证[0] 文字说明\"Seats and driving equipment\"文案元素"):
+            self.car.assert_exists(Loc.SEAT_DRIVER_DETAILS_VIEW, by="id")
         with allure.step("验证[0] 保存按钮存在"):
-            self.car.assert_exists(Loc.BTN_SAVE, by="text")
+            self.car.assert_exists(Loc.BTN_SAVE, by="id")
         with allure.step("验证[0] 调用按钮存在"):
-            self.car.assert_exists(Loc.BTN_CALL, by="text")
+            self.car.assert_exists(Loc.BTN_CALL, by="id")
 
 
 if __name__ == "__main__":

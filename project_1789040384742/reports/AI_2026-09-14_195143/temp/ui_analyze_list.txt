@@ -1,0 +1,53 @@
+✅ 页面分析成功
+目标: 车机 UI（ui）
+来源: 现场采集
+分析质量: 部分完成
+分析后端: 视觉 dump
+模型: OCR+DEKI+AI
+摘要: 视觉识别 33 项：文字 4，图标 29
+图像: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\page_analysis\captures\u2_page_bwa2ck8d.png
+分辨率: 1280x720
+检测统计: 匹配=29  候选=36  过滤=5
+候选语义覆盖: 总数=33  确认=29  推测=4  未解决=0
+识别结果: 图标=29  文字=4  视图=0  线条=0
+snapshot_id: analyze-20260914-221122-740594
+status  顶栏
+    e2 bounds=[15,1][44,41]  desc=关闭车窗  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e8 bounds=[58,7][91,37]  desc=Wi-Fi  semantic=confirmed confidence=high source=ui_tree
+   e18 bounds=[631,14][649,31]  desc=向下三角形  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e26 bounds=[1093,6][1105,20]  desc=圆形图标  semantic=provisional confidence=low source=ai_vision_contact_sheet
+   e27 bounds=[1104,4][1133,37]  desc=温度单位  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e28 bounds=[1146,6][1161,36]  desc=竖条  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e30 bounds=[1176,8][1267,37]  text=22:11
+nav  左侧
+   e10 bounds=[144,63][195,113]  desc=caruitoolbarlogo  semantic=confirmed confidence=high source=ui_tree
+    e6 bounds=[28,75][82,131]  desc=主页  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e1 bounds=[5,160][109,276]  desc=carnav  semantic=confirmed confidence=high source=ui_tree
+   e11 bounds=[147,223][207,299]  desc=thumbnail  semantic=confirmed confidence=high source=ui_tree
+    e4 bounds=[24,303][84,362]  desc=电话  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e5 bounds=[25,422][85,479]  desc=座椅布局  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e3 bounds=[22,541][90,595]  desc=车辆后视  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+content  主区
+   e24 bounds=[994,66][1037,111]  desc=caruitoolbarmenuitem  semantic=confirmed confidence=high source=ui_tree
+   e22 bounds=[906,68][948,108]  desc=caruitoolbarmenuitem  semantic=confirmed confidence=high source=ui_tree
+   e14 bounds=[378,153][433,186]  text=List
+   e32 bounds=[1207,239][1252,284]  desc=browseitemcustomaction  semantic=confirmed confidence=high source=ui_tree
+   e31 bounds=[1179,518][1224,572]  desc=暂停  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+dock  底栏
+    e7 bounds=[28,649][85,699]  text=21
+    e9 bounds=[85,651][107,672]  desc=温度单位  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e12 bounds=[150,650][231,694]  desc=风扇关闭  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e13 bounds=[324,645][371,698]  desc=steeringwheel  semantic=confirmed confidence=high source=ui_tree
+   e15 bounds=[466,646][522,697]  desc=座椅  semantic=confirmed confidence=high source=ui_tree
+   e16 bounds=[503,699][519,713]  desc=向上三角形  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e17 bounds=[602,651][676,716]  desc=空调开关  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e19 bounds=[759,647][814,696]  desc=座椅  semantic=confirmed confidence=high source=ui_tree
+   e20 bounds=[794,698][811,713]  desc=向上三角形  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e21 bounds=[905,653][959,690]  desc=除霜  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e23 bounds=[922,698][941,713]  desc=向上三角形  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e25 bounds=[1065,648][1116,695]  desc=座椅调节  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e29 bounds=[1173,650][1225,698]  text=21
+   e33 bounds=[1228,651][1251,673]  desc=温度单位  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+说明: 用 snapshot ref --ref eN --snapshot analyze-20260914-221122-740594 查看定位信息和操作建议；eN 仅适用于对应快照，实际点击路径由 ref 解析结果确定；按屏幕区域分组，方便核对是否漏检
+统计: 缓存=未命中  总计=12084ms  检测=1301ms  补名=10783ms
+提示: 已将 3 个候选重新归类为文字、线条或非页面对象

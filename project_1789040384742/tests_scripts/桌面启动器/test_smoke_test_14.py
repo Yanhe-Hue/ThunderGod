@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# AUTOCAR-REUSE-FINGERPRINT: {"case":"0596353eab8a78e1b488a80d756bf38161aee673c0e810649df4a9f0af04b80f","combined":"c70fa76925934d600cabe05ad6ed3c20dcdb14007dbbc489cfa8a5e06df94736","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"fc1aa99236362117709299e948385dacfb72ba87273548530ccc00e92f076a88","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","click_position","ensure_click","exists","press","screenshot","swipe"]},"version":2}
+# AUTOCAR-REUSE-FINGERPRINT: {"case":"32f65a7883aecda26fb28298d71277ea5b633b7334d87f768cbd613e1b98407a","combined":"e636a6026c1bb9e44b6834f9885ebd57887ab467c66d209535c9533d49d4dab5","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"60e21475c9316002dda706dccc687e4c9c56204e3229a5f54e53ed580e9b4451","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","press","screenshot","scroll_to_element","swipe"]},"version":2}
 
 from pathlib import Path
 

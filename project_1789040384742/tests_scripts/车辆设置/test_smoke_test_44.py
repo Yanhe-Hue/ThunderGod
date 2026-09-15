@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# AUTOCAR-REUSE-FINGERPRINT: {"case":"6eee21dd0027a29979b1bf1545406905ab49acea419cd6caf7147f16b9f690f5","combined":"e462ee947d9247847b283a1862683e50303aacfce631bf8cb42764ab952b1b37","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"11fee8af99b32b3d229d86856e217ba7f1998e14723f7041b410de37825958c1","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_attr","assert_text","click_position","ensure_click","exists","get_element_info","press","screenshot","scroll_to_element","swipe"]},"version":2}
+# AUTOCAR-REUSE-FINGERPRINT: {"case":"c737283bac5183bf99aac840620e51d238d3323dc4a5e12ec9fe2f3b889671e9","combined":"8cb97fef619dde44065ff5a5d92bca9a03f096d2f44fee5859438751578c7555","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"dbd5e9d894015605d506d109c8d8a87ccf350abea99ae61885e44b137f89c647","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_text","click_position","ensure_click","exists","press","screenshot","scroll_to_element","swipe","wait"]},"version":2}
 
 from pathlib import Path
 
@@ -46,35 +46,24 @@ class TestSmokeTest44:
         with allure.step("步骤1: 导航到车辆 > 驾驶辅助 > 停车"):
             self.page.navigate_to_parking_assist()
 
-        # AUTOCAR-EXPECTED[0]: 步骤1：页面显示"前面"、"侧面"、"后交叉停车警报"、"后主动紧急制动"和"乘员安全出口"
-        with allure.step("验证[0]: 步骤1：页面显示\"前面\"、\"侧面\"、\"后交叉停车警报\"、\"后主动紧急制动\"和\"乘员安全出口\""):
-            self.car.assert_text(Loc.TXT_FRONT, "前面")
-            self.car.assert_text(Loc.TXT_SIDE, "侧面")
-            self.car.assert_text(Loc.TXT_RCTA, "后交叉停车警报")
-            self.car.assert_text(Loc.TXT_RAEB, "后主动紧急制动")
-            # 原案文案为"乘员安全出口"，UI 实测显示"乘客安全出口"（Explore assert_text ok:true）
-            self.car.assert_text(Loc.TXT_OSE, "乘客安全出口")
+        # AUTOCAR-EXPECTED[0]: 步骤1：页面显示"Front"、"Side"、"Rear Cross Parking Alert"、"Rear Active Emergency Braking"和"Occupant Safe Exit"
+        with allure.step("验证[0]: 步骤1：页面显示 Front、Side、Rear Cross Parking Alert、Rear Active Emergency Braking 和 Occupant Safe Exit"):
+            # UI 文案为英文（launcher/driveassist 层次树与 Smoke_Test_43 回放均英文，case expected 亦为英文）
+            self.car.assert_text(Loc.TXT_FRONT, "Front")
+            self.car.assert_text(Loc.TXT_SIDE, "Side")
+            self.car.assert_text(Loc.TXT_RCTA, "Rear Cross Parking Alert")
+            self.car.assert_text(Loc.TXT_RAEB, "Rear Active Emergency Braking")
+            self.car.assert_text(Loc.TXT_OSE, "Occupant Safe Exit")
 
-        with allure.step("步骤2: 切换\"前面\"、\"侧面\"、\"后交叉停车警报\"、\"后主动紧急制动\"和\"乘员安全出\"5个选项的开/关"):
-            # 开关初始态在不同运行间会残留（Explore 结束时 5 个开关均为 ON，pytest 从 ON 点击变 OFF），
-            # 固定终态断言依赖初始态，因此先读取点击前 checked，点击后校验状态翻转。
-            _before = {
-                "前面": bool(self.car.get_element_info(Loc.SWITCH_FRONT, by="xpath").get("checked")),
-                "侧面": bool(self.car.get_element_info(Loc.SWITCH_SIDE, by="xpath").get("checked")),
-                "后交叉停车警报": bool(self.car.get_element_info(Loc.SWITCH_RCTA, by="xpath").get("checked")),
-                "后主动紧急制动": bool(self.car.get_element_info(Loc.SWITCH_RAEB, by="xpath").get("checked")),
-                "乘客安全出口": bool(self.car.get_element_info(Loc.SWITCH_OSE, by="xpath").get("checked")),
-            }
-            self.page.toggle_parking_options()
+        with allure.step("步骤2: 切换 Front、Side、Rear Cross Parking Alert、Rear Active Emergency Braking 和 Occupant Safe Exit 5个选项的开/关"):
+            # 开关初始态在不同运行间会残留，且 get_element_info 返回键不可靠（Smoke_Test_43 已验证），
+            # 由页面方法在点击前用 @checked='true' 谓词 exists 探测 before，点击后断言翻转。
+            _before = self.page.toggle_parking_options()
 
         # AUTOCAR-EXPECTED[1]: 步骤2：5个选项成功切换开/关，并伴随动画显示
         with allure.step("验证[1]: 步骤2：5个选项成功切换开/关，并伴随动画显示"):
             # 各开关点击后 checked 与点击前相反，即 5 个选项均成功切换开/关（切换类 expected）
-            self.car.assert_attr(Loc.SWITCH_FRONT, "checked", not _before["前面"], by="xpath")
-            self.car.assert_attr(Loc.SWITCH_SIDE, "checked", not _before["侧面"], by="xpath")
-            self.car.assert_attr(Loc.SWITCH_RCTA, "checked", not _before["后交叉停车警报"], by="xpath")
-            self.car.assert_attr(Loc.SWITCH_RAEB, "checked", not _before["后主动紧急制动"], by="xpath")
-            self.car.assert_attr(Loc.SWITCH_OSE, "checked", not _before["乘客安全出口"], by="xpath")
+            self.page.assert_parking_options_flipped(_before)
 
 
 if __name__ == "__main__":

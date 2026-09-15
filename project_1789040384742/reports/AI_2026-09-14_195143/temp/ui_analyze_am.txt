@@ -1,0 +1,54 @@
+✅ 页面分析成功
+目标: 车机 UI（ui）
+来源: 现场采集
+分析质量: 部分完成
+分析后端: 视觉 dump
+模型: OCR+DEKI+AI
+摘要: 视觉识别 34 项：文字 6，图标 28
+图像: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\temp\ui_analyze_am.png
+分辨率: 1280x720
+检测统计: 匹配=28  候选=36  过滤=6
+候选语义覆盖: 总数=34  确认=31  推测=3  未解决=0
+识别结果: 图标=28  文字=6  视图=0  线条=0
+snapshot_id: analyze-20260914-203208-426891
+status  顶栏
+    e2 bounds=[15,1][44,41]  desc=关闭车窗  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e8 bounds=[58,7][91,37]  desc=Wi-Fi  semantic=confirmed confidence=high source=ui_tree
+   e19 bounds=[631,14][649,31]  desc=向下三角形  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e27 bounds=[1093,6][1105,19]  desc=圆形图标  semantic=provisional confidence=low source=ai_vision_contact_sheet
+   e28 bounds=[1104,4][1133,37]  text=摄氏度
+   e30 bounds=[1146,6][1160,36]  desc=竖线  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e32 bounds=[1176,5][1267,38]  text=20:31
+nav  左侧
+    e6 bounds=[28,75][82,131]  desc=主页  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e1 bounds=[5,160][109,275]  desc=carnav  semantic=confirmed confidence=high source=ui_tree
+    e4 bounds=[25,303][84,362]  desc=电话  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e5 bounds=[25,421][85,480]  desc=车窗控制  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e10 bounds=[128,473][218,564]  desc=深色面板  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+    e3 bounds=[22,541][90,595]  desc=车辆前视图  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+content  主区
+   e29 bounds=[1105,66][1147,111]  desc=caruitoolbarmenuitem  semantic=confirmed confidence=high source=ui_tree
+   e33 bounds=[1197,70][1231,105]  desc=关闭叉号  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e26 bounds=[1076,183][1174,282]  desc=应用  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e12 bounds=[217,184][315,282]  desc=相机  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e21 bounds=[791,184][887,281]  desc=蓝牙  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e18 bounds=[506,185][601,280]  desc=导航向上  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e17 bounds=[504,448][602,544]  desc=USB  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e13 bounds=[226,456][303,528]  desc=相机  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+dock  底栏
+    e7 bounds=[28,649][85,699]  text=21°
+    e9 bounds=[85,651][107,671]  text=°C
+   e11 bounds=[150,650][231,694]  desc=风扇关闭  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e14 bounds=[325,646][370,698]  desc=steeringwheel  semantic=confirmed confidence=high source=ui_tree
+   e15 bounds=[466,646][521,696]  desc=座椅  semantic=confirmed confidence=high source=ui_tree
+   e16 bounds=[503,700][519,713]  desc=向上三角形  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e20 bounds=[759,647][814,696]  desc=座椅  semantic=confirmed confidence=high source=ui_tree
+   e22 bounds=[794,699][811,713]  desc=向上三角形  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e23 bounds=[905,653][959,690]  desc=后窗除霜  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e24 bounds=[922,698][941,712]  desc=向上三角形  semantic=provisional confidence=medium source=ai_vision_contact_sheet
+   e25 bounds=[1065,648][1116,695]  desc=座椅调节  semantic=confirmed confidence=high source=ai_vision_contact_sheet
+   e31 bounds=[1173,651][1225,698]  text=21
+   e34 bounds=[1228,651][1251,672]  text=°C
+说明: 用 snapshot ref --ref eN --snapshot analyze-20260914-203208-426891 查看定位信息和操作建议；eN 仅适用于对应快照，实际点击路径由 ref 解析结果确定；按屏幕区域分组，方便核对是否漏检
+统计: 缓存=未命中  总计=16173ms  检测=7563ms  补名=8610ms
+提示: 已将 5 个候选重新归类为文字、线条或非页面对象

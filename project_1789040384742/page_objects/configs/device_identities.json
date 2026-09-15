@@ -11,6 +11,17 @@
       "resolved_device_id": "3696ade",
       "source": "probe",
       "updated_at": "2026-09-10T11:49:04Z"
+    },
+    {
+      "device_id": "62888b2b",
+      "aliases": [
+        "62888b2b"
+      ],
+      "mode": "u2",
+      "name": "Android-62888b2b",
+      "resolved_device_id": "62888b2b",
+      "source": "probe",
+      "updated_at": "2026-09-14T23:26:05Z"
     }
   ]
 }

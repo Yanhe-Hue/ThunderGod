@@ -1,0 +1,108 @@
+{
+  "adb": "adb",
+  "usb_serial": "3696ade",
+  "wired_adb_independent": true,
+  "usb_root": "F:/",
+  "variant": "gas",
+  "today_only": true,
+  "package_manifest": "packages.json",
+  "download_token_env": "",
+  "max_clock_skew_seconds": 120,
+  "validation_timeout": 1800,
+  "flash_timeout": 3600,
+  "activation_timeout": 600,
+  "boot_timeout": 600,
+  "power": {
+    "resource": "ASRL13::INSTR",
+    "off_seconds": 5
+  },
+  "usb_switch": {
+    "port": "COM14",
+    "pc_usb_port": 3,
+    "car_usb_port": 2,
+    "enumeration_timeout": 60
+  },
+  "cloud": {
+    "url": "https://pan.thundersoft.com/web/index.html",
+    "path": [
+      "群组文件",
+      "ThunderGod",
+      "01-DailyBuild",
+      "ThunderGod-a-14.0-qcom_r14.1-main-Asample"
+    ],
+    "browser_channel": "msedge",
+    "login_timeout": 300,
+    "download_timeout": 7200,
+    "expected_qnx": "",
+    "auth_state": ".auth/cloud.json",
+    "expected_qnx_by_build": {}
+  },
+  "ui": {
+    "start": {
+      "text": "Start Update"
+    },
+    "activate": {
+      "text": "Activate"
+    },
+    "validation_done": {
+      "text": "Upgrade package verified",
+      "resource-id": "com.alliance.engineering.fota:id/usb_tv_title"
+    },
+    "flash_done": {
+      "text": "Installation complete",
+      "resource-id": "com.alliance.engineering.fota:id/usb_tv_title"
+    },
+    "activation_done": {
+      "text": "Activation complete",
+      "resource-id": "com.alliance.engineering.fota:id/usb_tv_title"
+    },
+    "qnx_value": null,
+    "failure_selectors": [
+      {
+        "text": "Upgrade failed",
+        "resource-id": "com.alliance.engineering.fota:id/usb_tv_title"
+      }
+    ],
+    "install": {
+      "text": "Start Upgrade"
+    },
+    "qnx_text_prefix": "QNX system version:",
+    "reboot_prompt": {
+      "text": "Activation has been completed successfully.\n\nPlease reboot the vehicle to finish the upgrade.",
+      "resource-id": "com.alliance.engineering.fota:id/usb_tv_description"
+    }
+  },
+  "automation": {
+    "version_navigation": [
+      {
+        "component": "com.ts.engineermode/.MainActivity",
+        "arrived": {
+          "text": "ThunderSoft Engineering Mode"
+        }
+      }
+    ],
+    "upgrade_navigation": [
+      {
+        "component": "com.alliance.engineering.fota/.UsbUpdateBtnActivity",
+        "arrived": {
+          "text": "System Update",
+          "resource-id": "com.alliance.engineering.fota:id/title"
+        }
+      },
+      {
+        "arrived": {
+          "text": "USB Upgrade"
+        },
+        "selector": {
+          "text": "USB Upgrade",
+          "resource-id": "com.alliance.engineering.fota:id/ver_tv_name"
+        }
+      }
+    ]
+  },
+  "smoke": {
+    "enabled": true,
+    "project_root": "D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742",
+    "case_timeout": 1800
+  }
+}

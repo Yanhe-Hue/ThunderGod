@@ -1,0 +1,27 @@
+📸 snapshot: C:\Users\TS\AppData\Roaming\AutoCar\projects\project_1789040384742\snapshots\explore-Smoke_Test_54-13164-1d7e11b57e76\latest.yml  (110 elements, session=explore-Smoke_Test_54-13164-1d7e11b57e76, scope=scan, snapshot_id=scan-20260914-215428-059198)
+scan ref 仅在具有稳定/目标视口唯一 locator 时可由 click 滚动查找；coordinate-only ref 不会自动回到旧视口，仅在当前页面签名匹配时允许坐标点击；瞬时弹窗或面板的子节点表示可定位，是否已展开结合截图或动作后证据判断。
+screen: 1280x720
+packages: com.renault.car.media (fg) | com.android.systemui
+page: title="87.5 MHz"  selected="87.5 MHz"  app=com.renault.car.media
+app
+  content
+    row  com.android.car.ui.utils.ROTARY_CONTAINER  enter  loc=text=com.android.car.ui.utils.ROTARY_CONTAINER  ref=e38
+      unlabeled  item_container  click  selected  loc=id=com.renault.car.media:id/item_container  ref=e44
+    row  Settings  enter  loc=desc=Settings  ref=e78
+    row  Sound settings  enter  loc=desc=Sound settings  ref=e84
+    row  SOURCES  enter  loc=desc=SOURCES  ref=e90
+    header  Radio  loc=text=Radio  ref=e53
+    header  List  loc=text=List  ref=e59
+    header  Favourites  loc=text=Favourites  ref=e83
+    header  87.5 MHz  selected  loc=text=87.5 MHz  ref=e54
+    header  FM  selected  loc=text=FM  ref=e55
+    row  87.5 MHz  value=0.0  enter  loc=text=87.5 MHz  nth=2  ref=e68
+      unlabeled  play_pause_container  click  loc=id=com.renault.car.media:id/play_pause_container  ref=e100
+      unlabeled  play_pause_stop  click  loc=id=com.renault.car.media:id/play_pause_stop  ref=e101
+overlay
+    unlabeled  com.android.systemui  click  loc=id=com.android.systemui:id/home  ref=e6
+chrome
+  status  clock=21:54  ref=e106
+  dock
+    unlabeled  hvac_bar  click  loc=id=com.android.systemui:id/hvac_bar  ref=e22
+folded: 92 wrappers  shown=18/110

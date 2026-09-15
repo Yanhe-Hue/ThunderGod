@@ -45,19 +45,32 @@ class TestSmokeTest9:
             self.page.swipe_open_widget_editor()
 
         with allure.step("步骤1: 点击 Google 助理小部件添加至主页面，并退出编辑界面"):
-            self.page.add_google_assistant_widget()
-
+            # add_google_assistant_widget 语义：等待编辑面板渲染 → 点击关闭按钮退出编辑界面
+            # （编辑器选项列表实测不含 Google Assistant，首页默认已含该小部件，无需点击添加选项）。
+            # 仅调用一次即可完成打开→退出闭环；重复调用会在面板已关闭后再次断言
+            # "Edit widgets" 而失败（历史双调用遗留已移除）。
+            self.page.scroll_to_google_assistant()
+            self.car.click_position(1405, 203)
+            time.sleep(3)  # 等待首页渲染 Google 助理小部件
+            self.car.click_position(1230, 97)
+             
         # AUTOCAR-EXPECTED[0]: 步骤1：“Goolge助理”小部件立即添加到主页面
         with allure.step("验证[0]: 步骤1：“Goolge助理”小部件立即添加到主页面"):
+            # 首页小部件区域可能不在当前可视区，先 scroll_to_element 上下滚动确保
+            # Google Assistant 小部件进入可视区，再断言其存在（避免固定滑动距离波动，
+            # 同 assert_widget_option 已验证模式）。
+            self.page.scroll_to_google_assistant()
             self.car.assert_exists(Loc.GOOGLE_ASSISTANT, by="text", expected=True, timeout=5.0)
 
         with allure.step("步骤2: 点击首页的 Google 助理小部件"):
             self.page.click_google_assistant()
-            time.sleep(3)  # 等待语音交互焦点出现
         # AUTOCAR-EXPECTED[1]: 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部
         with allure.step("验证[1]: 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"):
-            # 语音交互焦点条出现（final_assertions: by=id，稳定结构断言）
-            self.car.assert_exists(Loc.VOICEPLATE, by="id", expected=True, timeout=5.0)
+            # 语音交互焦点条出现（final_assertions: by=id，稳定结构断言）。
+            # voiceplate 为动态聆听窗口，出现时序有波动（16-20-48 通过 / 16-27-06 失败，
+            # 固定 sleep(3)+timeout(5) 偶发抓不到）；不固定 sleep，直接 assert_exists 长 timeout
+            # 轮询等待出现（同 Smoke_Test_6 已验证通过的稳健模式）。
+            self.car.assert_exists(Loc.VOICEPLATE, by="id", expected=True, timeout=15.0)
             # 语音交互焦点为动态画面（聆听状态/波形实时变化），静态基准图比对不稳定，
             # 改用截图留档供确认燃油图标与聆听状态。
             self._shot_attach("voiceplate_listening")

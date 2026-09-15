@@ -1,0 +1,133 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: 配对
+by: text
+matched_text: 配对
+matched_by: text
+matched_value: 配对
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-073216-529081
+added: 94  changed: 0  removed: 12
+added refs:
+    e2  FrameLayout    "miui:id/action_bar_container"  action=view  →  id=miui:id/action_bar_container
+    e3  View           "com.android.systemui:id/scrim_in_front"  action=view  →  id=com.android.systemui:id/scrim_in_front
+    e4  View           "com.android.systemui:id/scrim_behind"  action=view  →  id=com.android.systemui:id/scrim_behind
+    e5  FrameLayout    "com.android.systemui:id/status_bar_container"  action=view  →  id=com.android.systemui:id/status_bar_container
+    e6  FrameLayout    "com.android.systemui:id/status_bar"  action=view  →  id=com.android.systemui:id/status_bar
+    e7  ViewGroup      "miui:id/action_bar"  action=view  →  id=miui:id/action_bar
+    e8  FrameLayout    "miui:id/action_bar_movable_container"  action=view  →  id=miui:id/action_bar_movable_container
+   e10  LinearLayout   "com.android.settings:id/content_parent"  action=view  →  id=com.android.settings:id/content_parent
+   e11  FrameLayout    "com.android.settings:id/content_frame"  action=view  →  id=com.android.settings:id/content_frame
+   e12  FrameLayout    "com.android.settings:id/main_content"  action=view  →  id=com.android.settings:id/main_content
+   e13  ViewGroup      "android:id/list_container"  action=view  →  id=android:id/list_container
+   e14  Scroll         "com.android.settings:id/recycler_view"  action=scroll  →  id=com.android.settings:id/recycler_view
+   e15  LinearLayout   "com.android.systemui:id/phone_status_bar_contents_container"  action=view  →  id=com.android.systemui:id/phone_status_bar_con...
+   e16  FrameLayout    "com.android.systemui:id/clock_container"  action=view  →  id=com.android.systemui:id/clock_container
+   e17  LinearLayout   "com.android.systemui:id/leftside"  action=view  →  id=com.android.systemui:id/leftside
+   e18  TextView       "7:32"  action=view  →  text=7:32
+   e19  FrameLayout    "com.android.settings:id/view_corner"  action=view  →  id=com.android.settings:id/view_corner  [B:ambiguous]
+   e20  LinearLayout   "com.android.settings:id/view_high_light_root"  action=view  →  id=com.android.settings:id/view_high_light_root  [B:ambiguous]
+   e21  FrameLayout    "com.android.settings:id/view_corner"  action=view  →  id=com.android.settings:id/view_corner  [B:ambiguous]
+   e22  LinearLayout   "com.android.settings:id/view_high_light_root"  action=view  →  id=com.android.settings:id/view_high_light_root  [B:ambiguous]
+   e23  FrameLayout    "com.android.settings:id/view_corner"  action=view  →  id=com.android.settings:id/view_corner  [B:ambiguous]
+   e24  LinearLayout   "com.android.settings:id/view_high_light_root"  action=view  →  id=com.android.settings:id/view_high_light_root  [B:ambiguous]
+   e25  FrameLayout    "com.android.settings:id/view_corner"  action=view  →  id=com.android.settings:id/view_corner  [B:ambiguous]
+   e26  LinearLayout   "com.android.settings:id/view_high_light_root"  action=view  →  id=com.android.settings:id/view_high_light_root  [B:ambiguous]
+   e27  FrameLayout    "com.android.settings:id/view_corner"  action=view  →  id=com.android.settings:id/view_corner  [B:ambiguous]
+   e28  LinearLayout   "com.android.settings:id/view_high_light_root"  action=view  →  id=com.android.settings:id/view_high_light_root  [B:ambiguous]
+   e29  FrameLayout    "com.android.settings:id/view_corner"  action=view  →  id=com.android.settings:id/view_corner  [B:ambiguous]
+   e30  LinearLayout   "com.android.settings:id/view_high_light_root"  action=view  →  id=com.android.settings:id/view_high_light_root  [B:ambiguous]
+   e31  ImageView      "返回"  action=click  →  desc=返回
+   e37  TextView       "蓝牙"  action=view  →  text=蓝牙
+   e38  TextView       "开启蓝牙"  action=view  →  text=开启蓝牙
+   e40  FrameLayout    "com.android.systemui:id/notification_icon_area"  action=view  →  id=com.android.systemui:id/notification_icon_area
+   e41  LinearLayout   "com.android.systemui:id/notification_icon_area_inner"  action=view  →  id=com.android.systemui:id/notification_icon_ar...
+   e42  FrameLayout    "com.android.systemui:id/notificationIcons"  action=view  →  id=com.android.systemui:id/notificationIcons
+   e43  ImageView      "Android 系统通知：已连接到 USB 调试"  action=view  →  desc=Android 系统通知：已连接到 USB 调试
+   e44  ImageView      "Android 系统通知：已开启 USB 文件传输模式"  action=view  →  desc=Android 系统通知：已开启 USB 文件传输模式
+   e45  ImageView      "QQ音乐通知：2024那年今日回忆DNA动了没？.."  action=view  →  desc=QQ音乐通知：2024那年今日回忆DNA动了没？..
+   e46  FrameLayout    "com.android.settings:id/bt_title"  action=view  →  id=com.android.settings:id/bt_title  [B:ambiguous]
+   e47  RowAction      action=enter  label="gen4_gvm for arm64"  value=已保存  affordance=icon  (row_or_trailing_arrow)  →  text=gen4_gvm for arm64
+   e49  FrameLayout    "com.android.settings:id/bt_title"  action=view  →  id=com.android.settings:id/bt_title  [B:ambiguous]
+   e50  RowAction      action=enter  label="IONIQ V"  value=已保存  affordance=icon  (row_or_trailing_arrow)  →  text=IONIQ V
+   e52  FrameLayout    "com.android.settings:id/bt_title"  action=view  →  id=com.android.settings:id/bt_title  [B:ambiguous]
+   e53  RowAction      action=enter  label="Moto X Pro"  value=已保存  affordance=icon  (row_or_trailing_arrow)  →  text=Moto X Pro
+   e55  FrameLayout    "com.android.settings:id/bt_title"  action=view  →  id=com.android.settings:id/bt_title  [B:ambiguous]
+   e56  RowAction      action=enter  label="Redmi"  value=已保存  affordance=icon  (row_or_trailing_arrow)  →  text=Redmi
+   e58  FrameLayout    "com.android.settings:id/bt_title"  action=view  →  id=com.android.settings:id/bt_title  [B:ambiguous]
+   e59  RowAction      action=enter  label="Versa"  value=已保存  affordance=icon  alt=e36 desc=蓝牙  (row_or_trailing_arrow)  →  text=Versa
+   e61  FrameLayout    "com.android.settings:id/bt_title"  action=view  →  id=com.android.settings:id/bt_title  [B:ambiguous]
+   e62  TextView       "Versa 2"  action=view  →  text=Versa 2
+   e63  ImageView      "小米云服务通知：您的云存储空间已满"  action=view  →  desc=小米云服务通知：您的云存储空间已满
+   e64  LinearLayout   "com.android.systemui:id/system_icon_area"  action=view  →  id=com.android.systemui:id/system_icon_area
+   e65  LinearLayout   "com.android.systemui:id/system_icons"  action=view  →  id=com.android.systemui:id/system_icons
+   e66  TextView       "0.6K/s"  action=view  →  text=0.6K/s
+   e67  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e68  RowAction      action=enter  label="62888b2b"  value=手机名称  affordance=arrow_right  alt=e96 id=com.android.settings:id/arrow_right  (row_or_trailing_arrow)  →  text=62888b2b
+   e69  LinearLayout   "com.android.systemui:id/statusIcons"  action=view  →  id=com.android.systemui:id/statusIcons
+   e70  ImageView      "蓝牙开启。"  action=view  →  desc=蓝牙开启。
+   e71  LinearLayout   "com.android.systemui:id/signal_cluster_view"  action=view  →  id=com.android.systemui:id/signal_cluster_view
+   e72  LinearLayout   "com.android.systemui:id/signal_cluster"  action=view  →  id=com.android.systemui:id/signal_cluster
+   e73  LinearLayout   "com.android.systemui:id/mobile_signal_group_dual_notch"  action=view  →  id=com.android.systemui:id/mobile_signal_group_...
+   e74  LinearLayout   "com.android.systemui:id/mobile_combo"  action=view  →  id=com.android.systemui:id/mobile_combo
+   e75  TextView       "com.android.systemui:id/carrier"  action=view  →  id=com.android.systemui:id/carrier
+   e76  TextView       "com.android.systemui:id/mobile_type"  action=view  →  id=com.android.systemui:id/mobile_type
+   e77  ImageView      "com.android.systemui:id/no_sims"  action=view  →  id=com.android.systemui:id/no_sims
+   e78  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e79  CheckBox       "android:id/checkbox"  action=check  checked=true  →  id=android:id/checkbox
+   e80  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e81  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e82  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e83  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e84  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e85  LinearLayout   "android:id/widget_frame"  action=view  →  id=android:id/widget_frame  [B:ambiguous]
+   e91  FrameLayout    "WLAN 信号满格。"  action=view  →  desc=WLAN 信号满格。
+   e92  ImageView      "com.android.systemui:id/wifi_signal"  action=view  →  id=com.android.systemui:id/wifi_signal
+   e93  LinearLayout   "com.android.systemui:id/battery"  action=view  →  id=com.android.systemui:id/battery
+   e94  ImageView      "正在充电，已完成百分之100。"  action=view  →  desc=正在充电，已完成百分之100。
+   e95  TextView       "100"  action=view  →  text=100
+removed refs:
+    e3  LinearLayout   "miui:id/parentPanel"  action=view  →  id=miui:id/parentPanel
+    e4  FrameLayout    "miui:id/customPanel"  action=view  →  id=miui:id/customPanel
+    e5  FrameLayout    "android:id/custom"  action=view  →  id=android:id/custom
+    e6  FrameLayout    "miui:id/topPanel"  action=view  →  id=miui:id/topPanel
+    e7  LinearLayout   "miui:id/buttonPanel"  action=view  →  id=miui:id/buttonPanel
+    e8  LinearLayout   "miui:id/buttonGroup"  action=view  →  id=miui:id/buttonGroup
+    e9  Button         "取消"  action=click  →  text=取消
+   e10  CheckBox       "允许访问您的通讯录和通话记录"  action=check  checked=true  →  text=允许访问您的通讯录和通话记录
+   e11  TextView       "要与MY_CAR配对吗？"  action=view  →  text=要与MY_CAR配对吗？
+   e13  RowAction      action=enter  label="蓝牙配对码"  value=048382  value_ref=e12 assert_on=id=com.android.settings:id/pairing_subhead  (row_or_trailing_arrow)  →  text=蓝牙配对码
+   e14  Button         "配对"  action=click  →  text=配对
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:a4fda29628bd10f8eca547c92a20648069df8016
+after_signature: sha1:8001ff899c01781b89b8b54c0b58aeefd8b70ccb
+scan_snapshot.snapshot_id: scan-20260915-073214-615203
+scan_snapshot.session: explore-Smoke_Test_20-13164-fc1ab24a3272
+scan_snapshot.scope: scan
+scan_snapshot.query: 配对
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-073216-529081
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_20-13164-fc1ab24a3272/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_20-13164-fc1ab24a3272
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_073216_292480.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_073216_575358.png
+after_capture.summary.title: 蓝牙
+after_capture.summary.app: com.android.settings/com.android.settings.Settings$BluetoothSettingsActivity
+after_capture.summary.page_anchor: {'ref': 'e20', 'text': '', 'desc': '', 'by': 'id', 'value': 'com.android.settings:id/view_high_light_root'}
+after_snapshot.snapshot_id: viewport-20260915-073216-529081
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_20-13164-fc1ab24a3272
+
+===== stderr =====

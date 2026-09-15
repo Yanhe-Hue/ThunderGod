@@ -1,0 +1,90 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Vibration
+by: text
+matched_text: Vibration
+matched_by: text
+matched_value: Vibration
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-003415-462710
+added: 16  changed: 2  removed: 29
+added refs:
+   e40  FrameLayout    "com.renault.car.driveassist.renault.rro:id/container"  action=view  →  id=com.renault.car.driveassist.renault.rro:id/c...
+   e42  FrameLayout    "com.renault.car.driveassist:id/list"  action=view  →  id=com.renault.car.driveassist:id/list
+   e46  FrameLayout    "com.renault.car.driveassist:id/car_ui_list_item_touch_interceptor"  action=click  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e47  FrameLayout    "com.renault.car.driveassist:id/car_ui_list_item_touch_interceptor"  action=click  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e48  FrameLayout    "com.renault.car.driveassist:id/car_ui_list_item_touch_interceptor"  action=click  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e49  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  id=com.renault.car.driveassist.renault.rro:id/b...  [B:ambiguous]
+   e50  RadioButton    "com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget"  action=select  checked=false  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e51  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  id=com.renault.car.driveassist.renault.rro:id/b...  [B:ambiguous]
+   e52  RadioButton    "com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget"  action=select  checked=true  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e53  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  id=com.renault.car.driveassist.renault.rro:id/b...  [B:ambiguous]
+   e54  RadioButton    "com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget"  action=select  checked=false  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e63  TextView       "Low"  action=view  →  text=Low
+   e65  TextView       "High"  action=view  →  text=High
+   e74  FrameLayout    "com.renault.car.driveassist:id/car_ui_list_item_action_container"  action=view  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e75  FrameLayout    "com.renault.car.driveassist:id/car_ui_list_item_action_container"  action=view  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+   e76  FrameLayout    "com.renault.car.driveassist:id/car_ui_list_item_action_container"  action=view  →  id=com.renault.car.driveassist:id/car_ui_list_i...  [B:ambiguous]
+changed refs:
+   e45  RecyclerView   "com.android.car.ui.utils.ROTARY_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+   e62  TextView       "Vibration"  action=view  →  text=Vibration
+removed refs:
+   e40  FrameLayout    "android:id/list_container"  action=view  →  id=android:id/list_container
+   e42  FrameLayout    "com.renault.car.driveassist:id/recycler_view"  action=view  →  id=com.renault.car.driveassist:id/recycler_view
+   e44  ViewGroup      "com.renault.car.driveassist:id/car_ui_scroll_bar"  action=view  →  id=com.renault.car.driveassist:id/car_ui_scroll...
+   e45  View           "com.renault.car.driveassist:id/car_ui_scrollbar_track"  action=view  →  id=com.renault.car.driveassist:id/car_ui_scroll...
+   e46  View           "com.renault.car.driveassist:id/car_ui_scrollbar_thumb"  action=view  →  id=com.renault.car.driveassist:id/car_ui_scroll...
+   e49  RelativeLayout "com.renault.car.driveassist:id/shield_lane_keeping_my_shield_label"  action=click  →  id=com.renault.car.driveassist:id/shield_lane_k...
+   e50  RelativeLayout "com.renault.car.driveassist:id/shield_dashed_line_intervention"  action=click  →  id=com.renault.car.driveassist:id/shield_dashed...
+   e51  RelativeLayout "com.renault.car.driveassist:id/shield_lane_keeping_system_anticipation"  action=click  →  id=com.renault.car.driveassist:id/shield_lane_k...
+   e52  RelativeLayout "com.renault.car.driveassist:id/shield_lane_keeping_system_vibration_intensity"  action=click  →  id=com.renault.car.driveassist:id/shield_lane_k...
+   e53  RelativeLayout "com.renault.car.driveassist:id/shield_lane_change_collision_my_shield_label"  action=click  →  id=com.renault.car.driveassist:id/shield_lane_c...
+   e54  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e55  FrameLayout    "android:id/widget_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e56  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e57  FrameLayout    "android:id/widget_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e58  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e59  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e60  LinearLayout   "com.renault.car.driveassist.renault.rro:id/begin_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e61  FrameLayout    "android:id/widget_frame"  action=view  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e64  Switch         "android:id/switch_widget"  action=toggle  checked=true  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e65  Switch         "android:id/switch_widget"  action=toggle  checked=true  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e66  Switch         "android:id/switch_widget"  action=toggle  checked=true  →  xpath=//*[@resource-id='com.renault.car.driveas...
+   e75  TextView       "Lane departure prevention"  action=view  →  text=Lane departure prevention
+   e76  TextView       "Dashed line intervention"  action=view  →  text=Dashed line intervention
+   e77  RowAction      action=enter  label="Departure anticipation"  value=Late  value_ref=e78 assert_on=xpath=//*[@resource-id='com.renault.car.driveassist:id/shield_lane_keeping_system_anticipation']//*[@resource-id='android:id/summary']  affordance=icon  alt=e68 xpath=//*[@resource-id='com.renault.car.driveassist:id/shield_lane_keeping_system_anticipation']//*[@resource-id='android:id/icon']  (row_or_trailing_arrow)  →  text=Departure anticipation
+   e79  RowAction      action=enter  label="Vibration"  value=Medium  value_ref=e80 assert_on=xpath=//*[@resource-id='com.renault.car.driveassist:id/shield_lane_keeping_system_vibration_intensity']//*[@resource-id='android:id/summary']  affordance=icon  alt=e69 xpath=//*[@resource-id='com.renault.car.driveassist:id/shield_lane_keeping_system_vibration_intensity']//*[@resource-id='android:id/icon']  (row_or_trailing_arrow)  →  text=Vibration
+   e81  TextView       "Emergency lane departure prevention"  action=view  →  text=Emergency lane departure prevention
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:2adfa47f9e3929aa7bacbd6d5d904530a861d0df
+after_signature: sha1:cd12c609dacdbb4d0ec80cf59f79486c55d4a500
+scan_snapshot.snapshot_id: scan-20260915-003412-503706
+scan_snapshot.session: explore-Smoke_Test_42-13164-8008d16c782b
+scan_snapshot.scope: scan
+scan_snapshot.query: Vibration
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-003415-462710
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_42-13164-8008d16c782b
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_003414_644945.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_003415_516234.png
+after_capture.summary.title: Low
+after_capture.summary.app: com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity
+after_capture.summary.page_anchor: {'ref': 'e44', 'text': '', 'desc': 'Back', 'by': 'id', 'value': 'com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container'}
+after_snapshot.snapshot_id: viewport-20260915-003415-462710
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_42-13164-8008d16c782b
+
+===== stderr =====

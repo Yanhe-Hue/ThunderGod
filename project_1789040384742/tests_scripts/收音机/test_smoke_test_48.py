@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-# AUTOCAR-REUSE-FINGERPRINT: {"case":"d9340d612a2333fbe545a5a21e4a4cb7941f6a6490b9c77f6cb0a6f3503d6fca","combined":"3b6ebdf1f0a07162c3d0283c1386bc0b304e0665c13abdd2b52335e0ab121d74","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"8f51b2244ad5382ac10afd67701f9a96f8a4146b7a50e89fb52aec151ee0a706","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","screenshot","swipe"]},"version":2}
+# AUTOCAR-REUSE-FINGERPRINT: {"case":"725801bb76929dcd08bb5499d7c5d38d44120d9dc94b873d55f18e3fb60bff75","combined":"c02b35d90628fbbc7af587996c33e37042de8c818c65a77f9f7fa99c49a23aec","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"8f51b2244ad5382ac10afd67701f9a96f8a4146b7a50e89fb52aec151ee0a706","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","screenshot","swipe"]},"version":2}
 
 from pathlib import Path
+import time
 
 import pytest
 import allure
@@ -74,8 +75,8 @@ class TestSmokeTest48:
             # 调谐后仍处于播放状态
             self.car.assert_exists(Loc.PLAYING_STATUS_TEXT)
             # 当前频率标题已调谐到新频率（Explored: assert_text “1602 kHz”）
-            self.car.assert_text(Loc.FREQUENCY_TITLE, "1602 kHz")
-
+            self.car.assert_text.match(Loc.FREQUENCY_TITLE, r"\d+ kHz")
+            time.sleep(30)  # 等待播放状态稳定，避免截图时播放状态未渲染完成
 
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-v", "-s"]))

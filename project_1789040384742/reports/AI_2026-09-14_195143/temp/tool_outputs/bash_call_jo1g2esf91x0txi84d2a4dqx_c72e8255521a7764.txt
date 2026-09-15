@@ -1,0 +1,135 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Reset
+by: text
+matched_text: Reset
+matched_by: text
+matched_value: Reset
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-000904-888913
+added: 9  changed: 0  removed: 100
+added refs:
+    e2  LinearLayout   "android:id/parentPanel"  action=view  →  id=android:id/parentPanel
+    e3  FrameLayout    "android:id/customPanel"  action=view  →  id=android:id/customPanel
+    e4  FrameLayout    "android:id/custom"  action=view  →  id=android:id/custom
+    e5  ViewGroup      "com.renault.car.mydriving:id/alertDialogView"  action=view  →  id=com.renault.car.mydriving:id/alertDialogView
+    e6  ScrollView     "android:id/buttonPanel"  action=view  →  id=android:id/buttonPanel
+    e7  Button         "Reset"  action=click  →  text=Reset
+    e8  TextView       "The “Since reset” data will be reset to zero.
+This action will reset the data to the dashboard."  action=view  →  text=The “Since reset” data will be reset to ze...
+    e9  ImageView      "com.renault.car.mydriving:id/chargeModeAlertDialogTitle"  action=view  →  id=com.renault.car.mydriving:id/chargeModeAlert...
+   e10  Button         "Cancel"  action=click  →  text=Cancel
+removed refs:
+    e1  FrameLayout    "com.android.systemui:id/navigation_bar_frame"  action=view  →  id=com.android.systemui:id/navigation_bar_frame  [B:ambiguous]
+    e2  LinearLayout   "com.android.systemui:id/car_top_bar"  action=click  →  id=com.android.systemui:id/car_top_bar
+    e3  FrameLayout    "com.android.systemui:id/navigation_bar_frame"  action=view  →  id=com.android.systemui:id/navigation_bar_frame  [B:ambiguous]
+    e4  ViewGroup      "com.android.systemui:id/status_bar_background"  action=view  →  id=com.android.systemui:id/status_bar_background
+    e5  LinearLayout   "com.android.systemui:id/nav_buttons"  action=view  →  id=com.android.systemui:id/nav_buttons
+    e6  LinearLayout   "com.android.systemui:id/home"  action=click  →  id=com.android.systemui:id/home
+    e7  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+    e8  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+    e9  LinearLayout   "com.android.systemui:id/music_nav"  action=click  →  id=com.android.systemui:id/music_nav
+   e10  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e11  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e12  LinearLayout   "com.android.systemui:id/phone_nav"  action=click  →  id=com.android.systemui:id/phone_nav
+   e13  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e14  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e15  LinearLayout   "com.android.systemui:id/grid_nav"  action=click  →  id=com.android.systemui:id/grid_nav
+   e16  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e17  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e18  LinearLayout   "com.android.systemui:id/car_world"  action=click  selected=true  →  id=com.android.systemui:id/car_world
+   e19  FrameLayout    "com.android.systemui:id/car_nav_button_icon"  action=view  selected=true  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e20  ImageView      "com.android.systemui:id/car_nav_button_icon_image"  action=view  selected=true  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e21  FrameLayout    "com.android.systemui:id/navigation_bar_frame"  action=view  →  id=com.android.systemui:id/navigation_bar_frame  [B:ambiguous]
+   e22  LinearLayout   "com.android.systemui:id/hvac_bar"  action=click  →  id=com.android.systemui:id/hvac_bar
+   e24  FrameLayout    "com.android.systemui:id/first_left_container"  action=view  →  id=com.android.systemui:id/first_left_container
+   e25  ViewGroup      "com.android.systemui:id/container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e26  LinearLayout   "com.android.systemui:id/system_icons"  action=view  →  id=com.android.systemui:id/system_icons
+   e27  LinearLayout   "com.android.systemui:id/status_icons"  action=view  →  id=com.android.systemui:id/status_icons
+   e28  ViewGroup      "com.android.systemui:id/temperature_container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e29  RowAction      action=enter  label="21"  value=°C  value_ref=e31 assert_on=xpath=//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']  (row_or_trailing_arrow)  →  text=21
+   e32  FrameLayout    "com.renault.car.mydriving:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.mydriving:id/car_ui_base_lay...
+   e33  ViewGroup      "com.renault.car.mydriving:id/car_ui_toolbar_background"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+   e34  LinearLayout   "com.renault.car.mydriving:id/action_bar_root"  action=view  →  id=com.renault.car.mydriving:id/action_bar_root
+   e36  LinearLayout   "com.renault.car.mydriving:id/renault_root_view"  action=view  →  id=com.renault.car.mydriving:id/renault_root_view
+   e37  FrameLayout    "com.renault.car.mydriving:id/renault_nav_host"  action=view  →  id=com.renault.car.mydriving:id/renault_nav_host
+   e38  ViewPager      "com.renault.car.mydriving:id/dashboardPager"  action=view  →  id=com.renault.car.mydriving:id/dashboardPager
+   e39  Scroll         action=scroll  →  class=androidx.recyclerview.widget.RecyclerView  [C:coord]
+   e40  ViewGroup      "com.renault.car.mydriving:id/myDrivingContainer"  action=view  →  id=com.renault.car.mydriving:id/myDrivingContainer
+   e41  FrameLayout    "Back"  action=click  →  desc=Back
+   e42  ViewGroup      "com.renault.car.mydriving:id/myDrivingInfo"  action=view  →  id=com.renault.car.mydriving:id/myDrivingInfo
+   e43  ViewGroup      "com.renault.car.mydriving:id/ecoScoreTrip"  action=click  →  id=com.renault.car.mydriving:id/ecoScoreTrip
+   e44  ViewGroup      "com.renault.car.mydriving:id/itemEcoScoreContainer"  action=view  →  id=com.renault.car.mydriving:id/itemEcoScoreCon...
+   e45  RowAction      action=enter  label="Eco"  value=Score  value_ref=e46 assert_on=id=com.renault.car.mydriving:id/ecoScoreText  affordance=mydriving_dashboard_gauge  alt=e60 id=com.renault.car.mydriving:id/mydriving_dashboard_gauge  (row_or_trailing_arrow)  →  text=Eco
+   e47  ViewGroup      "com.renault.car.mydriving:id/energyConsumptionTrip"  action=click  →  id=com.renault.car.mydriving:id/energyConsumpti...
+   e48  ViewGroup      "com.renault.car.mydriving:id/itemEnergyConsumptionContainer"  action=view  →  id=com.renault.car.mydriving:id/itemEnergyConsu...
+   e50  RowAction      action=enter  label="Consumption"  value=kWh/100km  value_ref=e84 assert_on=id=com.renault.car.mydriving:id/energyConsumptionType  affordance=entrypointarrowimage  alt=e65 xpath=//*[@resource-id='com.renault.car.mydriving:id/itemEnergyConsumptionContainer']//*[@resource-id='com.renault.car.mydriving:id/entryPointArrowImage']  (row_or_trailing_arrow)  →  text=Consumption
+   e51  FrameLayout    "com.android.systemui:id/second_left_container"  action=view  →  id=com.android.systemui:id/second_left_container
+   e52  ViewGroup      "com.android.systemui:id/ventilation_container"  action=view  →  id=com.android.systemui:id/ventilation_container
+   e53  RowAction      action=enter  label="--/--/----"  value=| ‪--.- km‬ • ‪--‬ • ‪--‬  value_ref=e62 assert_on=id=com.renault.car.mydriving:id/myDrivingDashboardInfo  (row_or_trailing_arrow)  →  text=--/--/----
+   e54  ImageView      "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+   e57  LinearLayout   "com.renault.car.mydriving:id/car_ui_toolbar_tabs"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+   e58  FrameLayout    "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+   e59  FrameLayout    "com.renault.car.mydriving:id/ecoScoreProgressView"  action=view  →  id=com.renault.car.mydriving:id/ecoScoreProgres...
+   e61  LinearLayout   "com.android.systemui:id/center_container"  action=view  →  id=com.android.systemui:id/center_container
+   e63  ImageView      "com.android.systemui:id/steering_wheel_button"  action=view  enabled=false  →  id=com.android.systemui:id/steering_wheel_button
+   e64  ImageView      "com.android.systemui:id/steering_wheel_line_view"  action=view  enabled=false  →  id=com.android.systemui:id/steering_wheel_line_...
+   e66  TextView       "Since start"  action=view  →  text=Since start
+   e67  ImageView      "com.android.systemui:id/seat_image_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_image_view  [B:ambiguous]
+   e68  ImageView      "com.android.systemui:id/seat_status_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_status_view  [B:ambiguous]
+   e69  LinearLayout   "com.android.systemui:id/notifications"  action=click  →  id=com.android.systemui:id/notifications
+   e70  ImageView      "com.android.systemui:id/notifications_bar_animation"  action=view  →  id=com.android.systemui:id/notifications_bar_an...
+   e71  ImageView      "com.android.systemui:id/air_conditioner_button"  action=view  enabled=false  →  id=com.android.systemui:id/air_conditioner_button
+   e72  ImageView      "com.android.systemui:id/air_conditioner_line_view"  action=view  enabled=false  →  id=com.android.systemui:id/air_conditioner_line...
+   e73  ImageView      "com.android.systemui:id/seat_image_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_image_view  [B:ambiguous]
+   e74  ImageView      "com.android.systemui:id/seat_status_view"  action=view  enabled=false  →  id=com.android.systemui:id/seat_status_view  [B:ambiguous]
+   e75  TextView       "Since reset"  action=view  →  text=Since reset
+   e76  ViewGroup      "com.renault.car.mydriving:id/energyConsumptionElectricData"  action=view  →  id=com.renault.car.mydriving:id/energyConsumpti...
+   e77  ImageView      "com.android.systemui:id/window_heating_button"  action=view  enabled=false  →  id=com.android.systemui:id/window_heating_button
+   e78  ImageView      "com.android.systemui:id/window_heating_line_view"  action=view  enabled=false  →  id=com.android.systemui:id/window_heating_line_...
+   e82  FrameLayout    "com.android.systemui:id/first_right_container"  action=view  →  id=com.android.systemui:id/first_right_container
+   e85  LinearLayout   "com.android.systemui:id/external_temperature_view"  action=view  →  id=com.android.systemui:id/external_temperature...
+   e88  Button         "Reset"  action=click  →  text=Reset
+   e89  FrameLayout    "com.android.systemui:id/second_right_container"  action=view  →  id=com.android.systemui:id/second_right_container
+   e90  ViewGroup      "com.android.systemui:id/container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e91  LinearLayout   "com.renault.car.mydriving:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+   e93  FrameLayout    "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+   e94  ViewGroup      "com.android.systemui:id/temperature_container"  action=view  →  xpath=//*[@resource-id='com.android.systemui:id...
+   e95  RowAction      action=enter  label="21"  value=°C  value_ref=e101 assert_on=xpath=//*[@resource-id='com.android.systemui:id/second_right_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']  affordance=left_hvac_background  alt=e23 id=com.android.systemui:id/left_hvac_background  (row_or_trailing_arrow)  →  text=21
+   e96  ViewGroup      "com.android.systemui:id/clock"  action=view  →  id=com.android.systemui:id/clock
+   e97  FrameLayout    "com.android.systemui:id/custom_clock_container"  action=view  →  id=com.android.systemui:id/custom_clock_container
+   e98  RowAction      action=enter  label="00:08"  value=--  value_ref=e86 assert_on=id=com.android.systemui:id/external_temperature_value  affordance=wifi_icon  alt=e30 id=com.android.systemui:id/wifi_icon  (row_or_trailing_arrow)  →  text=00:08
+   e99  ImageView      "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon"  action=view  →  id=com.renault.car.mydriving:id/car_ui_toolbar_...
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:083c6885afcc3fc5009eddddba4152b75de4eaec
+after_signature: sha1:71a3a6536bea0e93cbc598e0957334513a8d5dec
+scan_snapshot.snapshot_id: scan-20260915-000902-235470
+scan_snapshot.session: explore-Smoke_Test_41-13164-355fe32a578d
+scan_snapshot.scope: scan
+scan_snapshot.query: Reset
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-000904-888913
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_41-13164-355fe32a578d
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_000904_152133.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_000904_911664.png
+after_capture.summary.title: The “Since reset” data will be reset to zero. This action will reset the data to the dashboard.
+after_capture.summary.app: com.renault.car.mydriving/.presentation.main.MyDrivingActivity
+after_capture.summary.page_anchor: {}
+after_snapshot.snapshot_id: viewport-20260915-000904-888913
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_41-13164-355fe32a578d
+
+===== stderr =====

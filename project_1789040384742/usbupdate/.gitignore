@@ -1,0 +1,14 @@
+config.json
+packages.json
+logs/
+prepared_package.json
+version_records.json
+downloads/
+.auth/
+evidence/*.apk
+evidence/*.strings.txt
+evidence/*.resources.json
+packages.json.*.bak
+tools/
+__pycache__/
+*.part

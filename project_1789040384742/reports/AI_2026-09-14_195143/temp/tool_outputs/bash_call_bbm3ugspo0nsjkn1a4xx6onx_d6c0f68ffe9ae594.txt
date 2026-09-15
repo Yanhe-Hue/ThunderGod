@@ -1,0 +1,106 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Radio
+by: text
+matched_text: Radio
+matched_by: text
+matched_value: Radio
+=== AFTER DIFF ===
+snapshot_id: viewport-20260914-223217-061175
+added: 26  changed: 0  removed: 38
+added refs:
+   e33  FrameLayout    "com.renault.car.media:id/media_activity_root"  action=view  →  id=com.renault.car.media:id/media_activity_root
+   e34  FrameLayout    "com.renault.car.media:id/playback_container"  action=view  →  id=com.renault.car.media:id/playback_container  [B:ambiguous]
+   e35  FrameLayout    "com.renault.car.media:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.media:id/car_ui_base_layout_...
+   e36  ViewGroup      "com.renault.car.media:id/playback_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.media:i...
+   e37  LinearLayout   "com.renault.car.media:id/car_ui_toolbar_background"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_back...
+   e38  FrameLayout    "Back"  action=click  →  desc=Back
+   e39  ViewGroup      "com.renault.car.media:id/playback_background"  action=view  →  id=com.renault.car.media:id/playback_background
+   e40  FrameLayout    "com.renault.car.media:id/background_image_image"  action=view  →  id=com.renault.car.media:id/background_image_image  [B:ambiguous]
+   e41  ImageView      "com.renault.car.media:id/background_image_image"  action=view  →  id=com.renault.car.media:id/background_image_image  [B:ambiguous]
+   e44  ImageView      "com.renault.car.media:id/car_ui_toolbar_nav_icon"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_nav_...
+   e46  ViewGroup      "com.renault.car.media:id/metadata_container"  action=view  →  id=com.renault.car.media:id/metadata_container
+   e47  FocusArea      "com.renault.car.media:id/playback_seek_bar_container"  action=view  →  id=com.renault.car.media:id/playback_seek_bar_c...
+   e48  RelativeLayout "com.renault.car.media:id/playback_controls"  action=view  →  id=com.renault.car.media:id/playback_controls
+   e49  LinearLayout   "com.renault.car.media:id/rows_container"  action=view  →  id=com.renault.car.media:id/rows_container
+   e51  FrameLayout    "com.renault.car.media:id/car_ui_toolbar_title_logo_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_titl...
+   e52  ImageView      "com.renault.car.media:id/car_ui_toolbar_title_logo"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_titl...
+   e53  ImageView      "Album Art"  action=click  →  desc=Album Art
+   e54  FrameLayout    "com.renault.car.media:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_sear...
+   e56  LinearLayout   "com.renault.car.media:id/car_ui_toolbar_title_container"  action=view  →  id=com.renault.car.media:id/car_ui_toolbar_titl...
+   e57  TextView       "Now Playing"  action=view  →  text=Now Playing
+   e60  ImageButton    "com.renault.car.media:id/skip_prev"  action=click  →  id=com.renault.car.media:id/skip_prev
+   e63  RowAction      action=enter  label="87.5 MHz"  value=FM  value_ref=e64 assert_on=id=com.renault.car.media:id/artist  (row_or_trailing_arrow)  →  text=87.5 MHz
+   e69  FrameLayout    "com.renault.car.media:id/play_pause_container"  action=click  →  id=com.renault.car.media:id/play_pause_container
+   e70  ImageView      "com.renault.car.media:id/play_pause_stop"  action=click  →  id=com.renault.car.media:id/play_pause_stop
+   e73  ImageButton    "com.renault.car.media:id/skip_next"  action=click  →  id=com.renault.car.media:id/skip_next
+removed refs:
+   e28  ViewGroup      "com.android.systemui:id/notification_headsup"  action=view  →  id=com.android.systemui:id/notification_headsup
+   e29  View           "com.android.systemui:id/scrim"  action=view  →  id=com.android.systemui:id/scrim
+   e30  FrameLayout    "com.android.car.ui.utils.FOCUS_DELEGATING_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.FOCUS_DELEGATING_...
+   e31  FrameLayout    "com.android.systemui:id/card_view"  action=click  →  id=com.android.systemui:id/card_view
+   e32  RelativeLayout "com.android.systemui:id/inner_template_view"  action=view  →  id=com.android.systemui:id/inner_template_view
+   e33  RelativeLayout "com.android.systemui:id/notification_body"  action=view  →  id=com.android.systemui:id/notification_body
+   e38  LinearLayout   "com.android.systemui:id/notification_header"  action=view  →  id=com.android.systemui:id/notification_header
+   e41  TextView       "Google apps and services can’t run on this device"  action=view  →  text=Google apps and services can’t run on this...
+   e42  FrameLayout    "com.renault.car.launcher:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_base_layo...
+   e43  ViewGroup      "com.renault.car.launcher:id/car_ui_toolbar_background"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_b...
+   e44  LinearLayout   "com.renault.car.launcher:id/action_bar_root"  action=view  →  id=com.renault.car.launcher:id/action_bar_root
+   e46  Scroll         "com.renault.car.launcher:id/media_source_grid_recycler"  action=scroll  →  id=com.renault.car.launcher:id/media_source_gri...
+   e49  RowAction      action=enter  label="Google Play services"  value=This device isn’t Play Protect certified  value_ref=e40 assert_on=id=com.android.systemui:id/notification_body_title  affordance=app_icon  alt=e39 id=com.android.systemui:id/app_icon  (row_or_trailing_arrow)  →  text=Google Play services
+   e50  FrameLayout    "com.renault.car.launcher:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_s...
+   e51  LinearLayout   "com.renault.car.launcher:id/car_ui_toolbar_title_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_t...
+   e52  TextView       "Sources"  action=view  →  text=Sources
+   e54  TextView       "AM Radio"  action=view  →  text=AM Radio
+   e55  TextView       "Radio"  action=view  selected=true  →  text=Radio
+   e57  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e58  ImageView      "com.renault.car.launcher:id/icon"  action=view  selected=true  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e62  TextView       "Android Auto"  action=view  →  text=Android Auto
+   e63  TextView       "USB"  action=view  →  text=USB
+   e66  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e67  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e72  TextView       "Bluetooth audio"  action=view  →  text=Bluetooth audio
+   e75  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e80  TextView       "News"  action=view  →  text=News
+   e82  LinearLayout   "com.renault.car.launcher:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_toolbar_m...
+   e85  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e86  FrameLayout    "com.renault.car.launcher:id/audio_settings"  action=click  →  id=com.renault.car.launcher:id/audio_settings
+   e87  FrameLayout    "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+   e89  ImageView      "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+   e93  FrameLayout    "com.renault.car.launcher:id/audio_close"  action=click  →  id=com.renault.car.launcher:id/audio_close
+   e94  FrameLayout    "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+  e100  ImageView      "com.renault.car.launcher:id/car_ui_toolbar_menu_item_icon"  action=view  →  xpath=//*[@resource-id='com.renault.car.launche...
+  e102  FrameLayout    "com.android.systemui:id/dismiss_button_container"  action=view  →  id=com.android.systemui:id/dismiss_button_conta...
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:4df6bff397f23e29e0a2d93b7885090596cce448
+after_signature: sha1:7974da2e55e5036f14f2986dbb8f016e5d8477a1
+scan_snapshot.snapshot_id: scan-20260914-223214-468959
+scan_snapshot.session: explore-Smoke_Test_55-13164-56f5db93e5a6
+scan_snapshot.scope: scan
+scan_snapshot.query: Radio
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260914-223217-061175
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_55-13164-56f5db93e5a6/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_55-13164-56f5db93e5a6
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260914_223216_314068.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260914_223217_107613.png
+after_capture.summary.title: 87.5 MHz
+after_capture.summary.app: com.renault.car.media/com.android.car.media.MediaActivity
+after_capture.summary.page_anchor: {'ref': 'e38', 'text': '', 'desc': 'Back', 'by': 'id', 'value': 'com.renault.car.media:id/car_ui_toolbar_nav_icon_container'}
+after_snapshot.snapshot_id: viewport-20260914-223217-061175
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_55-13164-56f5db93e5a6
+
+===== stderr =====

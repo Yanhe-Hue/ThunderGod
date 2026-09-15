@@ -1,0 +1,22 @@
+📸 snapshot: C:\Users\TS\AppData\Roaming\AutoCar\projects\project_1789040384742\snapshots\explore-Smoke_Test_54-13164-1d7e11b57e76\latest.yml  (90 elements, session=explore-Smoke_Test_54-13164-1d7e11b57e76, scope=scan, snapshot_id=scan-20260914-220415-984580)
+scan ref 仅在具有稳定/目标视口唯一 locator 时可由 click 滚动查找；coordinate-only ref 不会自动回到旧视口，仅在当前页面签名匹配时允许坐标点击；瞬时弹窗或面板的子节点表示可定位，是否已展开结合截图或动作后证据判断。
+screen: 1280x720
+packages: com.renault.car.media (fg) | com.android.systemui
+page: title="87.5 MHz"  app=com.renault.car.media
+app
+  content
+    row  Back  enter  loc=desc=Back  ref=e38
+    header  Now Playing  loc=text=Now Playing  ref=e57
+    row  Album Art  click  loc=desc=Album Art  ref=e53
+    header  87.5 MHz  loc=text=87.5 MHz  ref=e63
+    header  FM  loc=text=FM  ref=e64
+    unlabeled  skip_prev  click  loc=id=com.renault.car.media:id/skip_prev  ref=e60
+    unlabeled  play_pause_container  click  loc=id=com.renault.car.media:id/play_pause_container  ref=e69
+    unlabeled  skip_next  click  loc=id=com.renault.car.media:id/skip_next  ref=e73
+overlay
+    unlabeled  com.android.systemui  click  loc=id=com.android.systemui:id/home  ref=e6
+chrome
+  status  clock=22:04  ref=e89
+  dock
+    unlabeled  hvac_bar  click  loc=id=com.android.systemui:id/hvac_bar  ref=e22
+folded: 77 wrappers  shown=13/90

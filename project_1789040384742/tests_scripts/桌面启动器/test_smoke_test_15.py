@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# AUTOCAR-REUSE-FINGERPRINT: {"case":"7425230bffb148b553e4682c9b183be9dd1f9be5675e6f51680552fa822008db","combined":"d7b9ad18e28e8c41665b90f749a1b2c013f8eab18320dbef36d945561b2fad3c","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"076d4fb31509c1ce55d62c47d024ad707821f39ac800e49274c28cb30dfe6605","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","press","screenshot","swipe"]},"version":2}
+# AUTOCAR-REUSE-FINGERPRINT: {"case":"1cc2023d46a7cb77f886483799942a4f35a61b6c5545824b34bfccdc30db1fbe","combined":"943f35dc122214af70df76d6929f13ac47234726632fd6113e6edc80bc549001","dependencies":"92369232552f66cd17b297b17d15170eb38f6a1064c83eb59ae03cc5aef8ee1c","sdk":"60e21475c9316002dda706dccc687e4c9c56204e3229a5f54e53ed580e9b4451","sdk_fallback":"contract_unavailable","sdk_mode":"global","sdk_refs":{"at":["report_path"],"car":["assert_exists","assert_text","click_position","ensure_click","exists","press","screenshot","scroll_to_element","swipe"]},"version":2}
 
 from pathlib import Path
 
@@ -23,9 +23,9 @@ class TestSmokeTest15:
         # AUTOCAR-PRECONDITIONS:
         # 步骤0：车机正常启动，处于主页面 — 模块 autouse reset_environment 已在测试前回桌面，car 已连接（设备在线），
         # 与同模块 Smoke_Test_3/14 一致按外部硬件前置处理，无需额外动作。
-        # 步骤1："电话"小部件已添加到首页（replay 已验证动作：右滑打开编辑界面 → 点击电话小部件 → 关闭按钮）
-        self.page.swipe_open_widget_editor()
-        self.page.add_phone_widget()
+        # 步骤1："电话"小部件已添加到首页（前置已保证；首页已含 phone_container 时直接复用，
+        # 缺失时才右滑打开编辑界面添加，避免对已满足前置的首页无条件重开编辑面板而面板未渲染失败）
+        self.page.ensure_phone_widget_on_home()
         yield
         # AUTOCAR-POSTCONDITIONS: 原始 case 无 postconditions，保持 pass。
         pass
@@ -51,7 +51,7 @@ class TestSmokeTest15:
         # AUTOCAR-EXPECTED[0]: 步骤1：系统进入"电话"设置页面
         with allure.step("验证[0]: 步骤1：系统进入\"电话\"设置页面"):
             self.car.assert_exists(Loc.PHONE_SETTINGS_BLUETOOTH, by="text", expected=True, timeout=5.0, msg="系统进入\"电话\"设置页面")
-            self.car.assert_text(Loc.PHONE_SETTINGS_BLUETOOTH, "蓝牙", by="text")
+            self.car.assert_text(Loc.PHONE_SETTINGS_BLUETOOTH, "Bluetooth", by="text")
 
 
 if __name__ == "__main__":

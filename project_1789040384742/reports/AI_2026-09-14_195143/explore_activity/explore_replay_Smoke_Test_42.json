@@ -1,0 +1,3269 @@
+{
+  "schema": 6,
+  "case_id": "Smoke_Test_42",
+  "xlsx": {
+    "precondition": [
+      "步骤0：开机，adb正常连接",
+      "步骤1：点击左侧导航栏“Vehicle” 进入页面后选择“Driving Assistance”"
+    ],
+    "steps": [
+      "步骤0：检查Driving Assistance界面。",
+      "步骤1：点击页面上方\"Safety\"，检查页面显示",
+      "步骤2: 将“My Safety”下的按钮切换成“Perso”点击\"Configure My Safety Perso\"检查页面显示",
+      "步骤3：点击\"Departure anticipation\"检查页面显示",
+      "步骤4：返回上一级，点击\"Vibration\"检查页面显示",
+      "步骤5：回到“Safety\"界面，点击\"Warning anticipation\"检查页面显示"
+    ],
+    "expected": [
+      "步骤0：页面上方显示\"Safety\", \"Comfort\", and \"Parking\" 页面",
+      "步骤1：页面显示：\"My Safety\",\"Configure My Safety Perso\",\"Blind spot warning\",\"Active braking\"\"Warning anticipation\"",
+      "步骤2: ：页面显示\"Departure anticipation\", \"Vibration\", \"Emergency lane departure prevention\", \"Driver monitoring alert\",",
+      "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+      "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+      "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示"
+    ],
+    "postcondition": [
+      "杀死所有进程，车机恢复初始状态"
+    ]
+  },
+  "replay": {
+    "setup": [
+      {
+        "trace_id": "bab1f891c4a8",
+        "action_id": "bab1f891c4a8:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.android.systemui:id/car_world",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-002418-497891",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+            "page_signature": "sha1:d7cb787080fb4a873c3b183b51d9fcf2fbcb5bd7",
+            "summary": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "page_anchor": {
+                "ref": "e32",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e32",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/action_bar_root"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/mex_view_container"
+                },
+                {
+                  "ref": "e38",
+                  "text": "Live Data",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/data_button"
+                },
+                {
+                  "ref": "e39",
+                  "text": "Coaching",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/coaching_button"
+                },
+                {
+                  "ref": "e40",
+                  "text": "Challenges",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/paddock_button"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                },
+                {
+                  "ref": "e37",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                },
+                {
+                  "ref": "e50",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/apps_grid"
+                },
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                }
+              ]
+            },
+            "element_count": 97,
+            "page": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Drive Mode",
+                "Electric",
+                "Seats"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002417_740194.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002418_555622.png"
+          }
+        },
+        "execution_index": 0
+      },
+      {
+        "trace_id": "191865ca1cdf",
+        "action_id": "191865ca1cdf:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Driving assistance",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-002431-418171",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+            "page_signature": "sha1:1aadf219f9191baa2ce6162e8283cb1638a71eec",
+            "summary": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "page_anchor": {
+                "ref": "e42",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e42",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e43",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/action_bar_root"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/mex_view_container"
+                },
+                {
+                  "ref": "e48",
+                  "text": "Live Data",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/data_button"
+                },
+                {
+                  "ref": "e49",
+                  "text": "Coaching",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/coaching_button"
+                },
+                {
+                  "ref": "e50",
+                  "text": "Challenges",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/paddock_button"
+                },
+                {
+                  "ref": "e46",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                },
+                {
+                  "ref": "e47",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                },
+                {
+                  "ref": "e61",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/apps_grid"
+                },
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                }
+              ]
+            },
+            "element_count": 109,
+            "page": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Drive Mode",
+                "Electric",
+                "Seats"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002430_704831.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002431_470243.png"
+          }
+        },
+        "execution_index": 1
+      },
+      {
+        "trace_id": "7b52fed48799",
+        "action_id": "7b52fed48799:0",
+        "domain": "ui",
+        "sdk": "car.press",
+        "args": {
+          "key": "back"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-002455-132713",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+            "page_signature": "sha1:ea2693487135015ed70973ab1180ec1416947a9e",
+            "summary": {
+              "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+              "title": "Re-centre",
+              "page_anchor": {
+                "ref": "e42",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.google.android.apps.maps:id/action_bar_root"
+              },
+              "top_refs": [
+                {
+                  "ref": "e42",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/action_bar_root"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/snackbar_coordinator_container_view"
+                },
+                {
+                  "ref": "e50",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_container"
+                },
+                {
+                  "ref": "e51",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/one_bar_ellipsizing_container"
+                },
+                {
+                  "ref": "e54",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_mute_container"
+                },
+                {
+                  "ref": "e55",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_compass_container"
+                },
+                {
+                  "ref": "e56",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/one_bar_bottom_group"
+                },
+                {
+                  "ref": "e68",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/main_maps_cards_container"
+                },
+                {
+                  "ref": "e71",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/recenter_button_container"
+                },
+                {
+                  "ref": "e87",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.apps.maps:id/map_buttons_view_branding_watermark_container"
+                }
+              ]
+            },
+            "element_count": 134,
+            "page": {
+              "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+              "title": "Re-centre",
+              "title_source": "first_text",
+              "title_confidence": "low",
+              "selected": "",
+              "anchors": [
+                "Re-centre"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_press_20260915_002454_389224.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_press_20260915_002455_194545.png"
+          }
+        },
+        "execution_index": 2
+      },
+      {
+        "trace_id": "c7647a8efbea",
+        "action_id": "c7647a8efbea:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.android.systemui:id/car_world",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-002506-573080",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+            "page_signature": "sha1:949adbe3ecbe5d1049c79a580bce7cc86271fa0e",
+            "summary": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "page_anchor": {
+                "ref": "e32",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e32",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/action_bar_root"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/mex_view_container"
+                },
+                {
+                  "ref": "e38",
+                  "text": "Live Data",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/data_button"
+                },
+                {
+                  "ref": "e39",
+                  "text": "Coaching",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/coaching_button"
+                },
+                {
+                  "ref": "e40",
+                  "text": "Challenges",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/paddock_button"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                },
+                {
+                  "ref": "e37",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                },
+                {
+                  "ref": "e50",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/apps_grid"
+                },
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                }
+              ]
+            },
+            "element_count": 97,
+            "page": {
+              "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+              "title": "Drive Mode",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Drive Mode",
+                "Electric",
+                "Seats"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002505_812551.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002506_619205.png"
+          }
+        },
+        "execution_index": 3
+      },
+      {
+        "trace_id": "781304aad02e",
+        "action_id": "781304aad02e:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Driving assistance",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260915-002518-696823",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+            "page_signature": "sha1:e5158a2c044dd54311f4ccc971981d7d37ed7a53",
+            "summary": {
+              "app": "com.renault.car.driveassist/.main.AdasActivity",
+              "title": "",
+              "page_anchor": {
+                "ref": "e24",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.android.systemui:id/first_left_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                },
+                {
+                  "ref": "e32",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_left_container"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/ventilation_container"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/center_container"
+                },
+                {
+                  "ref": "e50",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_right_container"
+                },
+                {
+                  "ref": "e55",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_right_container"
+                },
+                {
+                  "ref": "e61",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/custom_clock_container"
+                },
+                {
+                  "ref": "e29",
+                  "text": "21",
+                  "desc": "",
+                  "by": "xpath",
+                  "value": "//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_text_view']"
+                },
+                {
+                  "ref": "e31",
+                  "text": "°C",
+                  "desc": "",
+                  "by": "xpath",
+                  "value": "//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']"
+                },
+                {
+                  "ref": "e53",
+                  "text": "--",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/external_temperature_value"
+                }
+              ]
+            },
+            "element_count": 63,
+            "page": {
+              "app": "com.renault.car.driveassist/.main.AdasActivity",
+              "title": "",
+              "title_source": "none",
+              "title_confidence": "none",
+              "selected": "",
+              "anchors": []
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002517_880821.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002518_730697.png"
+          }
+        },
+        "execution_index": 4
+      }
+    ],
+    "setup_steps": [
+      {
+        "xlsx_index": 1,
+        "xlsx_text": "步骤1：点击左侧导航栏“Vehicle” 进入页面后选择“Driving Assistance”",
+        "actions": [
+          {
+            "trace_id": "bab1f891c4a8",
+            "action_id": "bab1f891c4a8:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/car_world",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002418-497891",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:d7cb787080fb4a873c3b183b51d9fcf2fbcb5bd7",
+                "summary": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "page_anchor": {
+                    "ref": "e32",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/mex_view_container"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "Live Data",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/data_button"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "Coaching",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/coaching_button"
+                    },
+                    {
+                      "ref": "e40",
+                      "text": "Challenges",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/paddock_button"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/apps_grid"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    }
+                  ]
+                },
+                "element_count": 97,
+                "page": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Drive Mode",
+                    "Electric",
+                    "Seats"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002417_740194.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002418_555622.png"
+              }
+            },
+            "execution_index": 0
+          },
+          {
+            "trace_id": "191865ca1cdf",
+            "action_id": "191865ca1cdf:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Driving assistance",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002431-418171",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:1aadf219f9191baa2ce6162e8283cb1638a71eec",
+                "summary": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "page_anchor": {
+                    "ref": "e42",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e43",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/mex_view_container"
+                    },
+                    {
+                      "ref": "e48",
+                      "text": "Live Data",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/data_button"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "Coaching",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/coaching_button"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "Challenges",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/paddock_button"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                    },
+                    {
+                      "ref": "e47",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/apps_grid"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    }
+                  ]
+                },
+                "element_count": 109,
+                "page": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Drive Mode",
+                    "Electric",
+                    "Seats"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002430_704831.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002431_470243.png"
+              }
+            },
+            "execution_index": 1
+          },
+          {
+            "trace_id": "7b52fed48799",
+            "action_id": "7b52fed48799:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "back"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002455-132713",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:ea2693487135015ed70973ab1180ec1416947a9e",
+                "summary": {
+                  "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+                  "title": "Re-centre",
+                  "page_anchor": {
+                    "ref": "e42",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.google.android.apps.maps:id/action_bar_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/snackbar_coordinator_container_view"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_container"
+                    },
+                    {
+                      "ref": "e51",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/one_bar_ellipsizing_container"
+                    },
+                    {
+                      "ref": "e54",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_mute_container"
+                    },
+                    {
+                      "ref": "e55",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_compass_container"
+                    },
+                    {
+                      "ref": "e56",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/one_bar_bottom_group"
+                    },
+                    {
+                      "ref": "e68",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/main_maps_cards_container"
+                    },
+                    {
+                      "ref": "e71",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/recenter_button_container"
+                    },
+                    {
+                      "ref": "e87",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.apps.maps:id/map_buttons_view_branding_watermark_container"
+                    }
+                  ]
+                },
+                "element_count": 134,
+                "page": {
+                  "app": "com.google.android.apps.maps/com.google.android.maps.MapsActivity",
+                  "title": "Re-centre",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": [
+                    "Re-centre"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_press_20260915_002454_389224.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_press_20260915_002455_194545.png"
+              }
+            },
+            "execution_index": 2
+          },
+          {
+            "trace_id": "c7647a8efbea",
+            "action_id": "c7647a8efbea:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/car_world",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002506-573080",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:949adbe3ecbe5d1049c79a580bce7cc86271fa0e",
+                "summary": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "page_anchor": {
+                    "ref": "e32",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/mex_view_container"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "Live Data",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/data_button"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "Coaching",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/coaching_button"
+                    },
+                    {
+                      "ref": "e40",
+                      "text": "Challenges",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/paddock_button"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/apps_grid"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    }
+                  ]
+                },
+                "element_count": 97,
+                "page": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Drive Mode",
+                    "Electric",
+                    "Seats"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002505_812551.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002506_619205.png"
+              }
+            },
+            "execution_index": 3
+          },
+          {
+            "trace_id": "781304aad02e",
+            "action_id": "781304aad02e:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Driving assistance",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002518-696823",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:e5158a2c044dd54311f4ccc971981d7d37ed7a53",
+                "summary": {
+                  "app": "com.renault.car.driveassist/.main.AdasActivity",
+                  "title": "",
+                  "page_anchor": {
+                    "ref": "e24",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.android.systemui:id/first_left_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_left_container"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/ventilation_container"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/center_container"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_right_container"
+                    },
+                    {
+                      "ref": "e55",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_right_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/custom_clock_container"
+                    },
+                    {
+                      "ref": "e29",
+                      "text": "21",
+                      "desc": "",
+                      "by": "xpath",
+                      "value": "//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_text_view']"
+                    },
+                    {
+                      "ref": "e31",
+                      "text": "°C",
+                      "desc": "",
+                      "by": "xpath",
+                      "value": "//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']"
+                    },
+                    {
+                      "ref": "e53",
+                      "text": "--",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/external_temperature_value"
+                    }
+                  ]
+                },
+                "element_count": 63,
+                "page": {
+                  "app": "com.renault.car.driveassist/.main.AdasActivity",
+                  "title": "",
+                  "title_source": "none",
+                  "title_confidence": "none",
+                  "selected": "",
+                  "anchors": []
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002517_880821.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002518_730697.png"
+              }
+            },
+            "execution_index": 4
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "步骤0：检查Driving Assistance界面。",
+        "actions": [],
+        "observations": [
+          {
+            "trace_id": "8a96a6a2bd3f",
+            "action_id": "8a96a6a2bd3f:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Safety",
+              "by": "text",
+              "expected": "Safety"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "5ef3db0d40c4",
+            "action_id": "5ef3db0d40c4:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Comfort",
+              "by": "text",
+              "expected": "Comfort"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "e4f244d3a1eb",
+            "action_id": "e4f244d3a1eb:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Parking",
+              "by": "text",
+              "expected": "Parking"
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "xlsx_index": 1,
+        "xlsx_text": "步骤1：点击页面上方\"Safety\"，检查页面显示",
+        "actions": [
+          {
+            "trace_id": "71741ca2ae01",
+            "action_id": "71741ca2ae01:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Safety",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002621-253024",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:0f9f3d44c3b6eb7ce6cfd72bb5dcc08b9dac8682",
+                "summary": {
+                  "app": "com.renault.car.driveassist/.main.AdasActivity",
+                  "title": "My Safety",
+                  "page_anchor": {
+                    "ref": "e47",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e47",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/safety_body_preference_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/split_settings_preference_fragment_container"
+                    },
+                    {
+                      "ref": "e52",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/safety_body_shield_radio_group"
+                    },
+                    {
+                      "ref": "e71",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e105",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e108",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_menu_item_icon_container"
+                    }
+                  ]
+                },
+                "element_count": 115,
+                "page": {
+                  "app": "com.renault.car.driveassist/.main.AdasActivity",
+                  "title": "My Safety",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "My Safety",
+                    "Configure My Safety Perso",
+                    "Blind spot warning"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002620_498988.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002621_306291.png"
+              }
+            },
+            "execution_index": 8
+          }
+        ]
+      },
+      {
+        "xlsx_index": 2,
+        "xlsx_text": "步骤2: 将“My Safety”下的按钮切换成“Perso”点击\"Configure My Safety Perso\"检查页面显示",
+        "actions": [
+          {
+            "trace_id": "258fa5c8a976",
+            "action_id": "258fa5c8a976:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Configure My Safety Perso",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002721-048978",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:6b9feb884373472679f200c499760a73704efa19",
+                "summary": {
+                  "app": "com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity",
+                  "title": "Lane departure prevention",
+                  "page_anchor": {
+                    "ref": "e47",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e47",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/my_shield_body_preference_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/split_settings_preference_fragment_container"
+                    },
+                    {
+                      "ref": "e72",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e73",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e74",
+                      "text": "Configure My Safety Perso",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e48",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_internal_recycler_view"
+                    }
+                  ]
+                },
+                "element_count": 116,
+                "page": {
+                  "app": "com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity",
+                  "title": "Lane departure prevention",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Lane departure prevention",
+                    "Dashed line intervention",
+                    "Departure anticipation"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002720_308891.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002721_105933.png"
+              }
+            },
+            "execution_index": 15
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "caf3a16f83f4",
+            "action_id": "caf3a16f83f4:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "My Safety",
+              "by": "text",
+              "expected": "My Safety"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "bef73c631db2",
+            "action_id": "bef73c631db2:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Configure My Safety Perso",
+              "by": "text",
+              "expected": "Configure My Safety Perso"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "e695da648c57",
+            "action_id": "e695da648c57:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Blind spot warning",
+              "by": "text",
+              "expected": "Blind spot warning"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "8868f3ff6bd0",
+            "action_id": "8868f3ff6bd0:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Active braking",
+              "by": "text",
+              "expected": "Active braking"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "ef62ab5f1c47",
+            "action_id": "ef62ab5f1c47:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Warning anticipation",
+              "by": "text",
+              "expected": "Warning anticipation"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "37a8123a1d23",
+            "action_id": "37a8123a1d23:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "Perso",
+              "by": "text",
+              "attr": "checked",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "xlsx_index": 3,
+        "xlsx_text": "步骤3：点击\"Departure anticipation\"检查页面显示",
+        "actions": [
+          {
+            "trace_id": "45c753e5bee2",
+            "action_id": "45c753e5bee2:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "up",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.5
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 19
+          },
+          {
+            "trace_id": "46e6a0c5684d",
+            "action_id": "46e6a0c5684d:0",
+            "domain": "ui",
+            "sdk": "car.swipe",
+            "args": {
+              "locator": null,
+              "by": "text",
+              "direction": "down",
+              "duration": 0.5,
+              "fingers": null,
+              "auto_wait": false,
+              "scale": 0.5
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 21
+          },
+          {
+            "trace_id": "83b96aa455ee",
+            "action_id": "83b96aa455ee:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Departure anticipation",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-002923-591440",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:281f936f08aa28535012f96ccb02050759ff722e",
+                "summary": {
+                  "app": "com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity",
+                  "title": "Early",
+                  "page_anchor": {
+                    "ref": "e44",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/my_shield_body_preference_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/split_settings_preference_fragment_container"
+                    },
+                    {
+                      "ref": "e60",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e74",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_list_item_action_container"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_list_item_action_container"
+                    }
+                  ]
+                },
+                "element_count": 103,
+                "page": {
+                  "app": "com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity",
+                  "title": "Early",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Early",
+                    "Standard",
+                    "Late"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_002922_843781.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_002923_642758.png"
+              }
+            },
+            "execution_index": 22
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "f43ee6c01758",
+            "action_id": "f43ee6c01758:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Departure anticipation",
+              "by": "text",
+              "expected": "Departure anticipation"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "68e8d41acc55",
+            "action_id": "68e8d41acc55:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Vibration",
+              "by": "text",
+              "expected": "Vibration"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "498404481ce1",
+            "action_id": "498404481ce1:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Emergency lane departure prevention",
+              "by": "text",
+              "expected": "Emergency lane departure prevention"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "e955263b9e5c",
+            "action_id": "e955263b9e5c:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Driver monitoring alert",
+              "by": "text",
+              "expected": "Driver monitoring alert"
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "xlsx_index": 4,
+        "xlsx_text": "步骤4：返回上一级，点击\"Vibration\"检查页面显示",
+        "actions": [
+          {
+            "trace_id": "36a0bd92d9c8",
+            "action_id": "36a0bd92d9c8:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Early",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 26
+          },
+          {
+            "trace_id": "c00f2f931bff",
+            "action_id": "c00f2f931bff:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "back"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 27
+          },
+          {
+            "trace_id": "cd2155a4554b",
+            "action_id": "cd2155a4554b:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Configure My Safety Perso",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 28
+          },
+          {
+            "trace_id": "9c262055ee5a",
+            "action_id": "9c262055ee5a:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Departure anticipation",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 29
+          },
+          {
+            "trace_id": "0c7c790c9817",
+            "action_id": "0c7c790c9817:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Standard",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 30
+          },
+          {
+            "trace_id": "2da81107c371",
+            "action_id": "2da81107c371:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Late",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 32
+          },
+          {
+            "trace_id": "c001fd58079d",
+            "action_id": "c001fd58079d:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "back"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 35
+          },
+          {
+            "trace_id": "c0c7d53cc46e",
+            "action_id": "c0c7d53cc46e:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Vibration",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-003415-462710",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:cd12c609dacdbb4d0ec80cf59f79486c55d4a500",
+                "summary": {
+                  "app": "com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity",
+                  "title": "Low",
+                  "page_anchor": {
+                    "ref": "e44",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/my_shield_body_preference_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/split_settings_preference_fragment_container"
+                    },
+                    {
+                      "ref": "e60",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e74",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_list_item_action_container"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_list_item_action_container"
+                    }
+                  ]
+                },
+                "element_count": 103,
+                "page": {
+                  "app": "com.renault.car.driveassist/com.renault.car.safety.presentation.main.SafetyConfigureMyShieldActivity",
+                  "title": "Low",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Low",
+                    "Medium",
+                    "High"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_003414_644945.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_003415_516234.png"
+              }
+            },
+            "execution_index": 36
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "41f760267822",
+            "action_id": "41f760267822:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Early",
+              "by": "text",
+              "expected": "Early"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "452cd3c732b9",
+            "action_id": "452cd3c732b9:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Standard",
+              "by": "text",
+              "expected": "Standard"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "a7a343197d59",
+            "action_id": "a7a343197d59:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Late",
+              "by": "text",
+              "expected": "Late"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "12ea9e7a84d8",
+            "action_id": "12ea9e7a84d8:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[2]",
+              "by": "xpath",
+              "attr": "checked",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "a61f509a3722",
+            "action_id": "a61f509a3722:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+              "by": "xpath",
+              "attr": "checked",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "26423d6cb1f9",
+            "action_id": "26423d6cb1f9:0",
+            "domain": "ui",
+            "sdk": "car.assert_image",
+            "args": {
+              "locator": "Late",
+              "by": "text",
+              "baseline_img": "page_objects/sources/img/车辆设置/departure_anticipation_list.png",
+              "region": null,
+              "threshold": 0.9
+            },
+            "role": "observe",
+            "ok": true,
+            "evidence": {
+              "auto_captured": true,
+              "similarity": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "xlsx_index": 5,
+        "xlsx_text": "步骤5：回到“Safety\"界面，点击\"Warning anticipation\"检查页面显示",
+        "actions": [
+          {
+            "trace_id": "c97dbee5acc7",
+            "action_id": "c97dbee5acc7:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Low",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 40
+          },
+          {
+            "trace_id": "aa0569b6fa68",
+            "action_id": "aa0569b6fa68:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "High",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 42
+          },
+          {
+            "trace_id": "f03ff956a931",
+            "action_id": "f03ff956a931:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "back"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 45
+          },
+          {
+            "trace_id": "155fd8d12cb7",
+            "action_id": "155fd8d12cb7:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "back"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 46
+          },
+          {
+            "trace_id": "5b8c73f47fcb",
+            "action_id": "5b8c73f47fcb:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Driving assistance",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 47
+          },
+          {
+            "trace_id": "d5421a771b92",
+            "action_id": "d5421a771b92:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Warning anticipation",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-003709-821868",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_42-13164-8008d16c782b/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_42-13164-8008d16c782b",
+                "page_signature": "sha1:1ad11d3de18a229fcf671ff241e5b3e105e7576b",
+                "summary": {
+                  "app": "com.renault.car.driveassist/.main.AdasActivity",
+                  "title": "Early",
+                  "page_anchor": {
+                    "ref": "e44",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/safety_body_preference_container"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/split_settings_preference_fragment_container"
+                    },
+                    {
+                      "ref": "e60",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e61",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e74",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_list_item_action_container"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.driveassist:id/car_ui_list_item_action_container"
+                    }
+                  ]
+                },
+                "element_count": 100,
+                "page": {
+                  "app": "com.renault.car.driveassist/.main.AdasActivity",
+                  "title": "Early",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Early",
+                    "Standard",
+                    "Late"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_003709_054830.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_003709_898520.png"
+              }
+            },
+            "execution_index": 48
+          }
+        ],
+        "observations": [
+          {
+            "trace_id": "c0c3aec0c1f0",
+            "action_id": "c0c3aec0c1f0:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Low",
+              "by": "text",
+              "expected": "Low"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "76aefe3386e3",
+            "action_id": "76aefe3386e3:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "Medium",
+              "by": "text",
+              "expected": "Medium"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "5f62127ecc09",
+            "action_id": "5f62127ecc09:0",
+            "domain": "ui",
+            "sdk": "car.assert_text",
+            "args": {
+              "locator": "High",
+              "by": "text",
+              "expected": "High"
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "bd849a622da8",
+            "action_id": "bd849a622da8:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[1]",
+              "by": "xpath",
+              "attr": "checked",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "f27c8bbfcd05",
+            "action_id": "f27c8bbfcd05:0",
+            "domain": "ui",
+            "sdk": "car.assert_attr",
+            "args": {
+              "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+              "by": "xpath",
+              "attr": "checked",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "332c112f85ab",
+            "action_id": "332c112f85ab:0",
+            "domain": "ui",
+            "sdk": "car.assert_image",
+            "args": {
+              "locator": "High",
+              "by": "text",
+              "baseline_img": "page_objects/sources/img/车辆设置/vibration_list.png",
+              "region": null,
+              "threshold": 0.9
+            },
+            "role": "observe",
+            "ok": true,
+            "evidence": {
+              "auto_captured": true,
+              "similarity": 1.0
+            }
+          }
+        ]
+      }
+    ],
+    "asserts": [
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤0：页面上方显示\"Safety\", \"Comfort\", and \"Parking\" 页面",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Safety",
+          "by": "text",
+          "expected": "Safety"
+        },
+        "from": "8a96a6a2bd3f",
+        "execution_order": {
+          "after_action_id": "781304aad02e:0",
+          "before_action_id": "71741ca2ae01:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤0：页面上方显示\"Safety\", \"Comfort\", and \"Parking\" 页面",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Comfort",
+          "by": "text",
+          "expected": "Comfort"
+        },
+        "from": "5ef3db0d40c4",
+        "execution_order": {
+          "after_action_id": "781304aad02e:0",
+          "before_action_id": "71741ca2ae01:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤0：页面上方显示\"Safety\", \"Comfort\", and \"Parking\" 页面",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Parking",
+          "by": "text",
+          "expected": "Parking"
+        },
+        "from": "e4f244d3a1eb",
+        "execution_order": {
+          "after_action_id": "781304aad02e:0",
+          "before_action_id": "71741ca2ae01:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤1：页面显示：\"My Safety\",\"Configure My Safety Perso\",\"Blind spot warning\",\"Active braking\"\"Warning anticipation\"",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "My Safety",
+          "by": "text",
+          "expected": "My Safety"
+        },
+        "from": "caf3a16f83f4",
+        "execution_order": {
+          "after_action_id": "71741ca2ae01:0",
+          "after_step_index": 1,
+          "before_action_id": "258fa5c8a976:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤1：页面显示：\"My Safety\",\"Configure My Safety Perso\",\"Blind spot warning\",\"Active braking\"\"Warning anticipation\"",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Configure My Safety Perso",
+          "by": "text",
+          "expected": "Configure My Safety Perso"
+        },
+        "from": "bef73c631db2",
+        "execution_order": {
+          "after_action_id": "71741ca2ae01:0",
+          "after_step_index": 1,
+          "before_action_id": "258fa5c8a976:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤1：页面显示：\"My Safety\",\"Configure My Safety Perso\",\"Blind spot warning\",\"Active braking\"\"Warning anticipation\"",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Blind spot warning",
+          "by": "text",
+          "expected": "Blind spot warning"
+        },
+        "from": "e695da648c57",
+        "execution_order": {
+          "after_action_id": "71741ca2ae01:0",
+          "after_step_index": 1,
+          "before_action_id": "258fa5c8a976:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤1：页面显示：\"My Safety\",\"Configure My Safety Perso\",\"Blind spot warning\",\"Active braking\"\"Warning anticipation\"",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Active braking",
+          "by": "text",
+          "expected": "Active braking"
+        },
+        "from": "8868f3ff6bd0",
+        "execution_order": {
+          "after_action_id": "71741ca2ae01:0",
+          "after_step_index": 1,
+          "before_action_id": "258fa5c8a976:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤1：页面显示：\"My Safety\",\"Configure My Safety Perso\",\"Blind spot warning\",\"Active braking\"\"Warning anticipation\"",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Warning anticipation",
+          "by": "text",
+          "expected": "Warning anticipation"
+        },
+        "from": "ef62ab5f1c47",
+        "execution_order": {
+          "after_action_id": "71741ca2ae01:0",
+          "after_step_index": 1,
+          "before_action_id": "258fa5c8a976:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤2: ：页面显示\"Departure anticipation\", \"Vibration\", \"Emergency lane departure prevention\", \"Driver monitoring alert\",",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "Perso",
+          "by": "text",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "37a8123a1d23",
+        "execution_order": {
+          "after_action_id": "71741ca2ae01:0",
+          "after_step_index": 1,
+          "before_action_id": "258fa5c8a976:0",
+          "before_step_index": 2
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "37a8123a1d23",
+          "action_id": "37a8123a1d23:0",
+          "locator": "Perso",
+          "by": "text",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤2: ：页面显示\"Departure anticipation\", \"Vibration\", \"Emergency lane departure prevention\", \"Driver monitoring alert\",",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Departure anticipation",
+          "by": "text",
+          "expected": "Departure anticipation"
+        },
+        "from": "f43ee6c01758",
+        "execution_order": {
+          "after_action_id": "258fa5c8a976:0",
+          "after_step_index": 2,
+          "before_action_id": "45c753e5bee2:0",
+          "before_step_index": 3
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤2: ：页面显示\"Departure anticipation\", \"Vibration\", \"Emergency lane departure prevention\", \"Driver monitoring alert\",",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Vibration",
+          "by": "text",
+          "expected": "Vibration"
+        },
+        "from": "68e8d41acc55",
+        "execution_order": {
+          "after_action_id": "258fa5c8a976:0",
+          "after_step_index": 2,
+          "before_action_id": "45c753e5bee2:0",
+          "before_step_index": 3
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤2: ：页面显示\"Departure anticipation\", \"Vibration\", \"Emergency lane departure prevention\", \"Driver monitoring alert\",",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Emergency lane departure prevention",
+          "by": "text",
+          "expected": "Emergency lane departure prevention"
+        },
+        "from": "498404481ce1",
+        "execution_order": {
+          "after_action_id": "258fa5c8a976:0",
+          "after_step_index": 2,
+          "before_action_id": "45c753e5bee2:0",
+          "before_step_index": 3
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤2: ：页面显示\"Departure anticipation\", \"Vibration\", \"Emergency lane departure prevention\", \"Driver monitoring alert\",",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Driver monitoring alert",
+          "by": "text",
+          "expected": "Driver monitoring alert"
+        },
+        "from": "e955263b9e5c",
+        "execution_order": {
+          "after_action_id": "45c753e5bee2:0",
+          "after_step_index": 3,
+          "before_action_id": "46e6a0c5684d:0",
+          "before_step_index": 3
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Early",
+          "by": "text",
+          "expected": "Early"
+        },
+        "from": "41f760267822",
+        "execution_order": {
+          "after_action_id": "83b96aa455ee:0",
+          "after_step_index": 3,
+          "before_action_id": "36a0bd92d9c8:0",
+          "before_step_index": 4
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Standard",
+          "by": "text",
+          "expected": "Standard"
+        },
+        "from": "452cd3c732b9",
+        "execution_order": {
+          "after_action_id": "83b96aa455ee:0",
+          "after_step_index": 3,
+          "before_action_id": "36a0bd92d9c8:0",
+          "before_step_index": 4
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Late",
+          "by": "text",
+          "expected": "Late"
+        },
+        "from": "a7a343197d59",
+        "execution_order": {
+          "after_action_id": "83b96aa455ee:0",
+          "after_step_index": 3,
+          "before_action_id": "36a0bd92d9c8:0",
+          "before_step_index": 4
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[2]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "12ea9e7a84d8",
+        "execution_order": {
+          "after_action_id": "0c7c790c9817:0",
+          "after_step_index": 4,
+          "before_action_id": "2da81107c371:0",
+          "before_step_index": 4
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "12ea9e7a84d8",
+          "action_id": "12ea9e7a84d8:0",
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[2]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "a61f509a3722",
+        "execution_order": {
+          "after_action_id": "2da81107c371:0",
+          "after_step_index": 4,
+          "before_action_id": "c001fd58079d:0",
+          "before_step_index": 4
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "a61f509a3722",
+          "action_id": "a61f509a3722:0",
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤3：\"Early\", \"Standard\", \"Late\" are listed,选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_image",
+        "args": {
+          "locator": "Late",
+          "by": "text",
+          "baseline_img": "page_objects/sources/img/车辆设置/departure_anticipation_list.png",
+          "region": null,
+          "threshold": 0.9
+        },
+        "from": "26423d6cb1f9",
+        "execution_order": {
+          "after_action_id": "2da81107c371:0",
+          "after_step_index": 4,
+          "before_action_id": "c001fd58079d:0",
+          "before_step_index": 4
+        },
+        "evidence": {
+          "auto_captured": true,
+          "similarity": 1.0
+        }
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Low",
+          "by": "text",
+          "expected": "Low"
+        },
+        "from": "c0c3aec0c1f0",
+        "execution_order": {
+          "after_action_id": "c0c7d53cc46e:0",
+          "after_step_index": 4,
+          "before_action_id": "c97dbee5acc7:0",
+          "before_step_index": 5
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Medium",
+          "by": "text",
+          "expected": "Medium"
+        },
+        "from": "76aefe3386e3",
+        "execution_order": {
+          "after_action_id": "c0c7d53cc46e:0",
+          "after_step_index": 4,
+          "before_action_id": "c97dbee5acc7:0",
+          "before_step_index": 5
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "High",
+          "by": "text",
+          "expected": "High"
+        },
+        "from": "5f62127ecc09",
+        "execution_order": {
+          "after_action_id": "c0c7d53cc46e:0",
+          "after_step_index": 4,
+          "before_action_id": "c97dbee5acc7:0",
+          "before_step_index": 5
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[1]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "bd849a622da8",
+        "execution_order": {
+          "after_action_id": "c97dbee5acc7:0",
+          "after_step_index": 5,
+          "before_action_id": "aa0569b6fa68:0",
+          "before_step_index": 5
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "bd849a622da8",
+          "action_id": "bd849a622da8:0",
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[1]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "f27c8bbfcd05",
+        "execution_order": {
+          "after_action_id": "aa0569b6fa68:0",
+          "after_step_index": 5,
+          "before_action_id": "f03ff956a931:0",
+          "before_step_index": 5
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "f27c8bbfcd05",
+          "action_id": "f27c8bbfcd05:0",
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤4：列出\"Low\", \"Medium\", \"High\"选项，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_image",
+        "args": {
+          "locator": "High",
+          "by": "text",
+          "baseline_img": "page_objects/sources/img/车辆设置/vibration_list.png",
+          "region": null,
+          "threshold": 0.9
+        },
+        "from": "332c112f85ab",
+        "execution_order": {
+          "after_action_id": "aa0569b6fa68:0",
+          "after_step_index": 5,
+          "before_action_id": "f03ff956a931:0",
+          "before_step_index": 5
+        },
+        "evidence": {
+          "auto_captured": true,
+          "similarity": 1.0
+        }
+      },
+      {
+        "xlsx_index": 5,
+        "source_text": "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Early",
+          "by": "text",
+          "expected": "Early"
+        },
+        "from": "a3578aef393e",
+        "execution_order": {
+          "after_action_id": "d5421a771b92:0",
+          "after_step_index": 5,
+          "before_action_id": "c5d8e3261be2:0"
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 5,
+        "source_text": "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Standard",
+          "by": "text",
+          "expected": "Standard"
+        },
+        "from": "61639644e435",
+        "execution_order": {
+          "after_action_id": "d5421a771b92:0",
+          "after_step_index": 5,
+          "before_action_id": "c5d8e3261be2:0"
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 5,
+        "source_text": "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Late",
+          "by": "text",
+          "expected": "Late"
+        },
+        "from": "296f2ea084d8",
+        "execution_order": {
+          "after_action_id": "d5421a771b92:0",
+          "after_step_index": 5,
+          "before_action_id": "c5d8e3261be2:0"
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 5,
+        "source_text": "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[2]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "d6d4cc572bcd",
+        "execution_order": {
+          "after_action_id": "c5d8e3261be2:0",
+          "before_action_id": "4b0bd001a41f:0"
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "d6d4cc572bcd",
+          "action_id": "d6d4cc572bcd:0",
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[2]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 5,
+        "source_text": "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_attr",
+        "args": {
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        },
+        "from": "d4c167d950ba",
+        "execution_order": {
+          "after_action_id": "4b0bd001a41f:0",
+          "before_action_id": "8c4a2d143c7e:0"
+        },
+        "evidence": {},
+        "state_evidence": {
+          "source": "activity_assert_attr",
+          "method": "car.assert_attr",
+          "passed": true,
+          "trace_id": "d4c167d950ba",
+          "action_id": "d4c167d950ba:0",
+          "locator": "(//*[@resource-id='com.renault.car.driveassist:id/car_ui_list_item_radio_button_widget'])[3]",
+          "by": "xpath",
+          "attr": "checked",
+          "expected": true
+        }
+      },
+      {
+        "xlsx_index": 5,
+        "source_text": "步骤5：列出\"Early\", \"Standard\", \"Late\" 选项，可选择3个按钮，点击选项成功开启/关闭，动画正确显示",
+        "sdk": "car.assert_image",
+        "args": {
+          "locator": "Late",
+          "by": "text",
+          "baseline_img": "page_objects/sources/img/车辆设置/warning_anticipation_list.png",
+          "region": null,
+          "threshold": 0.9
+        },
+        "from": "008061508219",
+        "execution_order": {
+          "after_action_id": "4b0bd001a41f:0",
+          "before_action_id": "8c4a2d143c7e:0"
+        },
+        "evidence": {
+          "auto_captured": true,
+          "similarity": 1.0
+        }
+      }
+    ],
+    "teardown": [
+      {
+        "trace_id": "c5d8e3261be2",
+        "action_id": "c5d8e3261be2:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Standard",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 52
+      },
+      {
+        "trace_id": "4b0bd001a41f",
+        "action_id": "4b0bd001a41f:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Late",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 54
+      },
+      {
+        "trace_id": "8c4a2d143c7e",
+        "action_id": "8c4a2d143c7e:0",
+        "domain": "ui",
+        "sdk": "car.press",
+        "args": {
+          "key": "home"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 57
+      }
+    ],
+    "teardown_steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "杀死所有进程，车机恢复初始状态",
+        "actions": [
+          {
+            "trace_id": "c5d8e3261be2",
+            "action_id": "c5d8e3261be2:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Standard",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 52
+          },
+          {
+            "trace_id": "4b0bd001a41f",
+            "action_id": "4b0bd001a41f:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Late",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 54
+          },
+          {
+            "trace_id": "8c4a2d143c7e",
+            "action_id": "8c4a2d143c7e:0",
+            "domain": "ui",
+            "sdk": "car.press",
+            "args": {
+              "key": "home"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 57
+          }
+        ]
+      }
+    ]
+  },
+  "policies": [],
+  "gaps": [
+    {
+      "reason": "action-failed",
+      "trace_id": "92bc02151c96",
+      "domain": "ui",
+      "method": "assert_text",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "car.assert_text",
+          "args": {
+            "locator": "Driver monitoring alert",
+            "by": "text",
+            "expected": "Driver monitoring alert"
+          },
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "reason": "action-failed",
+      "trace_id": "9c064f4e6e96",
+      "domain": "ui",
+      "method": "assert_attr",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "car.assert_attr",
+          "args": {
+            "locator": "Early",
+            "by": "text",
+            "attr": "checked",
+            "expected": true
+          },
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,984 @@
+开始执行测试（16 个脚本，16 次运行）…
+
+
+--- tests_scripts/收音机/test_smoke_test_50 copy.py::TestSmokeTest50::test_smoke_test_50 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\收音机\test_smoke_test_50 copy.py::TestSmokeTest50::test_smoke_test_50 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/收音机/test_smoke_test_50 copy.py::TestSmokeTest50::test_smoke_test_50 ERROR
+
+=================================== ERRORS ====================================
+____________ ERROR at setup of TestSmokeTest50.test_smoke_test_50 _____________
+
+self = <test_smoke_test_50 copy.TestSmokeTest50 object at 0x000001420F1B0860>
+at = <AT devices=1 disconnected>
+car = <autocar.drivers.u2.driver.U2Manager object at 0x0000014210D8B410>
+config = {'ARXML_PATH': '', 'BT_DEVICE_NAME': '', 'CAMERA_CROP_REGION': None, 'CAMERA_FPS': '', ...}
+
+    @pytest.fixture(autouse=True)
+    def setup(self, at, car, config):
+        self.at = at
+        self.car = car
+        self.page = 收音机Page(car=car, at=at)
+        self._shot_dir = Path(self.at.report_path("screenshots", "smoke_test_50", create=True))
+        # AUTOCAR-PRECONDITIONS: 步骤0：进入“Music”页面 → 点击“AM Radio” → 点击频率进入播放界面；步骤1：AM Radio 正在播放
+>       self.page.enter_am_radio_playback()
+
+tests_scripts\收音机\test_smoke_test_50 copy.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\收音机\收音机_page.py:129: in enter_am_radio_playback
+    self.car.ensure_click(Loc.FREQUENCY_TITLE)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: ensure_click 失败: 元素 'com.renault.car.media:id/title' (by=id, nth=0) 层次树无匹配，在 1 个候选滚动容器中按主方向查找 + 适用的横向兜底后仍未命中 (direction=up, max_scrolls=10, container_xs=[696], containers=['com.renault.car.launcher:id/media_source_grid_recycler'])
+
+src/autocar/drivers/u2/enhanced.py:2084: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/music_nav' -> (56, 218), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='AM Radio' -> (267, 264), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='AM Radio' -> (267, 264), display-id=0, XML coords are physical screen coords
+=========================== short test summary info ===========================
+ERROR tests_scripts/收音机/test_smoke_test_50 copy.py::TestSmokeTest50::test_smoke_test_50
+============================== 1 error in 37.05s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_3.py::TestSmokeTest3::test_smoke_test_3 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_3.py::TestSmokeTest3::test_smoke_test_3 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_3.py::TestSmokeTest3::test_smoke_test_3 PASSED
+
+============================== 1 passed in 9.63s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest4.test_smoke_test_4 _______________________
+
+self = <test_smoke_test_4.TestSmokeTest4 object at 0x000002993AD2EA20>
+
+    @allure.story("系统UI - 地图搜索交互")
+    @allure.title("系统UI - 地图搜索交互")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_4(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤1：点击谷歌地图搜索栏', '步骤2：再次点击搜索栏'] | 预期: 步骤1：出现搜索下拉菜单：左侧显示“最近”“类别”“已保存”; 步骤2：出现屏幕键盘"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤1: 点击谷歌地图搜索栏"):
+            self.page.click_maps_search_box()
+            time.sleep(3)  # 等待搜索下拉菜单出现
+        # AUTOCAR-EXPECTED[0]: 步骤1：出现搜索下拉菜单：左侧显示“最近”“类别”“已保存”
+        with allure.step("验证[0]: 步骤1：出现搜索下拉菜单：左侧显示“Recent”“Categories”“Saved”"):
+            self.car.assert_text(Loc.MAPS_DROPDOWN_RECENT, "Recent", by="text")
+            self.car.assert_text(Loc.MAPS_DROPDOWN_CATEGORY, "Categories", by="text")
+            self.car.assert_text(Loc.MAPS_DROPDOWN_SAVED, "Saved", by="text")
+    
+        with allure.step("步骤2: 再次点击搜索栏"):
+            self.page.click_keyboard_search_edit()
+            time.sleep(3)
+        # AUTOCAR-EXPECTED[1]: 步骤2：出现屏幕键盘
+        with allure.step("验证[1]: 步骤2：出现屏幕键盘"):
+>           self.car.assert_exists(Loc.MAPS_KEYBOARD, by="id", expected=True, timeout=10)
+
+tests_scripts\桌面启动器\test_smoke_test_4.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: id=com.google.android.apps.automotive.inputmethod:id/input_view
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.google.android.apps.maps:id/main_suggested_destinations_search_box' -> (397, 106), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.google.android.apps.maps:id/destination_input_keyboard_search_edit_text' -> (523, 105), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_4.py::TestSmokeTest4::test_smoke_test_4
+============================= 1 failed in 28.89s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest6.test_smoke_test_6 _______________________
+
+self = <test_smoke_test_6.TestSmokeTest6 object at 0x000001A00FF76900>
+
+    @allure.story("系统UI - 触发谷歌助手")
+    @allure.title("系统UI - 触发谷歌助手")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_6(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤1：返回主界面并点击主界面谷歌助手区域'] | 预期: 步骤1：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤1: 返回主界面并点击主界面谷歌助手区域"):
+            self.page.go_home()
+            self.page.click_google_assistant()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤1：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部
+        with allure.step("验证[0]: 步骤1：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"):
+            # 语音交互焦点由 carassistant voiceplate 容器承载（燃油图标/聆听状态为容器内可视内容），
+            # 用 U2 控件树断言 voiceplate 元素出现即可证焦点已在屏幕底部显示。
+            # 原 assert_image 持久基线 voiceplate_assistant.png 为无效元素模板（baseline=(88,1040)，
+            # 与真实元素 (570,1168) 宽高比相对误差 4.77 >> tolerance 0.02，SDK 抛「基准图无效」），
+            # 且有效元素模板无法在本工作集内重建，故按 ##ui 规则改用控件树断言。
+>           self.car.assert_exists(Loc.VOICEPLATE, by="id", expected=True)
+
+tests_scripts\桌面启动器\test_smoke_test_6.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: id=com.google.android.carassistant:id/voiceplate
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Google Assistant' -> (1103, 118), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_6.py::TestSmokeTest6::test_smoke_test_6
+============================= 1 failed in 17.36s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5 FAILED
+
+================================== FAILURES ===================================
+__________________ TestSmokeTest7Row5.test_smoke_test_7_row5 __________________
+
+self = <test_smoke_test_7_row5.TestSmokeTest7Row5 object at 0x000001CB84977980>
+
+    @allure.story("系统UI - 左侧导航")
+    @allure.title("系统UI - 左侧导航")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_7_row5(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：点击左侧导航栏应用图标；验证目标页面', '步骤1：点击左侧导航栏车辆图标；验证目标页面', '步骤2：点击左侧导航栏音乐图标；验证目标页面', '步骤3：点击左侧导航栏电话图标；验证目标页面'] | 预期: 步骤0：页面跳转到应用页面，显示所有应用：“Play商店”，“Android Auto”，“设备管理器”，“收音机”，“AM收音机”; 步骤1：页面跳转到车辆页面,显示：“Live Data”,“Coaching”,; “Challenges”,“Driver Mode”,“电力”，“座位”，“My Driving”，“驾驶辅助”，“车辆”，“Reno Assistant”,“设置”; 步骤2：页面跳转到音乐源页面，显示“AM收音机”、“蓝牙音频”、“Google新闻”、“收音机”、“USB”,“Android Auto”; 步骤3：页面跳转到电话连接页面，页面显示：要完成通话，请先通过蓝牙将您的手机连接到汽车。带有“连接到蓝牙”按钮"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 点击左侧导航栏应用图标"):
+            self.page.click_nav_app()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤0：页面跳转到应用页面，显示所有应用：“Play商店”，“Android Auto”，“设备管理器”，“收音机”，“AM收音机”
+        with allure.step("验证[0]: 步骤0：页面跳转到应用页面，显示所有应用：“Play商店”，“Android Auto”，“设备管理器”，“收音机”，“AM收音机”"):
+            # 应用网格在点击后延迟加载（explore 证据：grid_nav 点击后 apps_grid 为空，约 2 分钟后才出现应用文案），
+            # 首个断言用长超时等待应用列表就绪，后续断言在网格加载完成后快速通过。
+>           self.car.assert_exists(Loc.APP_PLAY_STORE, timeout=120)
+
+tests_scripts\桌面启动器\test_smoke_test_7_row5.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: text=Play 商店
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/grid_nav' -> (56, 450), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_7_row5.py::TestSmokeTest7Row5::test_smoke_test_7_row5
+======================== 1 failed in 131.61s (0:02:11) ========================
+
+--- tests_scripts/桌面启动器/test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6 FAILED
+
+================================== FAILURES ===================================
+__________________ TestSmokeTest7Row6.test_smoke_test_7_row6 __________________
+
+self = <test_smoke_test_7_row6.TestSmokeTest7Row6 object at 0x0000021821D0C320>
+
+    @allure.story("系统UI - 窗口小部件编辑")
+    @allure.title("系统UI - 窗口小部件编辑")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_7_row6(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面'] | 预期: 步骤0：右侧出现“编辑窗口部件”窗口，下方显示“Google助理”，“日期和时间”，“GG图”，“Eco Score”“电话”，“”音频，“车辆”选项"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 从屏幕右侧向左滑动，打开窗口小部件编辑界面"):
+            self.page.swipe_open_widget_editor()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤0：右侧出现“编辑窗口部件”窗口，下方显示“Google助理”，“日期和时间”，“GG图”，“Eco Score”“电话”，“”音频，“车辆”选项
+        with allure.step("验证[0] 小部件编辑窗口标题: 编辑窗口部件"):
+>           self.car.assert_exists(
+                Loc.WIDGET_EDIT_TITLE,
+                by="text",
+                expected=True,
+                timeout=5.0,
+                msg="右侧出现“编辑窗口部件”窗口",
+            )
+
+tests_scripts\桌面启动器\test_smoke_test_7_row6.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 右侧出现“编辑窗口部件”窗口
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_7_row6.py::TestSmokeTest7Row6::test_smoke_test_7_row6
+============================= 1 failed in 18.16s ==============================
+
+--- test_smoke_test_7.1.py (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7.1.py --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_________ ERROR collecting tests_scripts/桌面启动器/test_smoke_test_7.1.py _________
+ImportError while importing test module 'd:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7.1.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\TS\AppData\Roaming\iatset\runtime\python-3.12.10-49ba2463778c\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'test_smoke_test_7.1'; 'test_smoke_test_7' is not a package
+=========================== short test summary info ===========================
+ERROR tests_scripts/桌面启动器/test_smoke_test_7.1.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.24s ===============================
+test_smoke_test_7.1.py 的测试进程异常退出（退出码 2），将继续执行剩余测试用例。
+
+--- tests_scripts/桌面启动器/test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest7.test_smoke_test_7 _______________________
+AUTOCAR_CASE_ISSUE: expected[0] 指定应用（PlayStore/Android Auto/Devices Manager/Audio/AM Radio）在本车机 Application 页均不存在；实际列表为 Google Assistant/Google Maps/News/Permissions Test/Renault UI Foundations/SMS/Settings/ThunderSoft Engineering Mode
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/grid_nav' -> (56, 450), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_7.py::TestSmokeTest7::test_smoke_test_7
+============================= 1 failed in 10.54s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9 FAILED
+
+================================== FAILURES ===================================
+______________________ TestSmokeTest9.test_smoke_test_9 _______________________
+
+self = <test_smoke_test_9.TestSmokeTest9 object at 0x000001E70BA8C6E0>
+
+    @allure.story("系统UI - 谷歌助手小部件生命周期")
+    @allure.title("系统UI - 谷歌助手小部件生命周期")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_9(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面', '步骤1：点击“Goolge助理”小部件将它添加在屏幕中，退出编辑界面并检查', '步骤2：点击首页的“Goolge助理”小部件', '步骤3：从屏幕右侧向左滑动，打开窗口小部件编辑界面，将“Goolge助理”小部件更换成其他小部件，退出编辑界面并检查'] | 预期: 步骤1：“Goolge助理”小部件立即添加到主页面; 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部; 步骤3：“Goolge助理”小部件从主页移除"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 从屏幕右侧向左滑动，打开窗口小部件编辑界面"):
+            self.page.swipe_open_widget_editor()
+    
+        with allure.step("步骤1: 点击 Google 助理小部件添加至主页面，并退出编辑界面"):
+            self.page.add_google_assistant_widget()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤1：“Goolge助理”小部件立即添加到主页面
+        with allure.step("验证[0]: 步骤1：“Goolge助理”小部件立即添加到主页面"):
+            self.car.assert_exists(Loc.GOOGLE_ASSISTANT, by="text", expected=True, timeout=5.0)
+    
+        with allure.step("步骤2: 点击首页的 Google 助理小部件"):
+            self.page.click_google_assistant()
+            time.sleep(3)  # 等待语音交互焦点出现
+        # AUTOCAR-EXPECTED[1]: 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部
+        with allure.step("验证[1]: 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部"):
+            # 语音交互焦点条出现（final_assertions: by=id，稳定结构断言）
+            self.car.assert_exists(Loc.VOICEPLATE, by="id", expected=True, timeout=5.0)
+            # 语音交互焦点为动态画面（聆听状态/波形实时变化），静态基准图比对不稳定，
+            # 改用截图留档供确认燃油图标与聆听状态。
+            self._shot_attach("voiceplate_listening")
+    
+        with allure.step("步骤3: 打开窗口小部件编辑界面，将 Google 助理小部件更换成其他小部件并退出"):
+>           self.page.replace_google_assistant_with_datetime()
+
+tests_scripts\桌面启动器\test_smoke_test_9.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\桌面启动器\桌面启动器_page.py:47: in replace_google_assistant_with_datetime
+    self.car.assert_exists(Loc.WIDGET_EDIT_TITLE_EN, by="text", expected=True, timeout=5.0)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: text=Edit widgets
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Google Assistant' -> (1103, 118), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_9.py::TestSmokeTest9::test_smoke_test_9
+============================= 1 failed in 24.69s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_10.py::TestSmokeTest10::test_smoke_test_10 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_10.py::TestSmokeTest10::test_smoke_test_10 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_10.py::TestSmokeTest10::test_smoke_test_10 PASSED
+
+============================= 1 passed in 32.55s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11 ERROR
+
+=================================== ERRORS ====================================
+____________ ERROR at setup of TestSmokeTest11.test_smoke_test_11 _____________
+
+self = <test_smoke_test_11.TestSmokeTest11 object at 0x00000277E636C6E0>
+at = <AT devices=1 disconnected>
+car = <autocar.drivers.u2.driver.U2Manager object at 0x00000277E7A0DF40>
+config = {'ARXML_PATH': '', 'BT_DEVICE_NAME': '', 'CAMERA_CROP_REGION': None, 'CAMERA_FPS': '', ...}
+
+    @pytest.fixture(autouse=True)
+    def setup(self, at, car, config):
+        self.at = at
+        self.car = car
+        self.page = 桌面启动器Page(car=car, at=at)
+        self._shot_dir = Path(self.at.report_path("screenshots", "smoke_test_11", create=True))
+        # AUTOCAR-PRECONDITIONS:
+        # 步骤0：车机正常启动，处于主页面（Explore 前置动作：press home ×2 → back 回到主页面）
+        self.car.press("home")
+        self.car.press("home")
+        self.car.press("back")
+        # 步骤1："日期和时间"小部件已添加到主界面（Explore 前置动作：右滑打开编辑界面 → 添加日期和时间 → 关闭编辑界面）
+        # 前置容错：上一用例可能残留打开的小部件编辑界面（本用例紧随 Smoke_Test_9/10 之后运行），
+        # 先关闭残留面板再打开，确保 swipe 打开的是全新编辑面板
+        if self.car.exists(Loc.WIDGET_EDIT_CLOSE_BUTTON, timeout=1.0):
+            self.car.click_position(1230, 97)
+        # 打开编辑界面：press home 回主页面后 launcher 过渡未完成时 swipe 可能不生效
+        # （本 run Smoke_Test_9 与 Smoke_Test_11 均出现过 swipe 后 'Edit widgets' 未出现），
+        # 故先确认面板未打开，再 swipe 并检查渲染结果，未出现则重试
+        if not self.car.exists(Loc.WIDGET_EDIT_TITLE_EN, timeout=1.0):
+            for _ in range(3):
+                self.page.swipe_open_widget_editor()
+                if self.car.exists(Loc.WIDGET_EDIT_TITLE_EN, timeout=2.0):
+                    break
+        # 确认编辑面板渲染完成，并点击 overlay 激活编辑面板（本车机编辑器非首次/残留打开时
+        # 选项点击不生效，需先点 overlay 激活，与 replace_google_assistant_with_datetime 已验证模式一致；
+        # fresh 打开时 overlay 亦存在且可点击，重复激活无害）
+        self.car.assert_exists(Loc.WIDGET_EDIT_TITLE_EN, by="text", expected=True, timeout=5.0)
+        self.car.ensure_click(Loc.WIDGET_EDIT_OVERLAY, by="id", max_scrolls=10, scroll_direction="up", fingers=1)
+>       self.page.add_datetime_widget()
+
+tests_scripts\桌面启动器\test_smoke_test_11.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\桌面启动器\桌面启动器_page.py:94: in add_datetime_widget
+    self.car.ensure_click(Loc.WIDGET_EDIT_DATE_TIME_EN, by="text", max_scrolls=10, scroll_direction="up", fingers=1)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: ensure_click 失败: 元素 'Date & time' (by=text, nth=0) 层次树无匹配，在 1 个候选滚动容器中按主方向查找 + 适用的横向兜底后仍未命中 (direction=up, max_scrolls=10, container_xs=[1400], containers=['cx=1400'])
+
+src/autocar/drivers/u2/enhanced.py:2084: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.launcher:id/overlay' -> (666, 189), display-id=0, XML coords are physical screen coords
+=========================== short test summary info ===========================
+ERROR tests_scripts/桌面启动器/test_smoke_test_11.py::TestSmokeTest11::test_smoke_test_11
+============================== 1 error in 26.16s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12 FAILED
+
+================================== FAILURES ===================================
+_____________________ TestSmokeTest12.test_smoke_test_12 ______________________
+
+self = <test_smoke_test_12.TestSmokeTest12 object at 0x00000232F03983E0>
+
+    @allure.story("系统UI - 音频小部件显示与移除")
+    @allure.title("系统UI - 音频小部件显示与移除")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_12(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面，将“音频”小部件更换成其他小部件，退出编辑界面并检查', '步骤1：从屏幕右侧向左滑动，打开窗口小部件编辑界面，点击“音频”小部件将它添加在屏幕中，退出编辑界面并检查'] | 预期: 步骤0：“音频”小部件从主页面移除; 步骤1：“音频”小部件添加到主页面"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 将“音频”小部件更换成其他小部件，退出编辑界面"):
+>           self.page.remove_audio_widget()
+
+tests_scripts\桌面启动器\test_smoke_test_12.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\桌面启动器\桌面启动器_page.py:116: in remove_audio_widget
+    self.car.ensure_click(Loc.WIDGET_EDIT_CLOSE_BUTTON, by="id", max_scrolls=10, scroll_direction="up", fingers=1)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: ensure_click 失败: 元素 'com.renault.car.launcher:id/close_button' (by=id, nth=0) 层次树无匹配，在 1 个候选滚动容器中按主方向查找 + 适用的横向兜底后仍未命中 (direction=up, max_scrolls=10, container_xs=[1400], containers=['cx=1400'])
+
+src/autocar/drivers/u2/enhanced.py:2084: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='GG Diagram' -> (1103, 408), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_12.py::TestSmokeTest12::test_smoke_test_12
+============================= 1 failed in 21.41s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13 ERROR
+
+=================================== ERRORS ====================================
+____________ ERROR at setup of TestSmokeTest13.test_smoke_test_13 _____________
+
+self = <test_smoke_test_13.TestSmokeTest13 object at 0x000001ECACCCD160>
+at = <AT devices=1 disconnected>
+car = <autocar.drivers.u2.driver.U2Manager object at 0x000001ECAE4465D0>
+config = {'ARXML_PATH': '', 'BT_DEVICE_NAME': '', 'CAMERA_CROP_REGION': None, 'CAMERA_FPS': '', ...}
+
+    @pytest.fixture(autouse=True)
+    def setup(self, at, car, config):
+        self.at = at
+        self.car = car
+        self.page = 桌面启动器Page(car=car, at=at)
+        self._shot_dir = Path(self.at.report_path("screenshots", "smoke_test_13", create=True))
+        # AUTOCAR-PRECONDITIONS: 前置“步骤0：车机正常启动，处于主页面”——识别到 adb 正常连接即通过
+        # 车机前置：通过 adb get-state 检测设备在线（car 已连接，设备在线即满足“车机正常启动”）；
+        # 模块 autouse reset_environment 已在测试前回桌面，无需额外动作。
+        self._assert_adb_connected(car)
+        # 前置“步骤1："音频"小部件已添加到主页面”：首页 player_container 默认即含 Audio 小部件，
+        # 已存在则跳过编辑面板操作，缺失才右滑添加（避免面板未展开时误点首页同名控件）
+>       self.page.ensure_audio_widget_on_home()
+
+tests_scripts\桌面启动器\test_smoke_test_13.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\桌面启动器\桌面启动器_page.py:128: in ensure_audio_widget_on_home
+    self.add_audio_widget()
+page_objects\pages\桌面启动器\桌面启动器_page.py:135: in add_audio_widget
+    self.car.assert_exists(Loc.WIDGET_EDIT_TITLE_EN, by="text", expected=True, timeout=5.0)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: text=Edit widgets
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+=========================== short test summary info ===========================
+ERROR tests_scripts/桌面启动器/test_smoke_test_13.py::TestSmokeTest13::test_smoke_test_13
+============================== 1 error in 17.11s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14 FAILED
+
+================================== FAILURES ===================================
+_____________________ TestSmokeTest14.test_smoke_test_14 ______________________
+
+self = <test_smoke_test_14.TestSmokeTest14 object at 0x000002B7958C3200>
+
+    @allure.story("系统UI - 电话小部件显示与移除")
+    @allure.title("系统UI - 电话小部件显示与移除")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_14(self):
+        """前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面', '步骤1：点击“电话”小部件将它添加在屏幕中，退出编辑界面并检查', '步骤2：从屏幕右侧向左滑动，打开窗口小部件编辑界面，将“电话”小部件更换成其他小部件，退出编辑界面并'] | 预期: 步骤1：“电话”小部件立即添加到主页面; 步骤2：“电话”小部件从主页面移除"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤0: 从屏幕右侧向左滑动，打开窗口小部件编辑界面"):
+            self.page.swipe_open_widget_editor()
+    
+        with allure.step("步骤1: 点击“电话”小部件将它添加在屏幕中，退出编辑界面"):
+>           self.page.add_phone_widget()
+
+tests_scripts\桌面启动器\test_smoke_test_14.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+page_objects\pages\桌面启动器\桌面启动器_page.py:158: in add_phone_widget
+    self.car.assert_exists(Loc.WIDGET_EDIT_TITLE_EN, by="text", expected=True, timeout=5.0)
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 元素不存在: text=Edit widgets
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_14.py::TestSmokeTest14::test_smoke_test_14
+============================= 1 failed in 14.89s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15 FAILED
+
+================================== FAILURES ===================================
+_____________________ TestSmokeTest15.test_smoke_test_15 ______________________
+
+self = <test_smoke_test_15.TestSmokeTest15 object at 0x0000016E6381C6E0>
+
+    @allure.story("系统UI - 点击电话小部件进入设置")
+    @allure.title("系统UI - 点击电话小部件进入设置")
+    @allure.severity(allure.severity_level.NORMAL)
+    def test_smoke_test_15(self):
+        """前置: 步骤0：车机正常启动，处于主页面; 步骤1：\"电话\"小部件已添加到首页 | 步骤: ['步骤1：点击首页上的\"电话\"小部件'] | 预期: 步骤1：系统进入\"电话\"设置页面"""
+        # AUTOCAR-DEVIATION: []
+        with allure.step("步骤1: 点击首页上的\"电话\"小部件"):
+            self.page.click_phone_widget()
+    
+        # AUTOCAR-EXPECTED[0]: 步骤1：系统进入"电话"设置页面
+        with allure.step("验证[0]: 步骤1：系统进入\"电话\"设置页面"):
+>           self.car.assert_exists(Loc.PHONE_SETTINGS_BLUETOOTH, by="text", expected=True, timeout=5.0, msg="系统进入\"电话\"设置页面")
+
+tests_scripts\桌面启动器\test_smoke_test_15.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\autocar\_internal\registry\method_registry.py:463: in wrapper
+    result = _fn(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/autocar/drivers/u2/driver.py:258: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+src/autocar/drivers/u2/driver.py:252: in autocar.drivers.u2.driver._with_device_session_recovery.wrapper
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   AssertionError: 系统进入"电话"设置页面
+
+src/autocar/drivers/u2/enhanced.py:2304: AssertionError
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: text='Phone' -> (1069, 603), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.launcher:id/close_button' -> (1230, 97), display-id=0, XML coords are physical screen coords
+------------------------------ Captured log call ------------------------------
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.renault.car.launcher:id/phone_container' -> (1075, 479), display-id=0, XML coords are physical screen coords
+---------------------------- Captured log teardown ----------------------------
+INFO     autocar.drivers.u2.driver:conftest.py:138 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开
+=========================== short test summary info ===========================
+FAILED tests_scripts/桌面启动器/test_smoke_test_15.py::TestSmokeTest15::test_smoke_test_15
+============================= 1 failed in 25.94s ==============================
+
+--- tests_scripts/桌面启动器/test_smoke_test_16.py::TestSmokeTest16::test_smoke_test_16 (--count=1) ---
+[CMD] C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe -m pytest -v -s d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\tests_scripts\桌面启动器\test_smoke_test_16.py::TestSmokeTest16::test_smoke_test_16 --count=1 --alluredir=d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\allure-results
+[CWD] d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+
+C:\Users\TS\AppData\Roaming\iatset\venv\Lib\site-packages\pytest_asyncio\plugin.py:247: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\TS\AppData\Roaming\iatset\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742
+plugins: allure-pytest-2.15.3, anyio-4.13.0, asyncio-1.3.0, cov-7.0.0, repeat-0.9.4, timeout-2.4.0, xonsh-0.23.5
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests_scripts/桌面启动器/test_smoke_test_16.py::TestSmokeTest16::test_smoke_test_16 ERROR
+
+=================================== ERRORS ====================================
+____________ ERROR at setup of TestSmokeTest16.test_smoke_test_16 _____________
+case_issue: 前置「步骤0：adb正常连接，处于主页面」缺少已验证的 setup 来源（处于主页面状态未证明）
+----------------------------- Captured log setup ------------------------------
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.auth.guard:conftest.py:121 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar._internal.impl.device:conftest.py:122 设备识别: device_id=62888b2b → mode=u2 name=Android-62888b2b source=table
+INFO     autocar.drivers.u2.driver:conftest.py:122 设备连接成功: 62888b2b
+INFO     autocar.drivers.factory:conftest.py:122 U2Manager 已连接设备: 62888b2b
+=========================== short test summary info ===========================
+ERROR tests_scripts/桌面启动器/test_smoke_test_16.py::TestSmokeTest16::test_smoke_test_16
+============================== 1 error in 9.02s ===============================
+
+正在生成 Allure 报告…
+Report successfully generated to reports
+
+报告路径：d:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\batch_2026-09-15_09-11-45\reports
+（使用“打开报告”启动 Allure 服务并在浏览器中打开）
+
+执行完成。

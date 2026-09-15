@@ -1,0 +1,1540 @@
+{
+  "schema": 6,
+  "case_id": "Smoke_Test_53",
+  "xlsx": {
+    "precondition": [
+      "步骤0：adb正常连接，点击左侧导航栏进入“Music”页面，点击“Radio”进入页面"
+    ],
+    "steps": [
+      "步骤1：检查界面",
+      "步骤2：点击87.5 kHz",
+      "步骤3：点击右下角的暂停按钮"
+    ],
+    "expected": [
+      "步骤1：页面正确显示\"List\"和\"Favourites\"标签页",
+      "步骤2：默认频率（例如87.5 kHz）显示在右下角",
+      "步骤3：音频立即暂停"
+    ],
+    "postcondition": [
+      "杀死所有进程，车机恢复初始状态"
+    ]
+  },
+  "replay": {
+    "setup": [
+      {
+        "trace_id": "dd2275faa351",
+        "action_id": "dd2275faa351:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.android.systemui:id/music_nav",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260914-213313-695569",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+            "page_signature": "sha1:0844722635663871aa9843f0fac3c5fb452a8c26",
+            "summary": {
+              "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+              "title": "This device isn’t Play Protect certified",
+              "page_anchor": {
+                "ref": "e32",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.google.android.gms:id/action_bar_root"
+              },
+              "top_refs": [
+                {
+                  "ref": "e32",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/action_bar_root"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/setup_wizard_layout"
+                },
+                {
+                  "ref": "e46",
+                  "text": "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration.",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/auth_uncertified_notification_description"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.google.android.gms:id/application_bar"
+                },
+                {
+                  "ref": "e24",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_left_container"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_left_container"
+                },
+                {
+                  "ref": "e37",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/ventilation_container"
+                },
+                {
+                  "ref": "e41",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/center_container"
+                },
+                {
+                  "ref": "e57",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/first_right_container"
+                },
+                {
+                  "ref": "e62",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.android.systemui:id/second_right_container"
+                }
+              ]
+            },
+            "element_count": 70,
+            "page": {
+              "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+              "title": "This device isn’t Play Protect certified",
+              "title_source": "top_non_clickable",
+              "title_confidence": "medium",
+              "selected": "",
+              "anchors": [
+                "This device isn’t Play Protect certified",
+                "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration."
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213312_933881.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213313_729215.png"
+          }
+        },
+        "execution_index": 0
+      },
+      {
+        "trace_id": "77df0750d03b",
+        "action_id": "77df0750d03b:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.android.systemui:id/music_nav",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260914-213350-625501",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+            "page_signature": "sha1:21a29817faa4daacdc405fab78d6e7235db59432",
+            "summary": {
+              "app": "com.renault.car.launcher/.mediamenu.MediaMenuActivity",
+              "title": "AM Radio",
+              "page_anchor": {
+                "ref": "e32",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+              },
+              "top_refs": [
+                {
+                  "ref": "e32",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/action_bar_root"
+                },
+                {
+                  "ref": "e39",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e40",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_toolbar_title_container"
+                },
+                {
+                  "ref": "e71",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_toolbar_menu_items_container"
+                },
+                {
+                  "ref": "e41",
+                  "text": "Sources",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_toolbar_title"
+                },
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/car_ui_toolbar_background"
+                },
+                {
+                  "ref": "e36",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/media_source_grid_recycler"
+                },
+                {
+                  "ref": "e75",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/audio_settings"
+                },
+                {
+                  "ref": "e82",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.launcher:id/audio_close"
+                }
+              ]
+            },
+            "element_count": 90,
+            "page": {
+              "app": "com.renault.car.launcher/.mediamenu.MediaMenuActivity",
+              "title": "AM Radio",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "AM Radio",
+              "anchors": [
+                "AM Radio",
+                "Android Auto",
+                "Bluetooth audio"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213349_911170.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213350_684868.png"
+          }
+        },
+        "execution_index": 1
+      },
+      {
+        "trace_id": "2c0732ed2d8b",
+        "action_id": "2c0732ed2d8b:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "Radio",
+          "by": "text",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260914-213402-453284",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+            "page_signature": "sha1:fb7d92fa90da5b0ee5269872c1f4b89e89071a9d",
+            "summary": {
+              "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+              "title": "Radio",
+              "page_anchor": {
+                "ref": "e33",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.media:id/media_activity_root"
+              },
+              "top_refs": [
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/media_activity_root"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/fragment_container"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e38",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e45",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_title_container"
+                },
+                {
+                  "ref": "e58",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_menu_items_container"
+                },
+                {
+                  "ref": "e46",
+                  "text": "Radio",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_title"
+                },
+                {
+                  "ref": "e59",
+                  "text": "",
+                  "desc": "Settings",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/menu_item_setting"
+                },
+                {
+                  "ref": "e64",
+                  "text": "",
+                  "desc": "Sound settings",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/menu_item_equalizer"
+                }
+              ]
+            },
+            "element_count": 83,
+            "page": {
+              "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+              "title": "Radio",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "",
+              "anchors": [
+                "Radio",
+                "SOURCES"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213401_670636.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213402_494459.png"
+          }
+        },
+        "execution_index": 2
+      }
+    ],
+    "setup_steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "步骤0：adb正常连接，点击左侧导航栏进入“Music”页面，点击“Radio”进入页面",
+        "actions": [
+          {
+            "trace_id": "dd2275faa351",
+            "action_id": "dd2275faa351:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/music_nav",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260914-213313-695569",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+                "page_signature": "sha1:0844722635663871aa9843f0fac3c5fb452a8c26",
+                "summary": {
+                  "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+                  "title": "This device isn’t Play Protect certified",
+                  "page_anchor": {
+                    "ref": "e32",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.google.android.gms:id/action_bar_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/setup_wizard_layout"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration.",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/auth_uncertified_notification_description"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.google.android.gms:id/application_bar"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_left_container"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/ventilation_container"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/center_container"
+                    },
+                    {
+                      "ref": "e57",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_right_container"
+                    },
+                    {
+                      "ref": "e62",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_right_container"
+                    }
+                  ]
+                },
+                "element_count": 70,
+                "page": {
+                  "app": "com.google.android.gms/.auth.uiflows.addaccount.UncertifiedNotificationActivity",
+                  "title": "This device isn’t Play Protect certified",
+                  "title_source": "top_non_clickable",
+                  "title_confidence": "medium",
+                  "selected": "",
+                  "anchors": [
+                    "This device isn’t Play Protect certified",
+                    "Users who purchased this device:\nThe device manufacturer has preloaded Google apps and services without Play Protect certification from Google. Contact the manufacturer and ask for a Play Protect certified device. Find out more at g.co/AndroidCertifiedDevice.\n\nUnlicensed manufacturers:\nYou need a licence from Google to distribute Google apps and services. Apply at g.co/AndroidGMSContact.\n\nLicensed manufacturers:\nTo use Google apps and services during development, register the device. Contact your Google Business Development Manager for more info.\n\nCustom ROM users:\nTo use Google apps and services with a custom ROM, register this device. Find out more at g.co/AndroidDeviceRegistration."
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213312_933881.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213313_729215.png"
+              }
+            },
+            "execution_index": 0
+          },
+          {
+            "trace_id": "77df0750d03b",
+            "action_id": "77df0750d03b:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/music_nav",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260914-213350-625501",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+                "page_signature": "sha1:21a29817faa4daacdc405fab78d6e7235db59432",
+                "summary": {
+                  "app": "com.renault.car.launcher/.mediamenu.MediaMenuActivity",
+                  "title": "AM Radio",
+                  "page_anchor": {
+                    "ref": "e32",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e71",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "Sources",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_toolbar_background"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/media_source_grid_recycler"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/audio_settings"
+                    },
+                    {
+                      "ref": "e82",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/audio_close"
+                    }
+                  ]
+                },
+                "element_count": 90,
+                "page": {
+                  "app": "com.renault.car.launcher/.mediamenu.MediaMenuActivity",
+                  "title": "AM Radio",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "AM Radio",
+                  "anchors": [
+                    "AM Radio",
+                    "Android Auto",
+                    "Bluetooth audio"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213349_911170.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213350_684868.png"
+              }
+            },
+            "execution_index": 1
+          },
+          {
+            "trace_id": "2c0732ed2d8b",
+            "action_id": "2c0732ed2d8b:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Radio",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260914-213402-453284",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+                "page_signature": "sha1:fb7d92fa90da5b0ee5269872c1f4b89e89071a9d",
+                "summary": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "Radio",
+                  "page_anchor": {
+                    "ref": "e33",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.media:id/media_activity_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/media_activity_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/fragment_container"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e58",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "Radio",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e59",
+                      "text": "",
+                      "desc": "Settings",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/menu_item_setting"
+                    },
+                    {
+                      "ref": "e64",
+                      "text": "",
+                      "desc": "Sound settings",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/menu_item_equalizer"
+                    }
+                  ]
+                },
+                "element_count": 83,
+                "page": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "Radio",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Radio",
+                    "SOURCES"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213401_670636.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213402_494459.png"
+              }
+            },
+            "execution_index": 2
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "步骤1：检查界面",
+        "actions": [],
+        "observations": [
+          {
+            "trace_id": "5524e90bb861",
+            "action_id": "5524e90bb861:0",
+            "domain": "ui",
+            "sdk": "car.assert_exists",
+            "args": {
+              "locator": "List",
+              "by": "text",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          },
+          {
+            "trace_id": "02743532a411",
+            "action_id": "02743532a411:0",
+            "domain": "ui",
+            "sdk": "car.assert_exists",
+            "args": {
+              "locator": "Favourites",
+              "by": "text",
+              "expected": true
+            },
+            "role": "observe",
+            "ok": true
+          }
+        ]
+      },
+      {
+        "xlsx_index": 1,
+        "xlsx_text": "步骤2：点击87.5 kHz",
+        "actions": [
+          {
+            "trace_id": "7bc672dbdd8c",
+            "action_id": "7bc672dbdd8c:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.renault.car.media:id/title",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260914-213523-135403",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+                "page_signature": "sha1:3d709b86c6aba80f95db3e21cea20cce90e19e6a",
+                "summary": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "87.5 MHz",
+                  "page_anchor": {
+                    "ref": "e33",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.media:id/media_activity_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/media_activity_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/fragment_container"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e43",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/item_container"
+                    },
+                    {
+                      "ref": "e51",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e52",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e71",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/minimized_control_bar_layout"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/subtitle_group"
+                    },
+                    {
+                      "ref": "e77",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_menu_items_container"
+                    }
+                  ]
+                },
+                "element_count": 110,
+                "page": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "87.5 MHz",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "87.5 MHz",
+                  "anchors": [
+                    "87.5 MHz",
+                    "Radio",
+                    "FM"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213522_347250.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213523_185120.png"
+              }
+            },
+            "execution_index": 5
+          }
+        ]
+      },
+      {
+        "xlsx_index": 2,
+        "xlsx_text": "步骤3：点击右下角的暂停按钮",
+        "actions": [
+          {
+            "trace_id": "41913a42fb4f",
+            "action_id": "41913a42fb4f:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.renault.car.media:id/play_pause_stop",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260914-213602-684376",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+                "page_signature": "sha1:c350ed8022fc4444107ded9848176fe8c6fbb787",
+                "summary": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "87.5 MHz",
+                  "page_anchor": {
+                    "ref": "e33",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.media:id/media_activity_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/media_activity_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/fragment_container"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e43",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/item_container"
+                    },
+                    {
+                      "ref": "e51",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e52",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e71",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/minimized_control_bar_layout"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/subtitle_group"
+                    },
+                    {
+                      "ref": "e77",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_menu_items_container"
+                    }
+                  ]
+                },
+                "element_count": 110,
+                "page": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "87.5 MHz",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "87.5 MHz",
+                  "anchors": [
+                    "87.5 MHz",
+                    "Radio",
+                    "FM"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213601_953870.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213602_741310.png"
+              }
+            },
+            "execution_index": 8
+          }
+        ]
+      }
+    ],
+    "asserts": [
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面正确显示\"List\"和\"Favourites\"标签页",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "List",
+          "by": "text",
+          "expected": true
+        },
+        "from": "5524e90bb861",
+        "execution_order": {
+          "after_action_id": "2c0732ed2d8b:0",
+          "before_action_id": "7bc672dbdd8c:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面正确显示\"List\"和\"Favourites\"标签页",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Favourites",
+          "by": "text",
+          "expected": true
+        },
+        "from": "02743532a411",
+        "execution_order": {
+          "after_action_id": "2c0732ed2d8b:0",
+          "before_action_id": "7bc672dbdd8c:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：默认频率（例如87.5 kHz）显示在右下角",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "87.5 MHz",
+          "by": "text",
+          "expected": "87.5 MHz"
+        },
+        "from": "4a91f7fa1e03",
+        "execution_order": {
+          "after_action_id": "7bc672dbdd8c:0",
+          "after_step_index": 1,
+          "before_action_id": "41913a42fb4f:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：默认频率（例如87.5 kHz）显示在右下角",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "com.renault.car.media:id/minimized_control_bar",
+          "by": "id",
+          "expected": true
+        },
+        "from": "ff67b9197b60",
+        "execution_order": {
+          "after_action_id": "7bc672dbdd8c:0",
+          "after_step_index": 1,
+          "before_action_id": "41913a42fb4f:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤3：音频立即暂停",
+        "sdk": "car.assert_image",
+        "args": {
+          "by": "text",
+          "baseline_img": "page_objects/sources/img/收音机/fm_paused_button.png",
+          "region": [
+            1164,
+            506,
+            1240,
+            582
+          ],
+          "threshold": 0.9
+        },
+        "from": "3444e7ee8195",
+        "execution_order": {
+          "after_action_id": "037059fb3b94:0"
+        },
+        "evidence": {
+          "auto_captured": true,
+          "similarity": 1.0
+        }
+      }
+    ],
+    "teardown": [
+      {
+        "trace_id": "888ae3e6689c",
+        "action_id": "888ae3e6689c:0",
+        "domain": "audio",
+        "sdk": "at.record_audio",
+        "args": {
+          "duration": 5.0,
+          "save_path": "D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/temp/smoke53_paused.wav"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 9
+      },
+      {
+        "trace_id": "dd524d6f0eaf",
+        "action_id": "dd524d6f0eaf:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.renault.car.media:id/play_pause_stop",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 10
+      },
+      {
+        "trace_id": "dea0a30a3c16",
+        "action_id": "dea0a30a3c16:0",
+        "domain": "audio",
+        "sdk": "at.record_audio",
+        "args": {
+          "duration": 5.0,
+          "save_path": "D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/temp/smoke53_playing.wav"
+        },
+        "role": "main",
+        "ok": true,
+        "execution_index": 11
+      },
+      {
+        "trace_id": "037059fb3b94",
+        "action_id": "037059fb3b94:0",
+        "domain": "ui",
+        "sdk": "car.ensure_click",
+        "args": {
+          "locator": "com.renault.car.media:id/play_pause_stop",
+          "by": "id",
+          "fingers": 1,
+          "max_scrolls": 10,
+          "scroll_direction": "up"
+        },
+        "role": "main",
+        "ok": true,
+        "evidence": {
+          "after_capture": {
+            "after": "evidence",
+            "snapshot_id": "viewport-20260914-213818-524547",
+            "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+            "scope": "viewport",
+            "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+            "page_signature": "sha1:e21b9c79201548be473f83450ab48c0b4cb35ff4",
+            "summary": {
+              "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+              "title": "87.5 MHz",
+              "page_anchor": {
+                "ref": "e33",
+                "text": "",
+                "desc": "",
+                "by": "id",
+                "value": "com.renault.car.media:id/media_activity_root"
+              },
+              "top_refs": [
+                {
+                  "ref": "e33",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/media_activity_root"
+                },
+                {
+                  "ref": "e34",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/fragment_container"
+                },
+                {
+                  "ref": "e35",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_base_layout_content_container"
+                },
+                {
+                  "ref": "e43",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"
+                },
+                {
+                  "ref": "e44",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/item_container"
+                },
+                {
+                  "ref": "e51",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_search_view_container"
+                },
+                {
+                  "ref": "e52",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_title_container"
+                },
+                {
+                  "ref": "e71",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/minimized_control_bar_layout"
+                },
+                {
+                  "ref": "e75",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/subtitle_group"
+                },
+                {
+                  "ref": "e77",
+                  "text": "",
+                  "desc": "",
+                  "by": "id",
+                  "value": "com.renault.car.media:id/car_ui_toolbar_menu_items_container"
+                }
+              ]
+            },
+            "element_count": 110,
+            "page": {
+              "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+              "title": "87.5 MHz",
+              "title_source": "resource_title",
+              "title_confidence": "high",
+              "selected": "87.5 MHz",
+              "anchors": [
+                "87.5 MHz",
+                "Radio",
+                "FM"
+              ]
+            },
+            "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213817_795389.xml",
+            "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213818_577042.png"
+          }
+        },
+        "execution_index": 12
+      }
+    ],
+    "teardown_steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "杀死所有进程，车机恢复初始状态",
+        "actions": [
+          {
+            "trace_id": "888ae3e6689c",
+            "action_id": "888ae3e6689c:0",
+            "domain": "audio",
+            "sdk": "at.record_audio",
+            "args": {
+              "duration": 5.0,
+              "save_path": "D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/temp/smoke53_paused.wav"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 9
+          },
+          {
+            "trace_id": "dd524d6f0eaf",
+            "action_id": "dd524d6f0eaf:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.renault.car.media:id/play_pause_stop",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 10
+          },
+          {
+            "trace_id": "dea0a30a3c16",
+            "action_id": "dea0a30a3c16:0",
+            "domain": "audio",
+            "sdk": "at.record_audio",
+            "args": {
+              "duration": 5.0,
+              "save_path": "D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/temp/smoke53_playing.wav"
+            },
+            "role": "main",
+            "ok": true,
+            "execution_index": 11
+          },
+          {
+            "trace_id": "037059fb3b94",
+            "action_id": "037059fb3b94:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.renault.car.media:id/play_pause_stop",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260914-213818-524547",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_53-13164-6b4c6ee20bad/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_53-13164-6b4c6ee20bad",
+                "page_signature": "sha1:e21b9c79201548be473f83450ab48c0b4cb35ff4",
+                "summary": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "87.5 MHz",
+                  "page_anchor": {
+                    "ref": "e33",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.media:id/media_activity_root"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/media_activity_root"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/fragment_container"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e43",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e44",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/item_container"
+                    },
+                    {
+                      "ref": "e51",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e52",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e71",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/minimized_control_bar_layout"
+                    },
+                    {
+                      "ref": "e75",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/subtitle_group"
+                    },
+                    {
+                      "ref": "e77",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.media:id/car_ui_toolbar_menu_items_container"
+                    }
+                  ]
+                },
+                "element_count": 110,
+                "page": {
+                  "app": "com.renault.car.media/com.android.car.media.MediaActivity",
+                  "title": "87.5 MHz",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "87.5 MHz",
+                  "anchors": [
+                    "87.5 MHz",
+                    "Radio",
+                    "FM"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260914_213817_795389.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260914_213818_577042.png"
+              }
+            },
+            "execution_index": 12
+          }
+        ]
+      }
+    ]
+  },
+  "policies": [],
+  "gaps": [
+    {
+      "reason": "action-failed",
+      "trace_id": "b367a5bec4d8",
+      "domain": "audio",
+      "method": "assert_db",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "at.assert_db",
+          "args": {},
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "reason": "action-failed",
+      "trace_id": "b7a55ed002fb",
+      "domain": "audio",
+      "method": "assert_db",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "at.assert_db",
+          "args": {},
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

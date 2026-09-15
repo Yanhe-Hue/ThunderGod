@@ -1,0 +1,7 @@
+INFO     autocar.auth.guard:conftest.py:96 active_key 有效，跳过网络鉴权，账号: Email
+INFO     autocar.drivers.u2.driver:conftest.py:106 设备连接成功: 3696ade
+INFO     autocar.drivers.factory:conftest.py:106 U2Manager 已连接设备: 3696ade
+INFO     autocar.drivers.u2.enhanced:method_registry.py:463 custom text vehicle compatibility: enabled=False vehicle= platform= country= soc_version=
+INFO     autocar.drivers.u2.driver:method_registry.py:457 display-aware click: id='com.android.systemui:id/music_nav' -> (56, 218), display-id=0, XML coords are physical screen coords
+INFO     autocar.drivers.u2.driver:conftest.py:108 设备已断开
+INFO     autocar.drivers.u2.driver:conftest.py:98 设备已断开

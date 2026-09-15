@@ -1,0 +1,1455 @@
+{
+  "schema": 6,
+  "case_id": "Smoke_Test_41",
+  "xlsx": {
+    "precondition": [
+      "步骤0：开机，adb正常连接"
+    ],
+    "steps": [
+      "步骤1：点击左侧栏的 \"Vehicle\"",
+      "步骤2：点击\"My Driving\"",
+      "步骤3：点击\"Energy\"",
+      "步骤4：点击\"Since reset\"",
+      "步骤5：点击“\"Reset\"出现弹窗后再次点击\"Reset\""
+    ],
+    "expected": [
+      "步骤1：页面显示 \"Drive Mode\", \"My Driving\", \"Driving assistance\", \"Vehicle\", \"Settings\"",
+      "步骤2：显示 \"Eco Score\", \"energy consumption value\", and \"Energy\", and \"Since start\", \"Since reset\"按钮",
+      "步骤3：系统导航到 Energy Detail页面",
+      "步骤4：右侧显示\"Reset\"按钮",
+      "步骤5：重置功能生效"
+    ],
+    "postcondition": [
+      "杀死所有进程，车机恢复初始状态"
+    ]
+  },
+  "replay": {
+    "setup": [],
+    "setup_steps": [],
+    "steps": [
+      {
+        "xlsx_index": 0,
+        "xlsx_text": "步骤1：点击左侧栏的 \"Vehicle\"",
+        "actions": [
+          {
+            "trace_id": "8d87c6d6f0e1",
+            "action_id": "8d87c6d6f0e1:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "com.android.systemui:id/car_world",
+              "by": "id",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000116-779344",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:00227bfbdf312308b9b228fb4c424090e92ca635",
+                "summary": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "page_anchor": {
+                    "ref": "e32",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/mex_view_container"
+                    },
+                    {
+                      "ref": "e38",
+                      "text": "Live Data",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/data_button"
+                    },
+                    {
+                      "ref": "e39",
+                      "text": "Coaching",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/coaching_button"
+                    },
+                    {
+                      "ref": "e40",
+                      "text": "Challenges",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/paddock_button"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_background"
+                    },
+                    {
+                      "ref": "e37",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/apps_grid"
+                    },
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    }
+                  ]
+                },
+                "element_count": 97,
+                "page": {
+                  "app": "com.renault.car.launcher/.carmenu.CarMenuActivity",
+                  "title": "Drive Mode",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Drive Mode",
+                    "Electric",
+                    "Seats"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000116_067441.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000116_826191.png"
+              }
+            },
+            "execution_index": 0
+          }
+        ]
+      },
+      {
+        "xlsx_index": 1,
+        "xlsx_text": "步骤2：点击\"My Driving\"",
+        "actions": [
+          {
+            "trace_id": "5e6c319d3b20",
+            "action_id": "5e6c319d3b20:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "My Driving",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000157-708247",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:00227bfbdf312308b9b228fb4c424090e92ca635",
+                "summary": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "Drive Mode",
+                  "page_anchor": {
+                    "ref": "e24",
+                    "text": "",
+                    "desc": "",
+                    "by": "id",
+                    "value": "com.android.systemui:id/first_left_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e24",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_left_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e35",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.launcher:id/mex_view_container"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_left_container"
+                    },
+                    {
+                      "ref": "e42",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/ventilation_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/center_container"
+                    },
+                    {
+                      "ref": "e78",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/first_right_container"
+                    },
+                    {
+                      "ref": "e87",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/second_right_container"
+                    },
+                    {
+                      "ref": "e93",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.android.systemui:id/custom_clock_container"
+                    }
+                  ]
+                },
+                "element_count": 97,
+                "page": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "Drive Mode",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Drive Mode",
+                    "Electric",
+                    "Seats"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000156_726977.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000157_754270.png"
+              }
+            },
+            "execution_index": 6
+          }
+        ]
+      },
+      {
+        "xlsx_index": 2,
+        "xlsx_text": "步骤3：点击\"Energy\"",
+        "actions": [
+          {
+            "trace_id": "ebba0fd6e9d1",
+            "action_id": "ebba0fd6e9d1:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Energy",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000336-671841",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:5c2aa361d34faa4def0ec6b03bc02e7ac7223069",
+                "summary": {
+                  "app": "com.renault.car.mydriving/com.renault.car.consumption.page.consumption.EnergyConsumptionActivity",
+                  "title": "Energy consumption",
+                  "page_anchor": {
+                    "ref": "e39",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e47",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e70",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e72",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e48",
+                      "text": "Energy consumption",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 79,
+                "page": {
+                  "app": "com.renault.car.mydriving/com.renault.car.consumption.page.consumption.EnergyConsumptionActivity",
+                  "title": "Energy consumption",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Energy consumption"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000335_942261.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000336_711129.png"
+              }
+            },
+            "execution_index": 12
+          }
+        ]
+      },
+      {
+        "xlsx_index": 3,
+        "xlsx_text": "步骤4：点击\"Since reset\"",
+        "actions": [
+          {
+            "trace_id": "5ab02b65fb5a",
+            "action_id": "5ab02b65fb5a:0",
+            "domain": "ui",
+            "sdk": "car.click_position",
+            "args": {
+              "x": 1214,
+              "y": 88
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000521-050597",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:aeaaf20cadc9912c08bdb8f908e85e0e5dce4dbc",
+                "summary": {
+                  "app": "com.renault.car.mydriving/com.renault.car.consumption.page.info.InfoEnergyConsumptionActivity",
+                  "title": "Information",
+                  "page_anchor": {
+                    "ref": "e40",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e40",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e47",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e48",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "Information",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "com.android.car.ui.utils.ROTARY_CONTAINER",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_internal_recycler_view"
+                    },
+                    {
+                      "ref": "e50",
+                      "text": "- This screen shows in graphical form the evolution of consumption over the last 30 minutes.\n\n- The average consumption of the current trip (Since start) can be compared with the average consumption displayed on the instrument panel (Since reset).\n\n- The consumption data (Since reset) shown in the instrument panel and in this display can be reset to zero with a long press on the steering wheel.\n\n- The average consumption of “Climate & others\" takes into account climate and all other electrical consumers (specific to the electric vehicle).",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/definitionDescription"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 78,
+                "page": {
+                  "app": "com.renault.car.mydriving/com.renault.car.consumption.page.info.InfoEnergyConsumptionActivity",
+                  "title": "Information",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Information",
+                    "- This screen shows in graphical form the evolution of consumption over the last 30 minutes.\n\n- The average consumption of the current trip (Since start) can be compared with the average consumption displayed on the instrument panel (Since reset).\n\n- The consumption data (Since reset) shown in the instrument panel and in this display can be reset to zero with a long press on the steering wheel.\n\n- The average consumption of “Climate & others\" takes into account climate and all other electrical consumers (specific to the electric vehicle)."
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_click_position_20260915_000520_342633.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_click_position_20260915_000521_114047.png"
+              }
+            },
+            "execution_index": 14
+          },
+          {
+            "trace_id": "341dca1b264f",
+            "action_id": "341dca1b264f:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Back",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000542-165906",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:4928e2cdd641bbe678d55e885b7b1e60a4cacc45",
+                "summary": {
+                  "app": "com.renault.car.mydriving/com.renault.car.consumption.page.consumption.EnergyConsumptionActivity",
+                  "title": "Energy consumption",
+                  "page_anchor": {
+                    "ref": "e39",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e39",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e47",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_title_container"
+                    },
+                    {
+                      "ref": "e70",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e72",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e48",
+                      "text": "Energy consumption",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_title"
+                    },
+                    {
+                      "ref": "e33",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_background"
+                    }
+                  ]
+                },
+                "element_count": 79,
+                "page": {
+                  "app": "com.renault.car.mydriving/com.renault.car.consumption.page.consumption.EnergyConsumptionActivity",
+                  "title": "Energy consumption",
+                  "title_source": "resource_title",
+                  "title_confidence": "high",
+                  "selected": "",
+                  "anchors": [
+                    "Energy consumption"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000541_442439.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000542_223525.png"
+              }
+            },
+            "execution_index": 15
+          },
+          {
+            "trace_id": "51e39146410c",
+            "action_id": "51e39146410c:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Back",
+              "by": "desc",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000726-341000",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:5345525f474fe0dac43fd889fadf83a39b9e5770",
+                "summary": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "--/--/----",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e58",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e90",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e92",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "Eco",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/ecoText"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "Score",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/ecoScoreText"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "Energy",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/energyText"
+                    }
+                  ]
+                },
+                "element_count": 100,
+                "page": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "--/--/----",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": [
+                    "--/--/----",
+                    "| ‪--.- km‬ • ‪--‬ • ‪--‬",
+                    "Eco"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000725_611118.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000726_393067.png"
+              }
+            },
+            "execution_index": 16
+          },
+          {
+            "trace_id": "ab898dcd11e6",
+            "action_id": "ab898dcd11e6:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Since reset",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000752-426897",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:df9844064a02802df090fcd6dc688a2b259d576f",
+                "summary": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "--/--/----",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e58",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e91",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e93",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "Eco",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/ecoText"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "Score",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/ecoScoreText"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "Energy",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/energyText"
+                    }
+                  ]
+                },
+                "element_count": 101,
+                "page": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "--/--/----",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": [
+                    "--/--/----",
+                    "| ‪--.- km‬ • ‪--‬ • ‪--‬",
+                    "Eco"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000751_662772.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000752_475986.png"
+              }
+            },
+            "execution_index": 17
+          }
+        ]
+      },
+      {
+        "xlsx_index": 4,
+        "xlsx_text": "步骤5：点击“\"Reset\"出现弹窗后再次点击\"Reset\"",
+        "actions": [
+          {
+            "trace_id": "f39b755dac1f",
+            "action_id": "f39b755dac1f:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Reset",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000904-888913",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:71a3a6536bea0e93cbc598e0957334513a8d5dec",
+                "summary": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "The “Since reset” data will be reset to zero.\nThis action will reset the data to the dashboard.",
+                  "page_anchor": {},
+                  "top_refs": [
+                    {
+                      "ref": "e8",
+                      "text": "The “Since reset” data will be reset to zero.\nThis action will reset the data to the dashboard.",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/chargeModeAlertDialogSubtitle"
+                    },
+                    {
+                      "ref": "e5",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/alertDialogView"
+                    },
+                    {
+                      "ref": "e9",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/chargeModeAlertDialogTitle"
+                    },
+                    {
+                      "ref": "e7",
+                      "text": "Reset",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/button2"
+                    },
+                    {
+                      "ref": "e10",
+                      "text": "Cancel",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/button1"
+                    },
+                    {
+                      "ref": "e1",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/content"
+                    },
+                    {
+                      "ref": "e2",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/parentPanel"
+                    },
+                    {
+                      "ref": "e3",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/customPanel"
+                    },
+                    {
+                      "ref": "e4",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/custom"
+                    },
+                    {
+                      "ref": "e6",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "android:id/buttonPanel"
+                    }
+                  ]
+                },
+                "element_count": 10,
+                "page": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "The “Since reset” data will be reset to zero.\nThis action will reset the data to the dashboard.",
+                  "title_source": "top_non_clickable",
+                  "title_confidence": "medium",
+                  "selected": "",
+                  "anchors": [
+                    "The “Since reset” data will be reset to zero.\nThis action will reset the data to the dashboard."
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000904_152133.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000904_911664.png"
+              }
+            },
+            "execution_index": 19
+          },
+          {
+            "trace_id": "bb02f2760994",
+            "action_id": "bb02f2760994:0",
+            "domain": "ui",
+            "sdk": "car.ensure_click",
+            "args": {
+              "locator": "Reset",
+              "by": "text",
+              "fingers": 1,
+              "max_scrolls": 10,
+              "scroll_direction": "up"
+            },
+            "role": "main",
+            "ok": true,
+            "evidence": {
+              "after_capture": {
+                "after": "evidence",
+                "snapshot_id": "viewport-20260915-000932-006439",
+                "snapshot": "C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_41-13164-355fe32a578d/latest.yml",
+                "scope": "viewport",
+                "session": "explore-Smoke_Test_41-13164-355fe32a578d",
+                "page_signature": "sha1:de4f3c9e99e52299904747b7fd1a359700a4e4d6",
+                "summary": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "--/--/----",
+                  "page_anchor": {
+                    "ref": "e41",
+                    "text": "",
+                    "desc": "Back",
+                    "by": "id",
+                    "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                  },
+                  "top_refs": [
+                    {
+                      "ref": "e41",
+                      "text": "",
+                      "desc": "Back",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_nav_icon_container"
+                    },
+                    {
+                      "ref": "e32",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_base_layout_content_container"
+                    },
+                    {
+                      "ref": "e34",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/action_bar_root"
+                    },
+                    {
+                      "ref": "e36",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/renault_root_view"
+                    },
+                    {
+                      "ref": "e58",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_search_view_container"
+                    },
+                    {
+                      "ref": "e91",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_items_container"
+                    },
+                    {
+                      "ref": "e93",
+                      "text": "",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/car_ui_toolbar_menu_item_icon_container"
+                    },
+                    {
+                      "ref": "e45",
+                      "text": "Eco",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/ecoText"
+                    },
+                    {
+                      "ref": "e46",
+                      "text": "Score",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/ecoScoreText"
+                    },
+                    {
+                      "ref": "e49",
+                      "text": "Energy",
+                      "desc": "",
+                      "by": "id",
+                      "value": "com.renault.car.mydriving:id/energyText"
+                    }
+                  ]
+                },
+                "element_count": 101,
+                "page": {
+                  "app": "com.renault.car.mydriving/.presentation.main.MyDrivingActivity",
+                  "title": "--/--/----",
+                  "title_source": "first_text",
+                  "title_confidence": "low",
+                  "selected": "",
+                  "anchors": [
+                    "--/--/----",
+                    "| ‪--.- km‬ • ‪--‬ • ‪--‬",
+                    "Eco"
+                  ]
+                },
+                "xml_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\hierarchy_after_ensure_click_20260915_000931_269447.xml",
+                "screenshot_path": "D:\\renult\\project_1788164131875\\project_1788434794119\\project_1788434802235\\project_1789040384742\\reports\\AI_2026-09-14_195143\\screenshots\\after_ensure_click_20260915_000932_054793.png"
+              }
+            },
+            "execution_index": 20
+          }
+        ]
+      }
+    ],
+    "asserts": [
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面显示 \"Drive Mode\", \"My Driving\", \"Driving assistance\", \"Vehicle\", \"Settings\"",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Drive Mode",
+          "by": "text",
+          "expected": true
+        },
+        "from": "20f958e7d18e",
+        "execution_order": {
+          "after_action_id": "8d87c6d6f0e1:0",
+          "after_step_index": 0,
+          "before_action_id": "5e6c319d3b20:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面显示 \"Drive Mode\", \"My Driving\", \"Driving assistance\", \"Vehicle\", \"Settings\"",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "My Driving",
+          "by": "text",
+          "expected": true
+        },
+        "from": "ef3f2d734dc2",
+        "execution_order": {
+          "after_action_id": "8d87c6d6f0e1:0",
+          "after_step_index": 0,
+          "before_action_id": "5e6c319d3b20:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面显示 \"Drive Mode\", \"My Driving\", \"Driving assistance\", \"Vehicle\", \"Settings\"",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Driving assistance",
+          "by": "text",
+          "expected": true
+        },
+        "from": "e73118503651",
+        "execution_order": {
+          "after_action_id": "8d87c6d6f0e1:0",
+          "after_step_index": 0,
+          "before_action_id": "5e6c319d3b20:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面显示 \"Drive Mode\", \"My Driving\", \"Driving assistance\", \"Vehicle\", \"Settings\"",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Vehicle",
+          "by": "text",
+          "expected": true
+        },
+        "from": "e71f253bbe28",
+        "execution_order": {
+          "after_action_id": "8d87c6d6f0e1:0",
+          "after_step_index": 0,
+          "before_action_id": "5e6c319d3b20:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 0,
+        "source_text": "步骤1：页面显示 \"Drive Mode\", \"My Driving\", \"Driving assistance\", \"Vehicle\", \"Settings\"",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Settings",
+          "by": "text",
+          "expected": true
+        },
+        "from": "936b024c8730",
+        "execution_order": {
+          "after_action_id": "8d87c6d6f0e1:0",
+          "after_step_index": 0,
+          "before_action_id": "5e6c319d3b20:0",
+          "before_step_index": 1
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：显示 \"Eco Score\", \"energy consumption value\", and \"Energy\", and \"Since start\", \"Since reset\"按钮",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Eco",
+          "by": "text",
+          "expected": "Eco"
+        },
+        "from": "07122391cc9c",
+        "execution_order": {
+          "after_action_id": "5e6c319d3b20:0",
+          "after_step_index": 1,
+          "before_action_id": "ebba0fd6e9d1:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：显示 \"Eco Score\", \"energy consumption value\", and \"Energy\", and \"Since start\", \"Since reset\"按钮",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Energy",
+          "by": "text",
+          "expected": "Energy"
+        },
+        "from": "29186e450e0c",
+        "execution_order": {
+          "after_action_id": "5e6c319d3b20:0",
+          "after_step_index": 1,
+          "before_action_id": "ebba0fd6e9d1:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：显示 \"Eco Score\", \"energy consumption value\", and \"Energy\", and \"Since start\", \"Since reset\"按钮",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Since start",
+          "by": "text",
+          "expected": "Since start"
+        },
+        "from": "2c51025660cf",
+        "execution_order": {
+          "after_action_id": "5e6c319d3b20:0",
+          "after_step_index": 1,
+          "before_action_id": "ebba0fd6e9d1:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：显示 \"Eco Score\", \"energy consumption value\", and \"Energy\", and \"Since start\", \"Since reset\"按钮",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Since reset",
+          "by": "text",
+          "expected": "Since reset"
+        },
+        "from": "ad957046d3e5",
+        "execution_order": {
+          "after_action_id": "5e6c319d3b20:0",
+          "after_step_index": 1,
+          "before_action_id": "ebba0fd6e9d1:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 1,
+        "source_text": "步骤2：显示 \"Eco Score\", \"energy consumption value\", and \"Energy\", and \"Since start\", \"Since reset\"按钮",
+        "sdk": "car.assert_ocr",
+        "args": {
+          "expected": "km",
+          "match_mode": "contains",
+          "region": null
+        },
+        "from": "61c243203782",
+        "execution_order": {
+          "after_action_id": "5e6c319d3b20:0",
+          "after_step_index": 1,
+          "before_action_id": "ebba0fd6e9d1:0",
+          "before_step_index": 2
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 2,
+        "source_text": "步骤3：系统导航到 Energy Detail页面",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Energy consumption",
+          "by": "text",
+          "expected": "Energy consumption"
+        },
+        "from": "6ed9fab79169",
+        "execution_order": {
+          "after_action_id": "ebba0fd6e9d1:0",
+          "after_step_index": 2,
+          "before_action_id": "5ab02b65fb5a:0",
+          "before_step_index": 3
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 3,
+        "source_text": "步骤4：右侧显示\"Reset\"按钮",
+        "sdk": "car.assert_exists",
+        "args": {
+          "locator": "Reset",
+          "by": "text",
+          "expected": true
+        },
+        "from": "73654ad2899f",
+        "execution_order": {
+          "after_action_id": "ab898dcd11e6:0",
+          "after_step_index": 3,
+          "before_action_id": "f39b755dac1f:0",
+          "before_step_index": 4
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤5：重置功能生效",
+        "sdk": "car.assert_text",
+        "args": {
+          "locator": "Consumption",
+          "by": "text",
+          "expected": "Consumption"
+        },
+        "from": "55e4dfc63570",
+        "execution_order": {
+          "after_action_id": "bb02f2760994:0",
+          "after_step_index": 4
+        },
+        "evidence": {}
+      },
+      {
+        "xlsx_index": 4,
+        "source_text": "步骤5：重置功能生效",
+        "sdk": "car.assert_ocr",
+        "args": {
+          "expected": "km",
+          "match_mode": "contains",
+          "region": null
+        },
+        "from": "d1881551f1bb",
+        "execution_order": {
+          "after_action_id": "bb02f2760994:0",
+          "after_step_index": 4
+        },
+        "evidence": {}
+      }
+    ],
+    "teardown": [],
+    "teardown_steps": []
+  },
+  "policies": [],
+  "gaps": [
+    {
+      "reason": "action-failed",
+      "trace_id": "08c2cb4e1a38",
+      "domain": "ui",
+      "method": "assert_ocr",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "car.assert_ocr",
+          "args": {
+            "expected": "Since",
+            "match_mode": "contains",
+            "region": null
+          },
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    },
+    {
+      "reason": "action-failed",
+      "trace_id": "e656af8bddd1",
+      "domain": "ui",
+      "method": "assert_ocr",
+      "ok": false,
+      "actions": [
+        {
+          "sdk": "car.assert_ocr",
+          "args": {
+            "expected": "Reset",
+            "match_mode": "contains",
+            "region": null
+          },
+          "role": "observe",
+          "evidence": {}
+        }
+      ]
+    }
+  ]
+}

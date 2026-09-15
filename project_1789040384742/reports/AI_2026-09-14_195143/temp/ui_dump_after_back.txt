@@ -1,0 +1,16 @@
+snapshot_id: dump-20260915-060842-332199
+snapshot: C:\Users\TS\AppData\Roaming\AutoCar\projects\project_1789040384742\snapshots\explore-Smoke_Test_17-13164-5453a1d86777\latest.yml  (87 elements, session=explore-Smoke_Test_17-13164-5453a1d86777, scope=viewport, snapshot_id=dump-20260915-060842-332199)
+page_source: D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/screenshots/dump_page_source_20260915_060842_387498.xml  (xml)
+screen: 1280x720
+packages: com.android.systemui (fg) | com.android.car.settings
+page: title="Bluetooth"  app=com.android.systemui
+app
+  content
+    unlabeled  music_nav  click  loc=id=com.android.systemui:id/music_nav  ref=e9
+overlay
+    link  Back  click  loc=desc=Back  ref=e41  com.android.car.settings
+chrome
+  status  clock=06:08  ref=e86
+  dock
+    unlabeled  hvac_bar  click  loc=id=com.android.systemui:id/hvac_bar  ref=e22
+folded: 81 wrappers  shown=6/87

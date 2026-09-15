@@ -1,0 +1,105 @@
+✅ UI 操作成功  method=inspect
+│ PAGE CARD
+│ page: Install certificates | app=com.android.car.settings/.common.SubSettingsActivity
+│ snapshot: viewport-20260915-051156-415353 | scope=viewport | source=saved
+│ anchors: Install certificates | Wi‑Fi preferences | Turn on Wi‑Fi automatically
+│ intent: 点击 Wi-Fi preferences 后页面 | kind=action | status=resolved
+│ target candidates:
+│ e54 [98] Wi‑Fi preferences tier=A selected=false checked=false enabled=true checkable=false -> id=com.android.car.settings:id/car_ui_toolbar_title
+│ e57 [88] Turn on Wi‑Fi automatically tier=A selected=false checked=false enabled=true checkable=false -> text=Turn on Wi‑Fi automatically
+│ e76 [85] °C tier=A selected=false checked=false enabled=true checkable=false -> id=com.android.systemui:id/external_temperature_format
+│ e85 [85] °C tier=A selected=false checked=false enabled=true checkable=false -> xpath=//*[@resource-id='com.android.systemui:id/second_right_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']
+│ e30 [85] °C tier=A selected=false checked=false enabled=true checkable=false -> xpath=//*[@resource-id='com.android.systemui:id/first_left_container']//*[@resource-id='com.android.systemui:id/climate_bar_temperature_format_text_view']
+│ target context: Wi‑Fi preferences | value=-
+│ nearby: e53 com.android.car.settings:id/car_u... | id=com.android.car.settings:id/c... || e55 android:id/icon | id=android:id/icon || e52 com.android.car.settings:id/car_u... | id=com.android.car.settings:id/c... || e56 com.android.systemui:id/center_co... | id=com.android.systemui:id/cente...
+│ page structure: 85 elements
+│ e1 com.android.systemui:id/navigation_bar_frame selected=false checked=false enabled=true checkable=false
+│ e2 com.android.systemui:id/car_top_bar selected=false checked=false enabled=true checkable=false
+│ e3 com.android.systemui:id/navigation_bar_frame selected=false checked=false enabled=true checkable=false
+│ e4 com.android.systemui:id/status_bar_background selected=false checked=false enabled=true checkable=false
+│ e5 com.android.systemui:id/nav_buttons selected=false checked=false enabled=true checkable=false
+│ e6 com.android.systemui:id/home selected=false checked=false enabled=true checkable=false
+│ e7 com.android.systemui:id/car_nav_button_icon selected=false checked=false enabled=true checkable=false
+│ e8 com.android.systemui:id/car_nav_button_icon_image selected=false checked=false enabled=true checkable=false
+│ e9 com.android.systemui:id/music_nav selected=false checked=false enabled=true checkable=false
+│ e10 com.android.systemui:id/car_nav_button_icon selected=false checked=false enabled=true checkable=false
+│ e11 com.android.systemui:id/car_nav_button_icon_image selected=false checked=false enabled=true checkable=false
+│ e12 com.android.systemui:id/phone_nav selected=false checked=false enabled=true checkable=false
+│ e13 com.android.systemui:id/car_nav_button_icon selected=false checked=false enabled=true checkable=false
+│ e14 com.android.systemui:id/car_nav_button_icon_image selected=false checked=false enabled=true checkable=false
+│ e15 com.android.systemui:id/grid_nav selected=false checked=false enabled=true checkable=false
+│ e16 com.android.systemui:id/car_nav_button_icon selected=false checked=false enabled=true checkable=false
+│ e17 com.android.systemui:id/car_nav_button_icon_image selected=false checked=false enabled=true checkable=false
+│ e18 com.android.systemui:id/car_world selected=true checked=false enabled=true checkable=false
+│ e19 com.android.systemui:id/car_nav_button_icon selected=true checked=false enabled=true checkable=false
+│ e20 com.android.systemui:id/car_nav_button_icon_image selected=true checked=false enabled=true checkable=false
+│ e21 com.android.systemui:id/navigation_bar_frame selected=false checked=false enabled=true checkable=false
+│ e22 com.android.systemui:id/hvac_bar selected=false checked=false enabled=true checkable=false
+│ e23 com.android.systemui:id/left_hvac_background selected=false checked=false enabled=true checkable=false
+│ e24 com.android.systemui:id/first_left_container selected=false checked=false enabled=true checkable=false
+│ e25 com.android.systemui:id/container selected=false checked=false enabled=true checkable=false
+│ e26 com.android.systemui:id/system_icons selected=false checked=false enabled=true checkable=false
+│ e27 com.android.systemui:id/status_icons selected=false checked=false enabled=true checkable=false
+│ e28 com.android.systemui:id/temperature_container selected=false checked=false enabled=true checkable=false
+│ e29 21 selected=false checked=false enabled=true checkable=false
+│ e30 °C selected=false checked=false enabled=true checkable=false
+│ e31 com.android.car.settings:id/car_ui_base_layout_content_container selected=false checked=false enabled=true checkable=false
+│ e32 android:id/content selected=false checked=false enabled=true checkable=false
+│ e33 com.android.car.settings:id/car_settings_activity_wrapper selected=false checked=false enabled=true checkable=false
+│ e34 com.android.car.settings:id/fragment_container_wrapper selected=false checked=false enabled=true checkable=false
+│ e35 com.android.car.settings:id/car_ui_toolbar_background selected=false checked=false enabled=true checkable=false
+│ e36 com.android.car.settings:id/fragment_container selected=false checked=false enabled=true checkable=false
+│ e37 android:id/list_container selected=false checked=false enabled=true checkable=false
+│ e38 com.android.car.settings:id/settings_car_ui_focus_area selected=false checked=false enabled=true checkable=false
+│ e39 com.android.car.settings:id/settings_recycler_view selected=false checked=false enabled=true checkable=false
+│ e40 com.android.car.settings:id/car_ui_recycler_view selected=false checked=false enabled=true checkable=false
+│ e41 Back selected=false checked=false enabled=true checkable=false
+│ e42 com.android.car.ui.utils.ROTARY_CONTAINER selected=false checked=false enabled=true checkable=false
+│ e43 com.android.car.settings.renault.rro:id/begin_frame selected=false checked=false enabled=true checkable=false
+│ e44 android:id/widget_frame selected=false checked=false enabled=true checkable=false
+│ e45 com.android.systemui:id/second_left_container selected=false checked=false enabled=true checkable=false
+│ e46 com.android.systemui:id/ventilation_container selected=false checked=false enabled=true checkable=false
+│ e47 android:id/switch_widget selected=false checked=false enabled=true checkable=true
+│ e48 com.android.car.settings:id/car_ui_toolbar_nav_icon selected=false checked=false enabled=true checkable=false
+│ e49 Install certificates selected=false checked=false enabled=true checkable=false
+│ e50 com.android.systemui:id/ventilation_level_image selected=false checked=false enabled=false checkable=false
+│ e51 com.android.systemui:id/ventilation_level_off_image selected=false checked=false enabled=false checkable=false
+│ e52 com.android.car.settings:id/car_ui_toolbar_search_view_container selected=false checked=false enabled=true checkable=false
+│ e53 com.android.car.settings:id/car_ui_toolbar_title_container selected=false checked=false enabled=true checkable=false
+│ e54 Wi‑Fi preferences selected=false checked=false enabled=true checkable=false
+│ e55 android:id/icon selected=false checked=false enabled=true checkable=false
+│ e56 com.android.systemui:id/center_container selected=false checked=false enabled=true checkable=false
+│ e57 Turn on Wi‑Fi automatically selected=false checked=false enabled=true checkable=false
+│ e58 Wi‑Fi will turn back on near high‑quality saved networks, such as your home network selected=false checked=false enabled=true checkable=false
+│ e59 com.android.systemui:id/steering_wheel_button selected=false checked=false enabled=false checkable=false
+│ e60 com.android.systemui:id/steering_wheel_line_view selected=false checked=false enabled=false checkable=false
+│ e61 com.android.systemui:id/seat_image_view selected=false checked=false enabled=false checkable=false
+│ e62 com.android.systemui:id/seat_status_view selected=false checked=false enabled=false checkable=false
+│ e63 com.android.systemui:id/notifications selected=false checked=false enabled=true checkable=false
+│ e64 com.android.systemui:id/notifications_bar_animation selected=false checked=false enabled=true checkable=false
+│ e65 com.android.systemui:id/air_conditioner_button selected=false checked=false enabled=false checkable=false
+│ e66 com.android.systemui:id/air_conditioner_line_view selected=false checked=false enabled=false checkable=false
+│ e67 com.android.systemui:id/seat_image_view selected=false checked=false enabled=false checkable=false
+│ e68 com.android.systemui:id/seat_status_view selected=false checked=false enabled=false checkable=false
+│ e69 com.android.systemui:id/window_heating_button selected=false checked=false enabled=false checkable=false
+│ e70 com.android.systemui:id/window_heating_line_view selected=false checked=false enabled=false checkable=false
+│ e71 com.android.systemui:id/right_hvac_background selected=false checked=false enabled=true checkable=false
+│ e72 com.android.systemui:id/first_right_container selected=false checked=false enabled=true checkable=false
+│ e73 com.android.systemui:id/ventilation_direction_view selected=false checked=false enabled=false checkable=false
+│ e74 com.android.systemui:id/external_temperature_view selected=false checked=false enabled=true checkable=false
+│ e75 -- selected=false checked=false enabled=true checkable=false
+│ e76 °C selected=false checked=false enabled=true checkable=false
+│ e77 com.android.systemui:id/second_right_container selected=false checked=false enabled=true checkable=false
+│ e78 com.android.systemui:id/container selected=false checked=false enabled=true checkable=false
+│ e79 com.android.systemui:id/dot_divider selected=false checked=false enabled=true checkable=false
+│ e80 com.android.systemui:id/temperature_container selected=false checked=false enabled=true checkable=false
+│ e81 21 selected=false checked=false enabled=true checkable=false
+│ e82 com.android.systemui:id/clock selected=false checked=false enabled=true checkable=false
+│ e83 com.android.systemui:id/custom_clock_container selected=false checked=false enabled=true checkable=false
+│ e84 05:11 selected=false checked=false enabled=true checkable=false
+│ e85 °C selected=false checked=false enabled=true checkable=false
+│ next: act | 目标语义和页面上下文均已解析；模型仍需确认动作符合用例。
+snapshot_id: viewport-20260915-051156-415353
+scope: viewport
+source: saved
+screenshot_path: 

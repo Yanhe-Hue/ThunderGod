@@ -1,0 +1,26 @@
+snapshot_id: dump-20260915-003058-564287
+snapshot: C:\Users\TS\AppData\Roaming\AutoCar\projects\project_1789040384742\snapshots\explore-Smoke_Test_42-13164-8008d16c782b\latest.yml  (115 elements, session=explore-Smoke_Test_42-13164-8008d16c782b, scope=viewport, snapshot_id=dump-20260915-003058-564287)
+page_source: D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742/reports/AI_2026-09-14_195143/screenshots/dump_page_source_20260915_003058_627040.xml  (xml)
+screen: 1280x720
+packages: com.renault.car.driveassist (fg) | com.android.systemui
+page: title="My Safety"  app=com.renault.car.driveassist
+app
+  nav
+    tab  All On  click  loc=text=All On  ref=e68
+    tab  Configure My Safety Perso  click  loc=text=Configure My Safety Perso  ref=e49
+    tab  Blind spot warning  click  loc=text=Blind spot warning  ref=e50
+    tab  Active braking  click  loc=text=Active braking  ref=e51
+  content
+    link  Back  click  loc=desc=Back  ref=e47
+    unlabeled  tool_bar_info_icon  click  loc=id=com.renault.car.driveassist:id/tool_bar_info_icon  ref=e107
+    header  Safety  loc=text=Safety  ref=e79
+    header  Comfort  loc=text=Comfort  ref=e87
+    header  Parking  loc=text=Parking  ref=e96
+    row  Warning anticipation  enter  loc=text=Warning anticipation  ref=e52
+overlay
+    unlabeled  com.android.systemui  click  loc=id=com.android.systemui:id/home  ref=e6
+chrome
+  status  clock=00:30  ref=e113
+  dock
+    unlabeled  hvac_bar  click  loc=id=com.android.systemui:id/hvac_bar  ref=e22
+folded: 100 wrappers  shown=15/115

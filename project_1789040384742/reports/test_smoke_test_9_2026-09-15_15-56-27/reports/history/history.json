@@ -1,0 +1,1 @@
+{"17b3145aad3ddb8402fd8df70b9618f6":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"473f7de38f01690b","status":"failed","statusDetails":"AssertionError: 元素不存在: text=Google Assistant","time":{"start":1789459004772,"stop":1789459012789,"duration":8017}}]}}

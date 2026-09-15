@@ -1,0 +1,10 @@
+  [review] 读取 xlsx: D:\雷诺\case\auto1.xlsx
+  [review] 解析用例: 40 条
+run_id     : review-20260914194535-939ce868
+status     : failed
+source     : D:\雷诺\case\auto1.xlsx
+cases      : 40
+duration   : 39 ms
+cost_usd   : 0.0
+artifacts  : 
+error      : ValueError: 重复 case_id: Smoke_Test_16（行 15 和 28）

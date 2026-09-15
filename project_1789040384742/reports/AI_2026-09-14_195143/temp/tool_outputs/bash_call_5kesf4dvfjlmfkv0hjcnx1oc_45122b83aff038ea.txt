@@ -1,0 +1,125 @@
+interrupted: false
+
+isImage: false
+
+noOutputExpected: false
+
+===== stdout =====
+✅ UI 操作成功  method=ensure_click
+page_changed: true
+locator: Settings
+by: text
+matched_text: Settings
+matched_by: text
+matched_value: Settings
+=== AFTER DIFF ===
+snapshot_id: viewport-20260915-050836-862766
+added: 37  changed: 0  removed: 45
+added refs:
+   e31  FrameLayout    "com.android.car.settings:id/car_ui_base_layout_content_container"  action=view  →  id=com.android.car.settings:id/car_ui_base_layo...
+   e33  RelativeLayout "com.android.car.settings:id/car_settings_activity_wrapper"  action=view  →  id=com.android.car.settings:id/car_settings_act...
+   e34  FrameLayout    "com.android.car.settings:id/fragment_container_wrapper"  action=view  →  id=com.android.car.settings:id/fragment_contain...
+   e35  ViewGroup      "com.android.car.settings:id/car_ui_toolbar_background"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_b...
+   e36  FrameLayout    "com.android.car.settings:id/fragment_container"  action=view  →  id=com.android.car.settings:id/fragment_container
+   e37  FrameLayout    "android:id/list_container"  action=view  →  id=android:id/list_container
+   e38  FocusArea      "com.android.car.settings:id/settings_car_ui_focus_area"  action=view  →  id=com.android.car.settings:id/settings_car_ui_...
+   e39  FrameLayout    "com.android.car.settings:id/settings_recycler_view"  action=view  →  id=com.android.car.settings:id/settings_recycle...
+   e40  FrameLayout    "com.android.car.settings:id/car_ui_recycler_view"  action=view  →  id=com.android.car.settings:id/car_ui_recycler_...
+   e41  ViewGroup      "com.android.car.settings:id/car_ui_scroll_bar"  action=view  →  id=com.android.car.settings:id/car_ui_scroll_bar
+   e42  View           "com.android.car.settings:id/car_ui_scrollbar_track"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e43  View           "com.android.car.settings:id/car_ui_scrollbar_thumb"  action=view  →  id=com.android.car.settings:id/car_ui_scrollbar...
+   e44  FrameLayout    "Back"  action=click  →  desc=Back
+   e45  Scroll         "com.android.car.ui.utils.ROTARY_CONTAINER"  action=scroll  →  desc=com.android.car.ui.utils.ROTARY_CONTAINER
+   e46  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e47  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e48  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e49  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e50  LinearLayout   "com.android.car.settings.renault.rro:id/begin_frame"  action=view  →  id=com.android.car.settings.renault.rro:id/begi...  [B:ambiguous]
+   e53  ImageView      "com.android.car.settings:id/car_ui_toolbar_nav_icon"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_n...
+   e54  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e55  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e56  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e57  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e58  ImageView      "android:id/icon"  action=view  →  id=android:id/icon  [B:ambiguous]
+   e61  FrameLayout    "com.android.car.settings:id/car_ui_toolbar_search_view_container"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_s...
+   e62  LinearLayout   "com.android.car.settings:id/car_ui_toolbar_title_container"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_t...
+   e63  TextView       "Settings"  action=view  →  text=Settings
+   e64  TextView       "Sound"  action=view  →  text=Sound
+   e65  TextView       "Network and internet"  action=view  →  text=Network and internet
+   e66  TextView       "Bluetooth"  action=view  →  text=Bluetooth
+   e67  TextView       "Location"  action=view  →  text=Location
+   e68  TextView       "Privacy"  action=view  →  text=Privacy
+   e90  LinearLayout   "com.android.car.settings:id/car_ui_toolbar_menu_items_container"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_m...
+   e92  FrameLayout    "Search"  action=click  →  desc=Search
+   e93  FrameLayout    "com.android.car.settings:id/car_ui_toolbar_menu_item_icon_container"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_m...
+   e99  ImageView      "com.android.car.settings:id/car_ui_toolbar_menu_item_icon"  action=view  →  id=com.android.car.settings:id/car_ui_toolbar_m...
+removed refs:
+   e28  ViewGroup      "com.android.systemui:id/notification_headsup"  action=view  →  id=com.android.systemui:id/notification_headsup
+   e29  View           "com.android.systemui:id/scrim"  action=view  →  id=com.android.systemui:id/scrim
+   e30  FrameLayout    "com.android.car.ui.utils.FOCUS_DELEGATING_CONTAINER"  action=view  →  desc=com.android.car.ui.utils.FOCUS_DELEGATING_...
+   e31  FrameLayout    "com.android.systemui:id/card_view"  action=click  →  id=com.android.systemui:id/card_view
+   e32  RelativeLayout "com.android.systemui:id/inner_template_view"  action=view  →  id=com.android.systemui:id/inner_template_view
+   e33  RelativeLayout "com.android.systemui:id/notification_body"  action=view  →  id=com.android.systemui:id/notification_body
+   e37  LinearLayout   "com.android.systemui:id/notification_header"  action=view  →  id=com.android.systemui:id/notification_header
+   e40  TextView       "Google apps and services can’t run on this device"  action=view  →  text=Google apps and services can’t run on this...
+   e41  FrameLayout    "com.renault.car.launcher:id/car_ui_base_layout_content_container"  action=view  →  id=com.renault.car.launcher:id/car_ui_base_layo...
+   e42  LinearLayout   "com.renault.car.launcher:id/action_bar_root"  action=view  →  id=com.renault.car.launcher:id/action_bar_root
+   e44  FrameLayout    "com.renault.car.launcher:id/mex_view_container"  action=view  →  id=com.renault.car.launcher:id/mex_view_container
+   e45  ImageView      "com.renault.car.launcher:id/carcontrol_telemetric_background"  action=view  →  id=com.renault.car.launcher:id/carcontrol_telem...
+   e46  ImageView      "com.renault.car.launcher:id/carcontrol_telemetric_vehicle"  action=view  →  id=com.renault.car.launcher:id/carcontrol_telem...
+   e47  Button         "Live Data"  action=click  →  text=Live Data
+   e48  Button         "Coaching"  action=click  →  text=Coaching
+   e49  Button         "Challenges"  action=click  →  text=Challenges
+   e52  RowAction      action=enter  label="Google Play services"  value=This device isn’t Play Protect certified  value_ref=e39 assert_on=id=com.android.systemui:id/notification_body_title  affordance=app_icon  alt=e38 id=com.android.systemui:id/app_icon  (row_or_trailing_arrow)  →  text=Google Play services
+   e60  Scroll         "com.renault.car.launcher:id/apps_grid"  action=scroll  →  id=com.renault.car.launcher:id/apps_grid
+   e61  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e62  TextView       "Drive Mode"  action=view  →  text=Drive Mode
+   e63  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e64  TextView       "My Driving"  action=view  →  text=My Driving
+   e65  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e66  TextView       "Reno Assistant"  action=view  →  text=Reno Assistant
+   e71  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+   e72  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+   e73  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+   e74  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e75  TextView       "Electric"  action=view  →  text=Electric
+   e76  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e77  TextView       "Driving assistance"  action=view  →  text=Driving assistance
+   e78  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e79  TextView       "Settings"  action=view  →  text=Settings
+   e84  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+   e85  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+   e86  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+   e89  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e90  TextView       "Seats"  action=view  →  text=Seats
+   e91  ImageView      "com.renault.car.launcher:id/icon"  action=view  →  id=com.renault.car.launcher:id/icon  [B:ambiguous]
+   e92  TextView       "Vehicle"  action=view  →  text=Vehicle
+  e105  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+  e106  ImageView      "com.renault.car.launcher:id/check"  action=view  →  id=com.renault.car.launcher:id/check  [B:ambiguous]
+  e108  FrameLayout    "com.android.systemui:id/dismiss_button_container"  action=view  →  id=com.android.systemui:id/dismiss_button_conta...
+scroll_direction: up
+max_scrolls: 10
+fingers: 1
+before_signature: sha1:5ba311a20322622b3b843301adfa11e2e0f91fd1
+after_signature: sha1:0be5bc9b6e40e5cbc3d5d4881616101e81c23be9
+scan_snapshot.snapshot_id: scan-20260915-050834-234228
+scan_snapshot.session: explore-Smoke_Test_36-13164-3609829d4a8a
+scan_snapshot.scope: scan
+scan_snapshot.query: Settings
+scan_snapshot.stopped_reason: target_found
+scan_snapshot.viewport_count: 0
+after_capture.after: evidence
+after_capture.snapshot_id: viewport-20260915-050836-862766
+after_capture.snapshot: C:/Users/TS/AppData/Roaming/AutoCar/projects/project_1789040384742/snapshots/explore-Smoke_Test_36-13164-3609829d4a8a/latest.yml
+after_capture.scope: viewport
+after_capture.session: explore-Smoke_Test_36-13164-3609829d4a8a
+after_capture.xml_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\hierarchy_after_ensure_click_20260915_050836_114356.xml
+after_capture.screenshot_path: D:\renult\project_1788164131875\project_1788434794119\project_1788434802235\project_1789040384742\reports\AI_2026-09-14_195143\screenshots\after_ensure_click_20260915_050836_909964.png
+after_capture.summary.title: Sound
+after_capture.summary.app: com.android.car.settings/.Settings_Launcher_Homepage
+after_capture.summary.page_anchor: {'ref': 'e44', 'text': '', 'desc': 'Back', 'by': 'id', 'value': 'com.android.car.settings:id/car_ui_toolbar_nav_icon_container'}
+after_snapshot.snapshot_id: viewport-20260915-050836-862766
+after_snapshot.scope: viewport
+after_snapshot.session: explore-Smoke_Test_36-13164-3609829d4a8a
+
+===== stderr =====

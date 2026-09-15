@@ -4,14 +4,19 @@
 
 # --- 车机 ---
 DEVICE_ID = "3696ade"
-# 接口类型: tosun / pcan / vector / zlgcan
-# 接口类型: tosun / pcan / vector / zlgcan；留空则不启用
+
+# 接口类型: tosun / pcan / vector / zlgcan
+
+# 接口类型: tosun / pcan / vector / zlgcan；留空则不启用
 
 # --- LIN 总线 ---
 # 接口类型: plin / vectorlin；留空则不启用
-# "qnx" / "linux" / "camera"；camera 模式读取下方 CAMERA_* 参数
-# 提供 CAMERA_NAME 时自动识别类型；为空时使用 CAMERA_TYPE
-# --- 蓝牙配对设备 ---
+
+# "qnx" / "linux" / "camera"；camera 模式读取下方 CAMERA_* 参数
+
+# 提供 CAMERA_NAME 时自动识别类型；为空时使用 CAMERA_TYPE
+
+# --- 蓝牙配对设备 ---
 BT_DEVICE_NAME = ""
 
 # --- WiFi 测试环境 ---
@@ -87,7 +92,7 @@ CAMERA_FPS = ""
 CAMERA_CROP_REGION = None
 
 # --- 程控电源 (VISA) ---
-POWER_RESOURCE = ""
+POWER_RESOURCE = "ASRL13::INSTR"
 
 # --- 故障注入继电器板（串口）---
 FAULT_INJECTION_PORT = ""
@@ -98,7 +103,7 @@ USB_SWITCH_BAUDRATE = ""
 
 # --- 手机（蓝牙/WiFi 互联测试用，未连接时留空）---
 # 手机类型: Android / iOS / HarmonyOS
-PHONE_DEVICE1_ID = ""
+PHONE_DEVICE1_ID = "62888b2b"
 PHONE_DEVICE1_TYPE = "Android"
 PHONE_DEVICE2_ID = ""
-PHONE_DEVICE2_TYPE = "Android"
+PHONE_DEVICE2_TYPE = "Android" 

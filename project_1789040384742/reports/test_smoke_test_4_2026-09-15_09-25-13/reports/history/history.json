@@ -1,0 +1,1 @@
+{"d85e5c7bd63ee58230dc473d964b3978":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"280c3fb87e73e892","status":"failed","statusDetails":"AssertionError: 元素不存在: text=Recent","time":{"start":1789435519528,"stop":1789435525281,"duration":5753}}]}}
