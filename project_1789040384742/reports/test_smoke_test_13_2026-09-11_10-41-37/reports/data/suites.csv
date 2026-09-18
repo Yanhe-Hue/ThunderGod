@@ -1,2 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"前置: 步骤0：车机正常启动，处于主页面; 步骤1：""音频""小部件已添加到主页面 | 步骤: ['步骤1：点击主界面上的""音频""小部件'] | 预期: 步骤1：系统进入设置页面","7808","系统UI - 点击音频小部件进入设置","tests_scripts.桌面启动器","2026-09-11","failed","2026-09-11","TestSmokeTest13","test_smoke_test_13","",""

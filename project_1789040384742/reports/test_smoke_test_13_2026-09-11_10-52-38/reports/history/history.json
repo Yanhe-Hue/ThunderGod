@@ -1,1 +1,0 @@
-{"a2bfcf8127ca51fb139b2b288a6bf078":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"7ad3f3f199ac93f5","status":"failed","statusDetails":"AssertionError: 设置页面显示日期和时间文案","time":{"start":1789095172204,"stop":1789095179762,"duration":7558}}]}}

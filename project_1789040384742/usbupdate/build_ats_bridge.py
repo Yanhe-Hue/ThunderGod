@@ -3,10 +3,10 @@ from pathlib import Path
 import zipfile
 
 root = Path(__file__).parent
-target = root / 'ats_bridge' / 'usbupdate-ats-bridge-1.0.1.vsix'
+target = root / 'ats_bridge' / 'usbupdate-ats-bridge-1.0.2.vsix'
 manifest = '''<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
-<Metadata><Identity Language="en-US" Id="usbupdate-ats-bridge" Version="1.0.1" Publisher="local-usbupdate"/>
+<Metadata><Identity Language="en-US" Id="usbupdate-ats-bridge" Version="1.0.2" Publisher="local-usbupdate"/>
 <DisplayName>USB Upgrade ATS Bridge</DisplayName><Description xml:space="preserve">Connect USB upgrade automation to ATS execution.</Description>
 <Properties><Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.75.0"/></Properties></Metadata>
 <Installation><InstallationTarget Id="Microsoft.VisualStudio.Code"/></Installation><Dependencies/>

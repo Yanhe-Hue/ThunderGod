@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory=$true)]
-    [ValidateSet('auto','local','resume','verify-version','verify-adb','smoke','smoke-plan','stress','login','plan','check','connect','cloud','prepare','upgrade','verify')]
+    [ValidateSet('auto','ci-once','local','resume','verify-version','verify-adb','smoke','smoke-plan','stress','login','plan','check','connect','cloud','prepare','upgrade','verify')]
     [string]$Action,
     [string]$Config = 'config.json',
     [ValidateSet('gas','no_gas')]
@@ -10,10 +10,10 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath $PSScriptRoot
-$pythonPath = $env:AUTOCAR_PYTHON
-if (-not $pythonPath) { $pythonPath = 'C:/Users/TS/AppData/Roaming/iatset/venv/Scripts/python.exe' }
+. (Join-Path $PSScriptRoot 'python_runtime.ps1')
+$pythonPath = Get-UpgradePython
 if (-not (Test-Path -LiteralPath $pythonPath)) { throw 'AutoCar Python not found. Set AUTOCAR_PYTHON.' }
-if ($Action -in @('auto', 'cloud') -and -not $Variant) {
+if ($Action -eq 'check' -and -not $Variant) {
     Add-Type -AssemblyName System.Windows.Forms
     $form = New-Object System.Windows.Forms.Form
     $form.Text = 'Select upgrade package'

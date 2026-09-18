@@ -1,1 +1,0 @@
-{"a2bfcf8127ca51fb139b2b288a6bf078":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"6046aeddef1bb36b","status":"failed","statusDetails":"AssertionError: 元素不存在: text=Google 新闻","time":{"start":1789094443182,"stop":1789094450900,"duration":7718}}]}}

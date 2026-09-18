@@ -1,1 +1,0 @@
-{"1b87852367f1217d4f132d960ec28609":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"5a07316a4ca087ff","status":"failed","statusDetails":"AssertionError: 小部件选项“Google助理”存在","time":{"start":1789108345262,"stop":1789108347384,"duration":2122}}]}}

@@ -20,7 +20,7 @@ class AutoTests(unittest.TestCase):
         runner.connect.assert_called_once_with()
         runner.verify.assert_called_once_with('', date_only=True)
 
-    def test_power_on_waits_sixty_seconds_before_adb(self):
+    def test_power_on_waits_120_seconds_before_adb(self):
         runner = self.runner()
         runner.cfg.update(automation={'upgrade_navigation': [{}]}, validation_timeout=1,
                           flash_timeout=1, activation_timeout=1, boot_timeout=10)
@@ -39,7 +39,7 @@ class AutoTests(unittest.TestCase):
         runner.hardware = Mock(return_value=power)
         with patch('usb_update.time.sleep', side_effect=lambda seconds: calls.append(('sleep', seconds))):
             runner.flash(package_ready=True)
-        self.assertEqual(calls, ['adb', 'power_on', ('sleep', 60), 'adb', 'adb'])
+        self.assertEqual(calls, ['adb', 'power_on', ('sleep', 120), 'adb', 'adb'])
 
     def test_standalone_version_check_waits_then_connects_and_compares(self):
         runner = self.runner()

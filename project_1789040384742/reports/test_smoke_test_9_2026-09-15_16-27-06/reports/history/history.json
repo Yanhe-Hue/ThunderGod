@@ -1,1 +1,0 @@
-{"17b3145aad3ddb8402fd8df70b9618f6":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"51f402683790f0f3","status":"failed","statusDetails":"AssertionError: 元素不存在: id=com.google.android.carassistant:id/voiceplate","time":{"start":1789460843775,"stop":1789460859328,"duration":15553}}]}}

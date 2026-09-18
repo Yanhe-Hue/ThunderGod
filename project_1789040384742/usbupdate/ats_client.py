@@ -7,6 +7,14 @@ import time
 from urllib.parse import urlencode
 
 
+class SmokeResultFailure(RuntimeError):
+    """ATS finished the run, but its cases did not all pass."""
+    def __init__(self, response, report):
+        self.response = response
+        self.report = str(report)
+        super().__init__('ATS 冒烟未全部通过：' + json.dumps(response, ensure_ascii=False))
+
+
 def run_ats(cfg, root, files, logs, event):
     report = (Path(logs) / 'smoke').resolve()
     # Bridge only accepts requests in the ATS workspace's usbupdate/logs.
@@ -43,9 +51,11 @@ def run_ats(cfg, root, files, logs, event):
                 if (response.get('status') != 'complete' or not result.get('total') or
                         result.get('passed') != result.get('total') or
                         any(result.get(key) for key in ('failed', 'skipped', 'blocked', 'errorCount'))):
-                    raise RuntimeError('ATS 冒烟未全部通过：' + json.dumps(response, ensure_ascii=False))
+                    if response.get('status') == 'complete' and not result.get('aborted'):
+                        raise SmokeResultFailure(response, report)
+                    raise RuntimeError('ATS 未正常完成：' + json.dumps(response, ensure_ascii=False))
                 print('\nATS 冒烟全部通过。', flush=True)
-                return
+                return {'status': 'passed', 'response': response, 'report': str(report)}
             if not (report / 'ats-started.json').is_file() and time.monotonic() > start_deadline:
                 raise RuntimeError('ATS 未接收任务，请确认连接扩展已安装、已打开 ATS 工程，并允许 VS Code 打开执行链接。')
             if time.monotonic() - last_progress > 15:

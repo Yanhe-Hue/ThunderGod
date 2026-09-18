@@ -2,7 +2,7 @@
   "name": "usbupdate-ats-bridge",
   "displayName": "USB Upgrade ATS Bridge",
   "publisher": "local-usbupdate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {"vscode": "^1.75.0"},
   "main": "extension.js",
   "activationEvents": ["onUri"],

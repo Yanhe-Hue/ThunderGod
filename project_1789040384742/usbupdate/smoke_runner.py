@@ -8,18 +8,28 @@ import sys
 import xml.etree.ElementTree as ET
 
 PATTERN = re.compile(r'test_smoke_test_(\d+)(?:\.(\d+))?(?:_row(\d+))?\.py$')
-DEFAULT_PROJECT = 'D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742'
+DEFAULT_PROJECT = str(Path(__file__).resolve().parent.parent)
 
 
 def discover(cfg):
-    root = Path(cfg.get('smoke', {}).get('project_root', DEFAULT_PROJECT)).resolve()
-    directory = root / 'tests_scripts'
+    root = Path(cfg.get('smoke', {}).get('project_root') or DEFAULT_PROJECT).resolve()
+    directory = (root / cfg.get('smoke', {}).get('case_directory', 'tests_scripts')).resolve()
+    if not directory.is_relative_to(root):
+        raise RuntimeError('冒烟目录必须位于 ATS 工程内')
     if not directory.is_dir():
         raise RuntimeError('冒烟用例目录不存在：' + str(directory))
+    requested = cfg.get('smoke', {}).get('case_files')
+    selected = None
+    if requested is not None:
+        if not isinstance(requested, list) or not requested:
+            raise RuntimeError('case_files 必须是非空用例路径数组')
+        selected = {(root / name).resolve() for name in requested}
+        if len(selected) != len(requested) or any(not p.is_file() or not p.is_relative_to(directory) or not PATTERN.fullmatch(p.name) for p in selected):
+            raise RuntimeError('case_files 含重复、不存在或不属于冒烟目录的用例')
     numbered = []
     for path in directory.rglob('*.py'):
         match = PATTERN.fullmatch(path.name)
-        if match and '__pycache__' not in path.parts:
+        if match and '__pycache__' not in path.parts and (selected is None or path.resolve() in selected):
             major, minor, row = (int(value or 0) for value in match.groups())
             numbered.append(((major, minor, row, path.relative_to(root).as_posix()), path))
     files = [path for _, path in sorted(numbered)]
@@ -34,7 +44,7 @@ def run_smoke(cfg, logs, event):
         return
     root, files = discover(cfg)
     from ats_client import run_ats
-    run_ats(cfg, root, files, logs, event)
+    return run_ats(cfg, root, files, logs, event)
 
 
 def run_pytest(cfg, logs, event):

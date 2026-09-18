@@ -1,2 +1,0 @@
-{"_autocar_explore_activity": {"schema": 1, "case_id": "Smoke_Test_3", "source_texts": {"precondition": ["步骤0：车机正常启动，处于主页面"], "step": ["步骤1：检查首页"], "expected": ["步骤1：显示Google地图、音频、Google助手三个区域"], "postcondition": []}, "run_id": "run-20260910194508-0ec3cdda"}}
-{"mark": {"kind": "precondition", "index": 0, "t": "2026-09-10T19:46:46+08:00", "source_text": "步骤0：车机正常启动，处于主页面"}}

@@ -4,6 +4,7 @@ from ctypes import wintypes as w
 import os
 import re
 import subprocess
+import time
 from pathlib import Path
 
 
@@ -31,7 +32,19 @@ def removable_roots():
             if mask & (1 << i) and kernel.GetDriveTypeW(chr(65+i) + ':\\') == 2]
 
 
-def eject(root):
+def lock_volume(k, handle, count, timeout=30, event=None):
+    deadline = time.monotonic() + timeout
+    while not k.DeviceIoControl(handle, 0x90018, None, 0, None, 0, ctypes.byref(count), None):
+        error = ctypes.get_last_error()
+        if error not in (5, 32, 33) or time.monotonic() >= deadline:
+            raise RuntimeError(f'U盘卷锁定失败（Windows {error}）。请关闭访问U盘的资源管理器/解压/扫描程序；未强制弹出或切换USB。')
+        if event:
+            event('USB_LOCK_RETRY', winerror=error)
+        print(f'U盘暂被占用（Windows {error}），2秒后重试安全锁定…', flush=True)
+        time.sleep(2)
+
+
+def eject(root, event=None):
     path = Path(root).resolve()
     if os.name != 'nt' or path != Path(path.anchor):
         raise RuntimeError('自动弹出仅支持 Windows 盘符根目录')
@@ -46,13 +59,11 @@ def eject(root):
     k.CloseHandle.argtypes = [w.HANDLE]
     handle = k.CreateFileW('\\\\.\\' + path.drive, 0xC0000000, 3, None, 3, 0, None)
     if handle == ctypes.c_void_p(-1).value:
-        raise ctypes.WinError(ctypes.get_last_error())
+        raise RuntimeError(f'无法打开U盘卷（Windows {ctypes.get_last_error()}），请检查管理员权限和盘符')
     count = w.DWORD()
     try:
         # Lock must succeed before dismount; never force removal of busy volumes.
-        for code in (0x90018,):
-            if not k.DeviceIoControl(handle, code, None, 0, None, 0, ctypes.byref(count), None):
-                raise ctypes.WinError(ctypes.get_last_error())
+        lock_volume(k, handle, count, event=event)
         if not k.FlushFileBuffers(handle):
             raise ctypes.WinError(ctypes.get_last_error())
         for code in (0x90020, 0x2D4808):

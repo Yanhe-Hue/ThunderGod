@@ -297,9 +297,9 @@ class Upgrade:
         raise RuntimeError('重启后未检测到新的启动实例或有线 ADB 未恢复。不要再次刷写')
 
     def wait_after_power_on(self):
-        self.event('WAITING_BEFORE_ADB', seconds=60)
-        print('上电后等待 60 秒，再连接 ADB。', flush=True)
-        time.sleep(60)
+        self.event('WAITING_BEFORE_ADB', seconds=120)
+        print('上电后等待 120 秒，再连接 ADB。', flush=True)
+        time.sleep(120)
 
     def verify(self, expected):
         confirm('请打开 ThunderSoft 工程模式 → Version Date Information，显示 QNX system version')
@@ -316,13 +316,23 @@ class Upgrade:
 
 def main():
     parser = argparse.ArgumentParser(description='U 盘升级：check 检查环境并完成云盘登录，通过后运行 auto。其他子命令用于分阶段排查。')
-    parser.add_argument('action', choices=['check', 'auto', 'local', 'resume', 'verify-version', 'verify-adb', 'smoke', 'smoke-plan', 'stress', 'login', 'plan', 'connect', 'cloud', 'prepare', 'upgrade', 'verify'])
+    parser.add_argument('action', choices=['check', 'auto', 'ci-once', 'local', 'resume', 'verify-version', 'verify-adb', 'smoke', 'smoke-plan', 'stress', 'login', 'plan', 'connect', 'cloud', 'prepare', 'upgrade', 'verify'])
     parser.add_argument('--config', default='config.json')
     parser.add_argument('--variant', choices=['gas', 'no_gas'], help='本次选择 GAS 或 no_gas；省略时使用配置值')
     parser.add_argument('--expected-qnx', help='安装后的完整目标 QNX 版本；提供时严格核对')
     parser.add_argument('--skip-smoke', action='store_true', help='只验证版本，不执行后续冒烟用例')
     args = parser.parse_args()
     cfg = json.loads(Path(args.config).read_text(encoding='utf-8-sig'))
+    if args.action == 'check' and args.variant:
+        cfg['variant'] = args.variant
+        config_path = Path(args.config)
+        temporary = config_path.with_suffix('.tmp')
+        temporary.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding='utf-8')
+        temporary.replace(config_path)
+        print('已保存云盘版本分类：' + args.variant, flush=True)
+    if args.action in ('auto', 'ci-once'):
+        cfg['_wait_today_cloud'] = True
+        cfg['today_only'] = True
     if args.skip_smoke:
         cfg.setdefault('smoke', {})['enabled'] = False
     if args.variant:
@@ -347,15 +357,24 @@ def main():
             return 0
         if args.action in ('verify-version', 'verify-adb'):
             from auto_update import AutomaticUpgrade
-            AutomaticUpgrade(cfg).verify_installed_version(wait_before_adb=args.action == 'verify-version')
+            runner = AutomaticUpgrade(cfg)
+            runner.verify_installed_version(wait_before_adb=args.action == 'verify-version')
             return 0
         if args.action == 'resume':
             from auto_update import AutomaticUpgrade
-            AutomaticUpgrade(cfg).resume()
+            runner = AutomaticUpgrade(cfg)
+            runner.resume()
             return 0
-        if args.action in ('auto', 'local'):
+        if args.action in ('auto', 'ci-once'):
+            from daily_update import run_daily
+            # Each daily runner captures its own upgrade errors, excluding smoke.
+            runner._smoke_started = True
+            run_daily(cfg, runner.event, once=args.action == 'ci-once')
+            return 0
+        if args.action == 'local':
             from auto_update import AutomaticUpgrade
-            AutomaticUpgrade(cfg).run(local=args.action == 'local')
+            runner = AutomaticUpgrade(cfg)
+            runner.run(local=args.action == 'local')
             return 0
         if args.action == 'login':
             from cloud_download import login
@@ -389,6 +408,9 @@ def main():
             runner.connect()
             runner.verify(entry['expected_qnx'])
     except (Exception, KeyboardInterrupt) as exc:
+        if args.action not in ('smoke', 'smoke-plan'):
+            from error_evidence import capture
+            capture(runner, exc)
         runner.event('STOPPED', reason=str(exc))
         print('流程停止：' + (str(exc) or '用户中断'))
         print('详细日志：', runner.logs)

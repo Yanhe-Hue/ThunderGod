@@ -1,1 +1,0 @@
-{"17b3145aad3ddb8402fd8df70b9618f6":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"a80dd9aab741dfe5","status":"failed","statusDetails":"AssertionError: 元素不应存在但存在: text=Google 助理","time":{"start":1789108996423,"stop":1789109015063,"duration":18640}}]}}

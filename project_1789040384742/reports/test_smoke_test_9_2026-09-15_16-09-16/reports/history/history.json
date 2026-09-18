@@ -1,1 +1,0 @@
-{"17b3145aad3ddb8402fd8df70b9618f6":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"aa5818dab1c3b5fa","status":"failed","statusDetails":"AssertionError: 元素不存在: text=Edit widgets","time":{"start":1789459773496,"stop":1789459783623,"duration":10127}}]}}

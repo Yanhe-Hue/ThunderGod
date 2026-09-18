@@ -12,11 +12,4 @@ packages.json.*.bak
 tools/
 __pycache__/
 *.part
-daily_state.json
-stress_cache/
-ci_artifacts/
-usb_stress_config.json
-github_upload/
-python.path.txt
-portable_dist/
-deployment_logs/
+reports/

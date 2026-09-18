@@ -1,2 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤1：点击谷歌地图搜索栏', '步骤2：再次点击搜索栏'] | 预期: 步骤1：出现搜索下拉菜单：左侧显示“最近”“类别”“已保存”; 步骤2：出现屏幕键盘","6263","系统UI - 地图搜索交互","tests_scripts.桌面启动器","2026-09-11","passed","2026-09-11","TestSmokeTest4","test_smoke_test_4","",""

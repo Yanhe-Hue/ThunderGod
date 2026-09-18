@@ -1,0 +1,6 @@
+# Company AutoCar SDK must already be installed in the selected Python environment.
+# Public support packages only; ATS test cases may require additional packages.
+playwright
+uiautomator2
+pytest
+allure-pytest

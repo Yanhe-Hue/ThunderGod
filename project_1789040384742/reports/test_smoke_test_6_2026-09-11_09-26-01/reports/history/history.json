@@ -1,1 +1,0 @@
-{"32b037baa2e58e635226b5e0176495b4":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"c45dd5945b3d2fa0","status":"failed","statusDetails":"Failed: case_issue: 前置状态【步骤0：车机正常启动，处于主页面】缺少已验证的可执行来源","time":{"start":1789089964162,"stop":1789089964162,"duration":0}}]}}

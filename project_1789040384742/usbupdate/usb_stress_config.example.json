@@ -103,7 +103,12 @@
   },
   "smoke": {
     "enabled": true,
-    "project_root": "D:/renult/project_1788164131875/project_1788434794119/project_1788434802235/project_1789040384742",
-    "case_timeout": 1800
+    "case_directory": "usbupdate/smoke_cases"
+  },
+  "stress": {
+    "mode": "usb_pair_smoke",
+    "cache_dir": "stress_cache",
+    "packages": [],
+    "cloud_expected_date": ""
   }
 }

@@ -1,2 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面', '步骤1：点击“Goolge助理”小部件将它添加在屏幕中，退出编辑界面并检查', '步骤2：点击首页的“Goolge助理”小部件', '步骤3：从屏幕右侧向左滑动，打开窗口小部件编辑界面，将“Goolge助理”小部件更换成其他小部件，退出编辑界面并检查'] | 预期: 步骤1：“Goolge助理”小部件立即添加到主页面; 步骤2：语音交互焦点（燃油图标和聆听状态）应出现在屏幕底部; 步骤3：“Goolge助理”小部件从主页移除","8017","系统UI - 谷歌助手小部件生命周期","tests_scripts.桌面启动器","2026-09-15","failed","2026-09-15","TestSmokeTest9","test_smoke_test_9","",""

@@ -43,8 +43,35 @@ def select_file(files):
     return matches[0]
 
 
+def wait_for_today(scan, cfg, event):
+    interval = cfg['cloud'].get('poll_interval_seconds', 60)
+    require(type(interval) in (int, float) and 5 <= interval <= 3600, '云盘检测间隔必须为 5～3600 秒')
+    timeout = cfg.get('_cloud_wait_timeout_seconds')
+    require(timeout is None or (type(timeout) in (int, float) and timeout > 0), 'CI 等包超时必须大于零')
+    deadline = time.monotonic() + timeout if timeout is not None else None
+    while True:
+        require(not cfg.get('_ci_target_date') or cfg['_ci_target_date'] == dt.date.today().isoformat(), 'CI 等包已跨日，结束本次任务，下一日由调度重新触发')
+        require(deadline is None or time.monotonic() < deadline, 'CI 等待当天包超时')
+        found = scan()
+        if found is not None:
+            require(not cfg.get('_ci_target_date') or cfg['_ci_target_date'] == dt.date.today().isoformat(), 'CI 检测期间已跨日，请由下一日任务重新选包')
+            return found
+        event('CLOUD_WAITING_TODAY', date=dt.date.today().isoformat(), variant=cfg['variant'], seconds=interval)
+        print(f"尚无今天 {dt.date.today()} 的 {cfg['variant']} 完整升级包，{interval} 秒后重新检测；Ctrl+C 停止", flush=True)
+        time.sleep(interval if deadline is None else min(interval, max(0, deadline - time.monotonic())))
+
+
+def pending_build(names, variant):
+    # A missing current-day build is a waiting condition; ambiguity remains an error.
+    today = dt.date.today()
+    candidates = [name for name in names if build_timestamp(name) and build_timestamp(name).date() == today
+                  and (name.endswith('full_userdebug') if variant == 'gas'
+                       else name.endswith('userdebug') and 'full' not in name)]
+    return select_build(candidates, variant, True) if candidates else None
+
+
 def wait_list(page):
-    page.locator('.filename').first.wait_for(state='visible', timeout=60000)
+    page.locator('.xtable-listwrap').wait_for(state='visible', timeout=60000)
     page.get_by_text('正在加载...', exact=True).wait_for(state='hidden', timeout=60000)
 
 
@@ -209,31 +236,43 @@ def download_latest(cfg, event, automatic=False, destination=None, target_name=N
         page = context.new_page()
         page.set_default_timeout(30000)
         try:
-            page.goto(cloud['url'], wait_until='domcontentloaded')
-            if not automatic:
-                print('请在新打开的云盘窗口扫码登录；登录完成后脚本会继续。', flush=True)
-            try:
-                page.get_by_text('群组文件', exact=True).first.wait_for(state='visible', timeout=(30 if automatic else cloud.get('login_timeout', 300)) * 1000)
-            except Exception as exc:
-                raise RuntimeError('云盘登录不可用；请重新运行 check 完成登录，auto 不会停留等待扫码') from exc
-            page.get_by_text('群组文件', exact=True).first.click()
-            wait_list(page)
-            for segment in cloud['path'][1:]:
-                list_entries(page, 'folderview')
-                open_folder(page, segment)
-            folders = list_entries(page, 'folderview')
-            folder_names = [item['name'] for item in folders]
-            event('CLOUD_BUILD_CANDIDATES', variant=cfg['variant'], folders=folder_names)
-            build = select_build(folder_names, cfg['variant'], cfg.get('today_only', False))
+            def scan():
+                page.goto(cloud['url'], wait_until='domcontentloaded')
+                if not automatic:
+                    print('请在新打开的云盘窗口扫码登录；登录完成后脚本会继续。', flush=True)
+                try:
+                    page.get_by_text('群组文件', exact=True).first.wait_for(state='visible', timeout=(30 if automatic else cloud.get('login_timeout', 300)) * 1000)
+                except Exception as exc:
+                    raise RuntimeError('云盘登录不可用；请重新运行 check 完成登录，auto 不会停留等待扫码') from exc
+                page.get_by_text('群组文件', exact=True).first.click()
+                wait_list(page)
+                for segment in cloud['path'][1:]:
+                    list_entries(page, 'folderview')
+                    open_folder(page, segment)
+                folders = list_entries(page, 'folderview')
+                folder_names = [item['name'] for item in folders]
+                event('CLOUD_BUILD_CANDIDATES', variant=cfg['variant'], folders=folder_names)
+                polling = cfg.get('_wait_today_cloud', False)
+                build = pending_build(folder_names, cfg['variant']) if polling else select_build(folder_names, cfg['variant'], cfg.get('today_only', False))
+                if build is None:
+                    return None
+                open_folder(page, build)
+                files = list_entries(page, 'fileview')
+                matches = [item for item in files if is_renault_package(item['name'])]
+                if polling and (not matches or (len(matches) == 1 and matches[0]['size'] <= 0)):
+                    return None
+                return build, select_file(files)
+            if cfg.get('_wait_today_cloud'):
+                build, package = wait_for_today(scan, cfg, event)
+            else:
+                build, package = scan()
             selected_path = '/' + '/'.join(cloud['path'] + [build])
-            print(f"云盘选择：{cfg['variant']} | 构建时间 {build_timestamp(build)} | {selected_path}", flush=True)
+            print(f"云盘选择：{cfg['variant']} | {selected_path}", flush=True)
             event('CLOUD_BUILD_SELECTED', variant=cfg['variant'], folder=selected_path,
                   build_time=build_timestamp(build).isoformat())
             if automatic:
                 expected_qnx = cloud.get('expected_qnx_by_build', {}).get(build, '').strip()
                 require(not expected_qnx.startswith('REPLACE'), '目标 QNX 仍为占位值：' + build)
-            open_folder(page, build)
-            package = select_file(list_entries(page, 'fileview'))
             event('CLOUD_PACKAGE_SELECTED', folder=build, name=package['name'], size=package['size'])
             require(Path(package['name']).name == package['name'] and not re.search(r'[<>:"/\\|?*]', package['name']), '云盘文件名包含不安全路径字符')
             # Only initialize the USB after a matching build and package are confirmed.
@@ -286,6 +325,16 @@ def download_latest(cfg, event, automatic=False, destination=None, target_name=N
             manifest.write_text(json.dumps([entry], ensure_ascii=False, indent=2), encoding='utf-8')
             event('CLOUD_DOWNLOAD_COMPLETE', target=str(target), manifest=str(manifest), sha256=sha256)
             return entry
+        except Exception:
+            # Capture the browser before its context closes.
+            try:
+                owner = getattr(event, '__self__', None)
+                folder = Path(getattr(owner, 'logs', 'logs')) / 'error'
+                folder.mkdir(parents=True, exist_ok=True)
+                page.screenshot(path=str(folder / 'cloud.png'), full_page=True, timeout=5000)
+            except Exception:
+                pass
+            raise
         finally:
             context.close()
             browser.close()

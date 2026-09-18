@@ -1,1 +1,0 @@
-{"7d04a7db196c16c6194071c1472b53c6":{"statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"5709489d111d80f6","status":"failed","statusDetails":"AssertionError: 元素不存在: text=Play 商店","time":{"start":1789105762843,"stop":1789105886071,"duration":123228}}]}}

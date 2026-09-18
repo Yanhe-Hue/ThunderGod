@@ -1,2 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"前置: 步骤0：车机正常启动，处于主页面 | 步骤: ['步骤0：从屏幕右侧向左滑动，打开窗口小部件编辑界面'] | 预期: 步骤0：右侧出现“编辑窗口部件”窗口，下方显示“Google助理”，“日期和时间”，“GG图”，“Eco Score”“电话”，“”音频，“车辆”选项","3800","系统UI - 窗口小部件编辑","tests_scripts.桌面启动器","2026-09-11","failed","2026-09-11","TestSmokeTest7Row6","test_smoke_test_7_row6","",""

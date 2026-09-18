@@ -1,10 +1,8 @@
 param([switch]$InstallAdb, [switch]$InstallCloud)
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath $PSScriptRoot
-$pythonPath = $env:AUTOCAR_PYTHON
-if (-not $pythonPath -and (Test-Path -LiteralPath 'C:/Users/TS/AppData/Roaming/iatset/venv/Scripts/python.exe')) {
-    $pythonPath = 'C:/Users/TS/AppData/Roaming/iatset/venv/Scripts/python.exe'
-}
+. (Join-Path $PSScriptRoot 'python_runtime.ps1')
+$pythonPath = Get-UpgradePython
 if (-not $pythonPath) {
     $pythonCommand = Get-Command python -ErrorAction SilentlyContinue
     if (-not $pythonCommand) { $pythonCommand = Get-Command py -ErrorAction SilentlyContinue }
@@ -13,7 +11,7 @@ if (-not $pythonPath) {
 if ($pythonPath) {
     & $pythonPath --version
     if ($LASTEXITCODE -ne 0) { throw 'Python unavailable. Install Python 3.10+ and enable PATH.' }
-    & $pythonPath -c 'import importlib.util; raise SystemExit(0 if importlib.util.find_spec("autocar") else 1)'
+    & $pythonPath -c "import importlib.util; raise SystemExit(0 if importlib.util.find_spec('autocar') else 1)"
     if ($LASTEXITCODE -ne 0) { Write-Warning 'AutoCar missing. Set AUTOCAR_PYTHON to the Python executable in your existing AutoCar environment.' }
 } else {
     Write-Warning 'Python not found. Set AUTOCAR_PYTHON to your AutoCar environment. Do not install an unrelated package with a similar name.'

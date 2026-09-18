@@ -38,7 +38,7 @@ function activate(context) {
         if (!Array.isArray(request.files) || !request.files.length) throw new Error('Empty test plan');
         const files = request.files.map(file => fs.realpathSync(file));
         for (const file of files) {
-          if (!inside(path.join(root, 'tests_scripts'), file) ||
+          if (!(inside(path.join(root, 'tests_scripts'), file) || inside(path.join(root, 'usbupdate', 'smoke_cases'), file)) ||
               !/^test_smoke_test_\d+(?:\.\d+)?(?:_row\d+)?\.py$/.test(path.basename(file))) {
             throw new Error('Test file is outside the ATS smoke plan');
           }

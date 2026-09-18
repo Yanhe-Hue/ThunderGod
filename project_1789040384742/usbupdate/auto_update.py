@@ -121,7 +121,7 @@ class AutomaticUpgrade(Upgrade):
         super().prepare(entry)
 
     def switch_to_car(self):
-        eject(self.cfg['usb_root'])
+        eject(self.cfg['usb_root'], event=self.event)
         self.event('USB_EJECTED')
         self.hardware().switch_usb('car')
         self.connect()
@@ -227,6 +227,8 @@ class AutomaticUpgrade(Upgrade):
             self.verify_and_smoke(self.cfg.get('verify_expected_qnx', ''))
             self.event('RESUME_COMPLETE')
         except BaseException as exc:
+            from error_evidence import capture
+            capture(self, exc)
             self.event('RESUME_STOPPED', reason=str(exc))
             raise
 
@@ -239,6 +241,7 @@ class AutomaticUpgrade(Upgrade):
     def verify_and_smoke(self, expected=''):
         self.verify(expected, date_only=not bool(expected))
         from smoke_runner import run_smoke
+        self._smoke_started = True
         run_smoke(self.cfg, self.logs, self.event)
 
     def verify(self, expected, date_only=False):
@@ -328,8 +331,10 @@ class AutomaticUpgrade(Upgrade):
                 entry = download_latest(self.cfg, self.event, automatic=True,
                                         destination=root / 'USB_UPDATE', target_name='Update.zip',
                                         prepare_destination=initialize_usb)
-                entry = choose_package([entry], self.cfg['variant'], self.cfg.get('today_only', False),
+                # Selection happened before download; retain that build across midnight.
+                entry = choose_package([entry], self.cfg['variant'], False,
                                        require_version=False)
+                self.cfg['_stress_expected_date'] = entry['build_date']
             self.entry = entry
             Path('prepared_package.json').write_text(json.dumps({
                 'folder': entry['folder'], 'sha256': entry['sha256'],
@@ -341,5 +346,7 @@ class AutomaticUpgrade(Upgrade):
             self.event('AUTO_COMPLETE')
             return True
         except BaseException as exc:
+            from error_evidence import capture
+            capture(self, exc)
             self.event('AUTO_STOPPED', reason=str(exc))
             raise
